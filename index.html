@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/main_style_sheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="javascript/jquery/jquery-1.11.3.min.js"></script>
+	<script src="javascript/jquery//jquery.mobile-1.4.5.min.js"></script>
+    <script src="javascript/tabsSwitcher.js"></script>
+    <script src="javascript/totalZerosCounter.js"></script>
+    <title>Trainings</title>
+</head>
+<body>
+    <header>
+        <div class="tabs_style">
+            <button class="tab_link" onclick="onTabClick('tabChars')" >Chars</button>
+            <button class="tab_link" onclick="onTabClick('tabStrings')">Strings</button>
+            <button class="tab_link" onclick="onTabClick('tabArrays')">Arrays</button>
+        </div>
+    </header>
+    <main>
+        <div id="tabChars" class="tab_content_visible">
+            <ol class="task_list_style">
+                <li>
+                    <p>Count total number of zeros from 1 upto n? Do not use string!</p>
+                    <form action="" method="">
+                        <div class="task1_input_values">
+                            <p>Please, enter a number</p>
+                            <input type="number" name="numberN" id="numberNId" placeholder="0">
+                            <input type="submit" value="Submit" onclick=" printResult('numberNId','countOfZerosId')">
+                        </div>
+                        <div class="task1_result_values">
+                            <p>Result:</p>
+                            <input type="number" name="countOfZeros" id="countOfZerosId"> 
+                        </div>
+
+                    </form>
+
+                </li>
+                <li>How would you verify a prime number?</li>
+            </ol>        
+        </div>
+                      
+        <div id="tabStrings" class="tab_content_hidden"> 
+            <ol class="task_list_style">
+                <li>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?</li>
+                <li>How would you reverse a string in JavaScript?</li>
+            </ol>
+        </div>
+                      
+        <div id="tabArrays" class="tab_content_hidden">
+            <ol class="task_list_style">
+                <li>Make this work: duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5] </li>
+                <li>How would you remove duplicate members from an array?</li>
+            </ol>
+        </div>
+    </main>
+
+        
+    
+</body>
+</html>

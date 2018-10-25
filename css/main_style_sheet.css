@@ -1,0 +1,62 @@
+* {box-sizing: border-box;}
+
+body, html {
+    height: 100%;
+    margin: 0px;
+    font-family: Arial;
+    width: 100vw;
+    display: inline-block;
+    font-family: "Open Sans", sans-serif;
+
+}
+header,
+.tabs_style {
+    width: inherit;
+    height: 40px;
+}
+
+
+.tab_link {
+    background-color: rgb(54, 144, 169) ;
+    color: white;
+    float: left;
+    border: none;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    font-size: 17px;
+    width: 33.33%;
+    padding: 0px;
+    border: 1px solid rgb(255, 255, 255);
+    border-right: none;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.tab_link > button:last-child {
+    border-right: 1px solid rgb(255, 255, 255);
+}
+
+.tab_link:hover,
+.tab_link_visible {
+    background: rgb(100, 197, 208);
+}
+
+.tab_content_hidden {
+    display: none;
+}
+
+.tab_content_visible {
+    display: block;
+    padding: 100px 20px;
+    height: 100%;
+}
+
+.task_list_style {
+    color: rgb(134, 135, 135);
+}
+
+
+.ui-icon-loading ~h1 {
+    display: none;
+}
