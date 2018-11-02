@@ -25,19 +25,14 @@
             <ol class="task_list_style">
                 <li>
                     <p>Count total number of zeros from 1 upto n? Do not use string!</p>
-                    <form action="" method="">
-                        <div class="task1_input_values">
-                            <p>Please, enter a number</p>
-                            <input type="number" name="numberN" id="numberNId" placeholder="0">
-                            <input type="submit" value="Submit" onclick=" printResult('numberNId','countOfZerosId')">
-                        </div>
-                        <div class="task1_result_values">
-                            <p>Result:</p>
-                            <input type="number" name="countOfZeros" id="countOfZerosId"> 
-                        </div>
-
+                    <form oninput="printZerosCountResult('numberNId','countOfZerosId')">
+                        <p>Please, enter a number
+                            <input type="number" name="numberN" id="numberNId" placeholder="0" autofocus>
+                        </p>
+                        <p>Result: 
+                            <output type="number" name="countOfZeros" id="countOfZerosId">0</output>
+                        </p>
                     </form>
-
                 </li>
                 <li>How would you verify a prime number?</li>
             </ol>        
