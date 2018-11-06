@@ -11,6 +11,7 @@
     <script src="javascript/tabsSwitcher.js"></script>
     <script src="javascript/totalZerosCounter.js"></script>
     <script src="javascript/stringReverse.js"></script>
+    <script src="javascript/primeNumberChecker.js"></script>
     <title>Trainings</title>
 </head>
 <body>
@@ -26,16 +27,26 @@
             <ol class="task_list_style">
                 <li>
                     <p>Count total number of zeros from 1 upto n? Do not use string!</p>
-                    <form oninput="printZerosCountResult('numberNId','countOfZerosId')">
+                    <form oninput="printZerosCountResult('countOfZerosNumberNId','countOfZerosId')">
                         <p>Please, enter a number
-                            <input type="number" name="numberN" id="numberNId" placeholder="0" autofocus>
+                            <input type="number" name="countOfZerosNumber" id="countOfZerosNumberNId" placeholder="0" autofocus>
                         </p>
                         <p>Result: 
                             <output type="number" name="countOfZeros" id="countOfZerosId">0</output>
                         </p>
                     </form>
                 </li>
-                <li>How would you verify a prime number?</li>
+                <li>
+                    <p>How would you verify a prime number?</p>
+                    <form oninput="printPrimeNumberCheckResult('checkPrimeNumberId','checkPrimeId')">
+                        <p>Please, enter a number
+                            <input type="number" name="checkPrimeNumber" id="checkPrimeNumberId" placeholder="0" autofocus>
+                        </p>
+                        <p>Result: 
+                            <output type="text" name="checkPrime" id="checkPrimeId"></output>
+                        </p>
+                    </form>
+                </li>
             </ol>        
         </div>
                       
