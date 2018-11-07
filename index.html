@@ -12,6 +12,7 @@
     <script src="javascript/totalZerosCounter.js"></script>
     <script src="javascript/stringReverse.js"></script>
     <script src="javascript/primeNumberChecker.js"></script>
+    <script src="javascript/arrayDuplicate.js"></script>
     <title>Trainings</title>
 </head>
 <body>
@@ -71,7 +72,18 @@
                       
         <div id="tabArrays" class="tab_content_hidden">
             <ol class="task_list_style">
-                <li>Make this work: duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5] </li>
+                <li>
+                   <p>Make this work: duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]</p>  
+                    <form>
+                        <p>Please, enter space-separated numbers
+                            <input type="text" name="userArray" id="userArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                        </p>
+                        <button type="submit" onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Duplicate</button>
+                        <p>Result:
+                            <output type="" name="duplicateUserArray" id="duplicateUserArrayId"></output>
+                        </p>
+                    </form>     
+                </li>
                 <li>How would you remove duplicate members from an array?</li>
             </ol>
         </div>
