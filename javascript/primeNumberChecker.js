@@ -19,11 +19,7 @@ function printStringValue(ctrlId, strValue){
     return ctrl.value = "\"" + strValue + "\"";
 }
 
-function primeNumberCheck(numberId) {
-    var number = readNumberValue(numberId);
-    if (number == -1)
-        return -1;
-
+function primeNumberCheck(number) {
     if(number < 2)
        return false;
 
@@ -37,11 +33,13 @@ function primeNumberCheck(numberId) {
 Events
 ***********************************************************************/
 function printPrimeNumberCheckResult(id1, id2){
-    var resultValue = primeNumberCheck(id1);
+    var userNumber = readNumberValue(id1);
+    if (userNumber == -1)
+        return alert("The number is invalid! Please, enter the correct number!");;
 
-    if (resultValue == -1)
-        alert("The number is invalid! Please, enter the correct number!");
-    else if(resultValue == true)
+    var resultValue = primeNumberCheck(userNumber);
+
+    if(resultValue == true)
         printStringValue(id2,"The number is prime!");
     else 
         printStringValue(id2, "The number isn't prime!");
