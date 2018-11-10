@@ -1,5 +1,5 @@
 function primeNumberCheck(number) {
-    if(number < 2)
+    if(!Number.isInteger(number) || number < 2)
        return false;
 
     for(var i = 2; i <= Math.floor(Math.sqrt(number)); i++){
