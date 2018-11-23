@@ -72,6 +72,26 @@ describe('Zeros counter', function() {
     });
   });
 
+describe('Duplicate array', function(){
+    it('should return an empty array', function(){
+        assert.isEmpty(duplicate("jsdhdsjh"));
+        assert.isEmpty(duplicate("js dh ds jh"));
+        assert.isEmpty(duplicate(null));
+        assert.isEmpty(duplicate(NaN));
+        assert.isEmpty(duplicate([]));
+    });
+    it('should return a duplicated array', function(){
+        assert.sameDeepOrderedMembers(duplicate([1, 2, 3, 4, 5]),[1, 2, 3, 4, 5, 1, 2, 3, 4, 5]);
+        assert.sameDeepOrderedMembers(duplicate([1, 'd', 3, 4, 'c']),[1, 'd', 3, 4, 'c', 1, 'd', 3, 4, 'c']);
+        assert.sameDeepOrderedMembers(duplicate([1, 2, 3, 4, null]),[1, 2, 3, 4, null, 1, 2, 3, 4, null]);
+        assert.sameDeepOrderedMembers(duplicate([1, [1,2], [1,2,3], 4]),[1, [1,2], [1,2,3], 4, 1, [1,2], [1,2,3], 4]);
+
+        var funcObj = function(param) { return duplicate(param); };
+        assert.sameDeepOrderedMembers(duplicate([1, 2, 3, duplicate([1, 2])]),[1, 2, 3, [1,2,1,2], 1, 2, 3, [1,2,1,2]]);
+        assert.sameDeepOrderedMembers(duplicate([1, 2, 3, funcObj([1, 2])]),[1, 2, 3, [1,2,1,2], 1, 2, 3, [1,2,1,2]]);
+    });
+});
+
 describe('Unique characters in String', function(){
     it('should return false for invalid value', function(){
         assert.isFalse(isStringConsistOfUniqueCharacters());
