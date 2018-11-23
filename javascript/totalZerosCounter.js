@@ -1,4 +1,7 @@
 function countZeros(numberN) {
+    if(!Number.isInteger(numberN) || numberN < 1 || !Number.isSafeInteger(numberN))
+        return -1;
+
     var countOfZeros = 0;
 
     while(numberN > 0){
