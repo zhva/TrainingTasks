@@ -1,6 +1,9 @@
-function reverseString(str) {
-    var arrayStrElem = new Array();
-    var strLength = str.length;
+﻿function reverseString(str) {
+    if(str == null )
+        return "";
+
+    var arrayStrElem = str.split("");
+    var strLength = arrayStrElem.length;
 
     for(var i = 0; i < strLength; i++){
         arrayStrElem[i] = str.charAt(strLength-i-1);

@@ -1,4 +1,4 @@
-var assert = chai.assert;
+﻿var assert = chai.assert;
 
 describe('Prime numbers', function() {
     it('should be false for numbers < 0', function() {
@@ -89,6 +89,20 @@ describe('Duplicate array', function(){
         var funcObj = function(param) { return duplicate(param); };
         assert.sameDeepOrderedMembers(duplicate([1, 2, 3, duplicate([1, 2])]),[1, 2, 3, [1,2,1,2], 1, 2, 3, [1,2,1,2]]);
         assert.sameDeepOrderedMembers(duplicate([1, 2, 3, funcObj([1, 2])]),[1, 2, 3, [1,2,1,2], 1, 2, 3, [1,2,1,2]]);
+    });
+});
+
+describe('String reverse', function(){
+    it('should return an empty String for invalide value', function(){
+        assert.isEmpty(reverseString());
+        assert.isEmpty(reverseString(""));
+        assert.isEmpty(reverseString(null));
+    });
+    it('should return reversed String', function(){
+        assert.equal(reverseString("qwerty"),"ytrewq");
+        assert.equal(reverseString("qwerty12345"),"54321ytrewq");
+        assert.equal(reverseString("üäßsdfva"),"avfdsßäü");
+        assert.equal(reverseString("qwertyuiop[]asdfghjkl;'zxcvbnm,.1234567890"),"0987654321.,mnbvcxz';lkjhgfdsa][poiuytrewq");
     });
 });
 
