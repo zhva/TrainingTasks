@@ -36,3 +36,19 @@ describe('Prime numbers', function() {
         assert.isFalse(primeNumberCheck(992093291442));
     });
   });
+describe('Unique characters in String', function(){
+    it('should return false for invalid value', function(){
+        assert.isFalse(isStringConsistOfUniqueCharacters());
+        assert.isFalse(isStringConsistOfUniqueCharacters(null));
+    });
+    it('should return false for String with repeating characters', function(){
+        assert.isFalse(isStringConsistOfUniqueCharacters("123233234456"));
+        assert.isFalse(isStringConsistOfUniqueCharacters("qwertfghrtbyuiop[asdfgdthnhjkl;'zxcvbnm"));
+    });
+    it('should return true for String with all unique characters', function(){
+        assert.isTrue(isStringConsistOfUniqueCharacters(""));
+        assert.isTrue(isStringConsistOfUniqueCharacters("123456"));
+        assert.isTrue(isStringConsistOfUniqueCharacters("qwertyuiop[asdfghjkl;'zxcvbnm"));
+        assert.isTrue(isStringConsistOfUniqueCharacters("üäßsdfva"));
+    });
+});
