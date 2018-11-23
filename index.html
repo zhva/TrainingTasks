@@ -14,6 +14,7 @@
     <script src="javascript/stringReverse.js"></script>
     <script src="javascript/primeNumberChecker.js"></script>
     <script src="javascript/arrayDuplicate.js"></script>
+    <script src="javascript/uniqueStringCharacktersCheck.js"></script>
     <title>Trainings</title>
 </head>
 <body>
@@ -54,7 +55,20 @@
                       
         <div id="tabStrings" class="tab_content_hidden"> 
             <ol class="task_list_style">
-                <li>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?</li>
+                <li>
+                    <p>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?</p>
+                    <div>
+                        <form>
+                            <p>Please, enter a string
+                                <input type="text" name="userStringForUnique" id="userStringForUniqueId" autofocus>
+                            </p>
+                            <p>Result: 
+                                <button type="submit" onclick="printUniqueCharactersResult('userStringForUniqueId','resultStringForUniqueId')">Check</button>
+                                <pre><output type="" name="resultStringForUnique" id="resultStringForUniqueId"></output></pre>
+                            </p>
+                        </form>
+                    </div>
+                </li>
                 <li>
                    <p>How would you reverse a string in JavaScript?</p>
                     <div>
