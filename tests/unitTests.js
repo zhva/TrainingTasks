@@ -143,3 +143,25 @@ describe('Prime factorization of Number', function(){
     });
 
 });
+
+describe('Prime factors of Number', function(){
+    it('should return an empty array for invalid value', function(){
+        assert.isEmpty(primeFactorsOfNumber("jsdhdsjh"));
+        assert.isEmpty(primeFactorsOfNumber(null));
+        assert.isEmpty(primeFactorsOfNumber(NaN));
+        assert.isEmpty(primeFactorsOfNumber([]));
+        assert.isEmpty(primeFactorsOfNumber(0));
+        assert.isEmpty(primeFactorsOfNumber(1));
+        assert.isEmpty(primeFactorsOfNumber(-78));
+    });
+    it('should return a list of prime factors of Number', function(){
+        assert.sameDeepOrderedMembers(primeFactorsOfNumber(2),[2]);
+        assert.sameDeepOrderedMembers(primeFactorsOfNumber(13),[13]);
+        assert.sameDeepOrderedMembers(primeFactorsOfNumber(78),[2, 3, 13]);
+        assert.sameDeepOrderedMembers(primeFactorsOfNumber(54),[2, 3]);
+        assert.sameDeepOrderedMembers(primeFactorsOfNumber(1024),[2]);
+        assert.sameDeepOrderedMembers(primeFactorsOfNumber(53581),[11, 4871]);
+        assert.sameDeepOrderedMembers(primeFactorsOfNumber(987987),[3, 7, 11, 13, 47]);
+    });
+
+});

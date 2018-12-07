@@ -16,6 +16,7 @@
     <script src="javascript/arrayDuplicate.js"></script>
     <script src="javascript/uniqueStringCharactersCheck.js"></script>
     <script src="javascript/numberPrimeFactorization.js"></script>
+    <script src="javascript/primeFactorsOfNumber.js"></script>
     <title>Trainings</title>
 </head>
 <body>
@@ -55,10 +56,22 @@
                     <p>Prime factorization of a number?</p>
                     <form action="">
                         <p>Please, enter a number
+                            <input type="numer" name="primeFactorizationOfNumber" id="primeFactorizationOfNumberId" placeholder="0">
+                        </p>
+                        <p>Result:
+                            <button type="submit" onclick="printNumberPrimeFactorizationResult('primeFactorizationOfNumberId', 'primeFactorizationId')">Submit</button>
+                            <output type="text" name="primeFactorization" id="primeFactorizationId"></output>
+                        </p>
+                    </form>
+                </li>
+                <li>
+                    <p>How could you find all prime factors of a number?</p>
+                    <form action="">
+                        <p>Please, enter a number
                             <input type="numer" name="primeFactorsOfNumber" id="primeFactorsOfNumberId" placeholder="0">
                         </p>
                         <p>Result:
-                            <button type="submit" onclick="printNumberPrimeFactorizationResult('primeFactorsOfNumberId', 'primeFactorsId')">Submit</button>
+                            <button type="submit" onclick="printPrimeFactorsResult('primeFactorsOfNumberId', 'primeFactorsId')">Submit</button>
                             <output type="text" name="primeFactors" id="primeFactorsId"></output>
                         </p>
                     </form>
