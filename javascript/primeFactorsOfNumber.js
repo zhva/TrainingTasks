@@ -2,12 +2,10 @@ function primeFactorsOfNumber(number){
     if(!Number.isInteger(number) || number < 2)
         return [];
 
-    var primeFactorsArray = [],
-        isPrime;
+    var primeFactorsArray = [];
 
     for(var i = 2; i <= number; i++){
         if(number % i == 0){
-
             if(primeNumberCheck(i)){
                 primeFactorsArray.push(i);
             }

@@ -4,14 +4,30 @@ function numberPrimeFactorization(number){
 
     var primeFactorsArray = [];
 
-    for(var i = 2; i <= number; i++){
+    while(number % 2 == 0){
+        primeFactorsArray.push(2);
+        number /= 2;
+    }
+
+    for(var i = 3; i <= Math.floor(Math.sqrt(number)); i+=2){
         while(number % i == 0){
             if(primeNumberCheck(i)){
                 primeFactorsArray.push(i);
             }
         number /= i;
-        }
+        } 
     }
+    if(primeNumberCheck(number)){
+        primeFactorsArray.push(number);
+    }
+    // for(var i = 2; i <= number; i++){
+    //     while(number % i == 0){
+    //         if(primeNumberCheck(i)){
+    //             primeFactorsArray.push(i);
+    //         }
+    //     number /= i;
+    //     }
+    // }
     return primeFactorsArray;
 }
 
