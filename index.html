@@ -15,6 +15,7 @@
     <script src="javascript/primeNumberChecker.js"></script>
     <script src="javascript/arrayDuplicate.js"></script>
     <script src="javascript/uniqueStringCharactersCheck.js"></script>
+    <script src="javascript/numberPrimeFactorization.js"></script>
     <title>Trainings</title>
 </head>
 <body>
@@ -47,6 +48,18 @@
                         </p>
                         <p>Result: 
                             <output type="text" name="checkPrime" id="checkPrimeId"></output>
+                        </p>
+                    </form>
+                </li>
+                <li>
+                    <p>Prime factorization of a number?</p>
+                    <form action="">
+                        <p>Please, enter a number
+                            <input type="numer" name="primeFactorsOfNumber" id="primeFactorsOfNumberId" placeholder="0">
+                        </p>
+                        <p>Result:
+                            <button type="submit" onclick="printNumberPrimeFactorizationResult('primeFactorsOfNumberId', 'primeFactorsId')">Submit</button>
+                            <output type="text" name="primeFactors" id="primeFactorsId"></output>
                         </p>
                     </form>
                 </li>

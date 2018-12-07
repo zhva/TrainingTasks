@@ -122,3 +122,24 @@ describe('Unique characters in String', function(){
         assert.isTrue(isStringConsistOfUniqueCharacters("üäßsdfva"));
     });
 });
+
+describe('Prime factorization of Number', function(){
+    it('should return an empty array for invalid value', function(){
+        assert.isEmpty(numberPrimeFactorization("jsdhdsjh"));
+        assert.isEmpty(numberPrimeFactorization(null));
+        assert.isEmpty(numberPrimeFactorization(NaN));
+        assert.isEmpty(numberPrimeFactorization([]));
+        assert.isEmpty(numberPrimeFactorization(0));
+        assert.isEmpty(numberPrimeFactorization(1));
+        assert.isEmpty(numberPrimeFactorization(-78));
+    });
+    it('should return a list of prime factors of Number', function(){
+        assert.sameDeepOrderedMembers(numberPrimeFactorization(2),[2]);
+        assert.sameDeepOrderedMembers(numberPrimeFactorization(78),[2, 3, 13]);
+        assert.sameDeepOrderedMembers(numberPrimeFactorization(54),[2, 3, 3, 3]);
+        assert.sameDeepOrderedMembers(numberPrimeFactorization(1024),[2, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
+        assert.sameDeepOrderedMembers(numberPrimeFactorization(53581),[11, 4871]);
+        assert.sameDeepOrderedMembers(numberPrimeFactorization(987987),[3, 7, 7, 11, 13, 47]);
+    });
+
+});
