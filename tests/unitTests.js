@@ -181,3 +181,22 @@ describe('Nth Fibonacci Number', function(){
         assert.equal(nthFibonacciNumberCounter(12345), Infinity);
     });
 });
+
+describe('Greatest common divisor of two numbers', function(){
+    it('should return 0 for invalid index', function(){
+        assert.equal(greatestCommonDivisorCounter("dagad", 23), 0);
+        assert.equal(greatestCommonDivisorCounter(null), 0);
+        assert.equal(greatestCommonDivisorCounter(NaN), 0);
+        assert.equal(greatestCommonDivisorCounter(0), 0);
+    });
+    it('should return greatest common divisor', function(){
+        assert.equal(greatestCommonDivisorCounter(1, 1), 1);
+        assert.equal(greatestCommonDivisorCounter(21, 49), 7);
+        assert.equal(greatestCommonDivisorCounter(58, 4), 2);
+        assert.equal(greatestCommonDivisorCounter(-5, 25), 5);
+        assert.equal(greatestCommonDivisorCounter(-36, -6), 6);
+        assert.equal(greatestCommonDivisorCounter(26, 546), 26);
+        assert.equal(greatestCommonDivisorCounter(1024, 1024), 1024);
+        assert.equal(greatestCommonDivisorCounter(56784, 5465464561986), 1014);
+    });
+});
