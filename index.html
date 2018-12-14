@@ -19,6 +19,7 @@
     <script src="javascript/primeFactorsOfNumber.js"></script>
     <script src="javascript/nthFibonacciNumberCounter.js"></script>
     <script src="javascript/greatestCommonDivisorCounter.js"></script>
+    <script src="javascript/uniqueElementsInArray.js"></script>
     <title>Trainings</title>
 </head>
 <body>
@@ -58,7 +59,6 @@
                     <p>Prime factorization of a number?</p>
                     <form action="">
                         <p>Please, enter a number
-                            <input type="numer" name="primeFactorizationOfNumber" id="primeFactorizationOfNumberId" placeholder="0">
                             <input type="number" name="primeFactorizationOfNumber" id="primeFactorizationOfNumberId" placeholder="0">
                         </p>
                         <p>Result:
@@ -71,7 +71,6 @@
                     <p>How could you find all prime factors of a number?</p>
                     <form action="">
                         <p>Please, enter a number
-                            <input type="numer" name="primeFactorsOfNumber" id="primeFactorsOfNumberId" placeholder="0">
                             <input type="number" name="primeFactorsOfNumber" id="primeFactorsOfNumberId" placeholder="0">
                         </p>
                         <p>Result:
@@ -150,11 +149,22 @@
                         </p>
                         <button type="submit" onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Duplicate</button>
                         <p>Result:
-                            <output type="" name="duplicateUserArray" id="duplicateUserArrayId"></output>
+                            <output type="text" name="duplicateUserArray" id="duplicateUserArrayId"></output>
                         </p>
                     </form>     
                 </li>
-                <li>How would you remove duplicate members from an array?</li>
+                <li>
+                    <p>How would you remove duplicate members from an array?</p>  
+                    <form>
+                        <p>Please, enter space-separated numbers
+                            <input type="text" name="userDuplicatedArray" id="userDuplicatedArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                        </p>
+                        <button type="submit" onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Submit</button>
+                        <p>Result:
+                            <output type="text" name="nonDuplicatedArray" id="nonDuplicatedArrayId"></output>
+                        </p>
+                    </form> 
+                </li>
             </ol>
         </div>
     </main>

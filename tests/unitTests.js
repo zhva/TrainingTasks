@@ -200,3 +200,20 @@ describe('Greatest common divisor of two numbers', function(){
         assert.equal(greatestCommonDivisorCounter(56784, 5465464561986), 1014);
     });
 });
+
+describe('Delete duplicates from an Array', function(){
+    it('should return an empty array', function(){
+        assert.isEmpty(deleteDuplicateMemebers("jsdhdsjh"));
+        assert.isEmpty(deleteDuplicateMemebers("js dh ds jh"));
+        assert.isEmpty(deleteDuplicateMemebers(null));
+        assert.isEmpty(deleteDuplicateMemebers(NaN));
+        assert.isEmpty(deleteDuplicateMemebers([]));
+    });
+    it('should return an array without duplicates', function(){
+        assert.sameDeepOrderedMembers(deleteDuplicateMemebers([1, 2, 3, 1, 4, 5, 2, 8, 4]), [1, 2, 3, 4, 5, 8]);
+        assert.sameDeepOrderedMembers(deleteDuplicateMemebers([1, 1, 1, 1, 1, 1, 1]), [1]);
+        assert.sameDeepOrderedMembers(deleteDuplicateMemebers([1, 'd', 3, 1, 'c', 2,'c']), [1, 'd', 3, 'c', 2]);
+        assert.sameDeepOrderedMembers(deleteDuplicateMemebers([8, 4, 3, 4, null]), [8, 4, 3, null]);
+        assert.sameDeepOrderedMembers(deleteDuplicateMemebers([1, 2, , 1, 4, 5, 2, 8, 4, ]), [1, 2, , 4, 5, 8, ]);
+    });
+});
