@@ -62,7 +62,6 @@ describe('Zeros counter', function() {
         assert.equal(countZeros(30),1);
         assert.equal(countZeros(100),2);
         assert.equal(countZeros(901098900),4);
-        assert.equal(countZeros(0123),0);
     });
     it('should ignore trailing zeroes', function() {
         assert.equal(countZeros(0123),0);
@@ -164,4 +163,21 @@ describe('Prime factors of Number', function(){
         assert.sameDeepOrderedMembers(primeFactorsOfNumber(987987),[3, 7, 11, 13, 47]);
     });
 
+});
+
+describe('Nth Fibonacci Number', function(){
+    it('should return 0 for invalid index', function(){
+        assert.equal(nthFibonacciNumberCounter("dagad"), 0);
+        assert.equal(nthFibonacciNumberCounter(null), 0);
+        assert.equal(nthFibonacciNumberCounter(NaN), 0);
+        assert.equal(nthFibonacciNumberCounter(0), 0);
+        assert.equal(nthFibonacciNumberCounter(-5), 0);
+    });
+    it('should return nth Fibonacci number', function(){
+        assert.equal(nthFibonacciNumberCounter(1), 1);
+        assert.equal(nthFibonacciNumberCounter(5), 5);
+        assert.equal(nthFibonacciNumberCounter(13), 233);
+        assert.equal(nthFibonacciNumberCounter(55), 139583862445);
+        assert.equal(nthFibonacciNumberCounter(12345), Infinity);
+    });
 });
