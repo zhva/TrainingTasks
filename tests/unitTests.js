@@ -202,18 +202,53 @@ describe('Greatest common divisor of two numbers', function(){
 });
 
 describe('Delete duplicates from an Array', function(){
-    it('should return an empty array', function(){
-        assert.isEmpty(deleteDuplicateMemebers("jsdhdsjh"));
-        assert.isEmpty(deleteDuplicateMemebers("js dh ds jh"));
-        assert.isEmpty(deleteDuplicateMemebers(null));
-        assert.isEmpty(deleteDuplicateMemebers(NaN));
-        assert.isEmpty(deleteDuplicateMemebers([]));
+
+    var funcs = [deleteDuplicateMembers_v1, deleteDuplicateMembers_v2, deleteDuplicateMembers_v3, 
+                 deleteDuplicateMembers_v4, deleteDuplicateMembers_v5, deleteDuplicateMembers_v6, 
+                 deleteDuplicateMembers_v7];
+    
+    var i = 0;
+    funcs.forEach(function(deleteDuplicateMembers_vN){
+        it('should return an empty array (V' + (i+1) + ')', function(){
+            assert.isEmpty(deleteDuplicateMembers_vN("jsdhdsjh"));
+            assert.isEmpty(deleteDuplicateMembers_vN("js dh ds jh"));
+            assert.isEmpty(deleteDuplicateMembers_vN(null));
+            assert.isEmpty(deleteDuplicateMembers_vN(NaN));
+            assert.isEmpty(deleteDuplicateMembers_vN([]));
+        });
+        it('should return an array without duplicates (V' + (i+1) + ')', function(){
+            assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN([1, 2, 3, 1, 4, 5, 2, 8, 4]), [1, 2, 3, 4, 5, 8]);
+            assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN([1, 1, 1, 1, 1, 1, 1]), [1]);
+            assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN([1, 'd', 3, 1, 'c', 2,'c']), [1, 'd', 3, 'c', 2]);
+            assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN([8, 4, 3, 4, null]), [8, 4, 3, null]);
+            assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN([1, 2, , 1, 4, 5, 2, 8, 4, ]), [1, 2, , 4, 5, 8, ]);
+        });
+        i++;
     });
-    it('should return an array without duplicates', function(){
-        assert.sameDeepOrderedMembers(deleteDuplicateMemebers([1, 2, 3, 1, 4, 5, 2, 8, 4]), [1, 2, 3, 4, 5, 8]);
-        assert.sameDeepOrderedMembers(deleteDuplicateMemebers([1, 1, 1, 1, 1, 1, 1]), [1]);
-        assert.sameDeepOrderedMembers(deleteDuplicateMemebers([1, 'd', 3, 1, 'c', 2,'c']), [1, 'd', 3, 'c', 2]);
-        assert.sameDeepOrderedMembers(deleteDuplicateMemebers([8, 4, 3, 4, null]), [8, 4, 3, null]);
-        assert.sameDeepOrderedMembers(deleteDuplicateMemebers([1, 2, , 1, 4, 5, 2, 8, 4, ]), [1, 2, , 4, 5, 8, ]);
+
+});
+
+describe('Performance test', function(){
+    this.timeout(60000);
+    var funcs = [deleteDuplicateMembers_v1, deleteDuplicateMembers_v2, deleteDuplicateMembers_v3, 
+        deleteDuplicateMembers_v4, deleteDuplicateMembers_v5, deleteDuplicateMembers_v6, 
+        deleteDuplicateMembers_v7];
+
+    var output = [1,2,3,4,5,6,7,8,9,0];
+    var a = output;
+    a = a.concat(a).concat(a).concat(a).concat(a).concat(a).concat(a).concat(a).concat(a);
+    a = a.concat(a).concat(a).concat(a).concat(a).concat(a).concat(a).concat(a).concat(a);
+    var input = [];
+    for (var i=0;i<50;i++)
+    {
+        input = input.concat(a);
+    }
+    var i = 0;
+    funcs.forEach(function(deleteDuplicateMembers_vN){
+        it('Test (V' + (i+1) + ') (N = ' + input.length + ')', function(){
+            assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN(input), output);
+        });
+        i++;
     });
+
 });
