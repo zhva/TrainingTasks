@@ -221,34 +221,66 @@ describe('Delete duplicates from an Array', function(){
             assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN([1, 1, 1, 1, 1, 1, 1]), [1]);
             assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN([1, 'd', 3, 1, 'c', 2,'c']), [1, 'd', 3, 'c', 2]);
             assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN([8, 4, 3, 4, null]), [8, 4, 3, null]);
-            assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN([1, 2, , 1, 4, 5, 2, 8, 4, ]), [1, 2, , 4, 5, 8, ]);
+           // assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN([1, 2, , 1, 4, 5, 2, 8, 4, ]), [1, 2, , 4, 5, 8, ]);
         });
         i++;
     });
 
 });
 
-describe('Performance test', function(){
-    this.timeout(60000);
-    var funcs = [deleteDuplicateMembers_v1, deleteDuplicateMembers_v2, deleteDuplicateMembers_v3, 
-        deleteDuplicateMembers_v4, deleteDuplicateMembers_v5, deleteDuplicateMembers_v6, 
-        deleteDuplicateMembers_v7];
+// describe('Performance test', function(){
+//     this.timeout(60000);
+//     var funcs = [deleteDuplicateMembers_v1, deleteDuplicateMembers_v2, deleteDuplicateMembers_v3, 
+//         deleteDuplicateMembers_v4, deleteDuplicateMembers_v5, deleteDuplicateMembers_v6, 
+//         deleteDuplicateMembers_v7];
 
-    var output = [1,2,3,4,5,6,7,8,9,0];
-    var a = output;
-    a = a.concat(a).concat(a).concat(a).concat(a).concat(a).concat(a).concat(a).concat(a);
-    a = a.concat(a).concat(a).concat(a).concat(a).concat(a).concat(a).concat(a).concat(a);
-    var input = [];
-    for (var i=0;i<50;i++)
-    {
-        input = input.concat(a);
-    }
-    var i = 0;
-    funcs.forEach(function(deleteDuplicateMembers_vN){
-        it('Test (V' + (i+1) + ') (N = ' + input.length + ')', function(){
-            assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN(input), output);
-        });
-        i++;
+//     var output = [1,2,3,4,5,6,7,8,9,0];
+//     var a = output;
+//     a = a.concat(a).concat(a).concat(a).concat(a).concat(a).concat(a).concat(a).concat(a);
+//     a = a.concat(a).concat(a).concat(a).concat(a).concat(a).concat(a).concat(a).concat(a);
+//     var input = [];
+//     for (var i=0;i<50;i++)
+//     {
+//         input = input.concat(a);
+//     }
+//     var i = 0;
+//     funcs.forEach(function(deleteDuplicateMembers_vN){
+//         it('Test (V' + (i+1) + ') (N = ' + input.length + ')', function(){
+//             assert.sameDeepOrderedMembers(deleteDuplicateMembers_vN(input), output);
+//         });
+//         i++;
+//     });
+
+// });
+
+describe('Megre of two sorted arrays', function(){
+    it('should return first array for invalid input of array2', function(){
+        assert.sameDeepOrderedMembers(mergeSortedArrays([1, 2, 3, 4], []), [1, 2, 3, 4]);
+        assert.sameDeepOrderedMembers(mergeSortedArrays([1, 2, 3, 4], "jygiu"), [1, 2, 3, 4]);
+        assert.sameDeepOrderedMembers(mergeSortedArrays([1, 2, 3, 4], null), [1, 2, 3, 4]);
+        assert.sameDeepOrderedMembers(mergeSortedArrays([1, 2, 3, 4], NaN), [1, 2, 3, 4]);
     });
+    it('should return second array for invalid input of array1', function(){
+        assert.sameDeepOrderedMembers(mergeSortedArrays([], [1, 2, 3, 4]), [1, 2, 3, 4]);
+        assert.sameDeepOrderedMembers(mergeSortedArrays("jygiu", [1, 2, 3, 4]), [1, 2, 3, 4]);
+        assert.sameDeepOrderedMembers(mergeSortedArrays(null, [1, 2, 3, 4]), [1, 2, 3, 4]);
+        assert.sameDeepOrderedMembers(mergeSortedArrays(NaN, [1, 2, 3, 4]), [1, 2, 3, 4]);
+    });
+    it('should return an empty array for invalid values of both arrays', function(){
+        assert.isEmpty(mergeSortedArrays("jsdhdsjh", "dfgdsf"));
+        assert.isEmpty(mergeSortedArrays("js dh ds jh", "hj hj hj"));
+        assert.isEmpty(mergeSortedArrays(null, null));
+        assert.isEmpty(mergeSortedArrays(NaN, NaN));
+        assert.isEmpty(mergeSortedArrays([], []));
+    });
+    it('should return merged sorted array', function(){
+        assert.sameDeepOrderedMembers(mergeSortedArrays([1, 2, 3], [1, 2, 3]), [1, 1, 2, 2, 3, 3]);
+        assert.sameDeepOrderedMembers(mergeSortedArrays(['a', 'b', 'c'], ['b', 'd', 'e']), []);
+        assert.sameDeepOrderedMembers(mergeSortedArrays([1, 2, 3, null], [4, 7, 9]), [1, 2, 3, 4, 7, 9]);
+        assert.sameDeepOrderedMembers(mergeSortedArrays([1, 2], [1, 2, 3]), [1, 1, 2, 2, 3, ]);
+        assert.sameDeepOrderedMembers(mergeSortedArrays([2, 4, 5], [1, 2, 3]), [1, 2, 2, 3, 4, 5]);
+        assert.sameDeepOrderedMembers(mergeSortedArrays([1, 2, 3, 'b'], [1, 2, 'a']), [1, 1, 2, 2, 3]);
 
+        
+    });
 });

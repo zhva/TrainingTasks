@@ -20,6 +20,7 @@
     <script src="javascript/nthFibonacciNumberCounter.js"></script>
     <script src="javascript/greatestCommonDivisorCounter.js"></script>
     <script src="javascript/uniqueElementsInArray.js"></script>
+    <script src="javascript/twoSortedArraysMerge.js"></script>
     <title>Trainings</title>
 </head>
 <body>
@@ -162,6 +163,19 @@
                         <button type="submit" onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Submit</button>
                         <p>Result:
                             <output type="text" name="nonDuplicatedArray" id="nonDuplicatedArrayId"></output>
+                        </p>
+                    </form> 
+                </li>
+                <li>
+                    <p>How would you merge two sorted array?</p>  
+                    <form>
+                        <p>Please, enter space-separated numbers
+                            <input type="text" name="userArrayForMerge1" id="userArrayForMerge1Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                            <input type="text" name="userArrayForMerge2" id="userArrayForMerge2Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                        </p>
+                        <button type="submit" onclick="printMergedArray('userArrayForMerge1Id', 'userArrayForMerge2Id', 'mergedArrayId')">Submit</button>
+                        <p>Result:
+                            <output type="text" name="mergedArray" id="mergedArrayId"></output>
                         </p>
                     </form> 
                 </li>
