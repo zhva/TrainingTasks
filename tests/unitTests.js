@@ -284,3 +284,22 @@ describe('Megre of two sorted arrays', function(){
         
     });
 });
+
+describe('Fizz Buzz Task', function(){
+    it('should return an empty array for invalid value', function(){
+        assert.isEmpty(fizzBuzzOutput([]));
+        assert.isEmpty(fizzBuzzOutput("jygiu"));
+        assert.isEmpty(fizzBuzzOutput (null));
+        assert.isEmpty(fizzBuzzOutput(NaN));
+        assert.isEmpty(fizzBuzzOutput(200));
+        assert.isEmpty(fizzBuzzOutput(26.5));
+        assert.isEmpty(fizzBuzzOutput(0));
+    });
+    it('should return string with Fizz for /3, Buzz for /5, FizzBuzz for /5 & /3 and other number', function(){
+        assert.equal(fizzBuzzOutput(1), 1);
+        assert.equal(fizzBuzzOutput(5), "1 2 Fizz 4 Buzz");
+        assert.equal(fizzBuzzOutput(15), "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz");
+        assert.equal(fizzBuzzOutput(56), "1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz 31 32 Fizz 34 Buzz Fizz 37 38 Fizz Buzz 41 Fizz 43 44 FizzBuzz 46 47 Fizz 49 Buzz Fizz 52 53 Fizz Buzz 56");
+
+    });
+});
