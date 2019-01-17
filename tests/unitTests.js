@@ -325,3 +325,23 @@ describe('Reverse digits of an integer.', function(){
     i++;
     });
 });
+
+describe('Count prime factor of a number', function() {
+    it('should return -1 for invalid input', function() {
+        assert.equal(primeNumbersCounter(-9999999), -1);
+        assert.equal(primeNumbersCounter(0), -1);
+        assert.equal(primeNumbersCounter(1), -1);
+        assert.equal(primeNumbersCounter("sadasd"), -1);
+        assert.equal(primeNumbersCounter(), -1);
+        assert.equal(primeNumbersCounter(null), -1);
+        assert.equal(primeNumbersCounter(NaN), -1);
+        assert.equal(primeNumbersCounter(3.00000000005), -1);
+    });
+    it('should return amount of prime numbers', function() {
+        assert.equal(primeNumbersCounter(2), 0);
+        assert.equal(primeNumbersCounter(173), 39);
+        assert.equal(primeNumbersCounter(1234), 202);
+        assert.equal(primeNumbersCounter(324150), 27931);
+        assert.equal(primeNumbersCounter(15), 6);
+    });
+  });
