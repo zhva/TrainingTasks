@@ -303,3 +303,25 @@ describe('Fizz Buzz Task', function(){
 
     });
 });
+
+describe('Reverse digits of an integer.', function(){
+    var funcs = [didgitsReverser_V1, didgitsReverser_V2];
+
+    var i = 0;
+    funcs.forEach(function(didgitsReverser_VN){
+        it('should return -1 for invalid value', function(){
+            assert.equal(didgitsReverser_VN(), -1);
+            assert.equal(didgitsReverser_VN("jygiu"), -1);
+            assert.equal(didgitsReverser_VN(null), -1);
+            assert.equal(didgitsReverser_VN(NaN), -1);
+            assert.equal(didgitsReverser_VN(26.5), -1);
+            assert.equal(didgitsReverser_VN(0), -1);
+        });
+        it('should return reverced number', function(){
+            assert.equal(didgitsReverser_VN(1234), 4321);
+            assert.equal(didgitsReverser_VN(35146540), 4564153);
+            assert.equal(didgitsReverser_VN(-1234), -4321);
+        });
+    i++;
+    });
+});
