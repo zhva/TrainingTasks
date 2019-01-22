@@ -358,5 +358,66 @@ describe('Count prime factor of a number', function() {
     });
   });
 
+  describe('Ugly numbers', function() {
+    var funcs = [isNumberUgly_V1, isNumberUgly_V2];
+
+    var i = 0;
+    funcs.forEach(function(isNumberUgly_VN){
+        it('should return -1 for invalid input (V' + (i+1) + ')', function() {
+            assert.isFalse(isNumberUgly_VN(-9999999));
+            assert.isFalse(isNumberUgly_VN(0));
+            assert.isFalse(isNumberUgly_VN("sadasd"));
+            assert.isFalse(isNumberUgly_VN());
+            assert.isFalse(isNumberUgly_VN(null));
+            assert.isFalse(isNumberUgly_VN(NaN));
+            assert.isFalse(isNumberUgly_VN(3.00000000005));
+        });
+        it('should return false for not ugly numbers (V' + (i+1) + ')', function() {
+            assert.isFalse(isNumberUgly_VN(7));
+            assert.isFalse(isNumberUgly_VN(14));
+            assert.isFalse(isNumberUgly_VN(156));
+            assert.isFalse(isNumberUgly_VN(324150));
+        });
+        it('should return true of for ugly numbers (V' + (i+1) + ')', function() {
+            assert.isTrue(isNumberUgly_VN(1));
+            assert.isTrue(isNumberUgly_VN(2));
+            assert.isTrue(isNumberUgly_VN(15));
+            assert.isTrue(isNumberUgly_VN(125));
+            assert.isTrue(isNumberUgly_VN(324000));
+        });
+        i++;
     });
   });
+
+//   describe('Performance test', function(){
+//     this.timeout(60000);
+//     var funcs = [isNumberUgly_V1, isNumberUgly_V2];
+
+//     var input = [];
+//     var N = 100000;
+//     var mults = [2,3,5];
+
+//     for (var i=0; i<N; i++)
+//     {
+//         input[i] = 1;
+//         var R = Math.round(Math.random() * 7);
+//         var mult_i = Math.round(Math.random() * 2);
+//         for (var j=0; j<R; j++)
+//         {
+//             input[i] *= mults[mult_i];
+//         }
+//     }
+
+//     var i = 0;
+//     funcs.forEach(function(isNumberUgly_VN){
+//         it('Test (V' + (i+1) + ') (N = ' + input.length + ')', function(){
+//             for (var k=0; k<N; k++){
+//                 assert.isTrue(isNumberUgly_VN(input[k]), true);
+//             }
+//         });
+//         i++;
+//     });
+
+// });
+
+
