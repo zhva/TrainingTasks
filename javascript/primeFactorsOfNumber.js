@@ -6,7 +6,7 @@ function primeFactorsOfNumber(number){
 
     for(var i = 2; i <= number; i++){
         if(number % i == 0){
-            if(primeNumberCheck(i)){
+            if(primeNumberCheck_V1(i)){
                 primeFactorsArray.push(i);
             }
         }

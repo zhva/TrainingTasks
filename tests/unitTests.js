@@ -1,39 +1,45 @@
 ﻿var assert = chai.assert;
 
 describe('Prime numbers', function() {
-    it('should be false for numbers < 0', function() {
-        assert.isFalse(primeNumberCheck(-1));
-        assert.isFalse(primeNumberCheck(-9999999));
-    });
-    it('should be false for 0, 1', function() {
-        assert.isFalse(primeNumberCheck(0));
-        assert.isFalse(primeNumberCheck(1));
-    });
-    it('should be false for invalid input', function() {
-        assert.isFalse(primeNumberCheck("sadasd"));
-        assert.isFalse(primeNumberCheck());
-        assert.isFalse(primeNumberCheck(null));
-        assert.isFalse(primeNumberCheck(NaN));
-    });
-    it('should be false for numbers with floating point', function() {
-        assert.isFalse(primeNumberCheck(3.5));
-        assert.isFalse(primeNumberCheck(7.0000000001));
-    });
+    var funcs = [primeNumberCheck_V1, primeNumberCheck_V2];
+   
+    var i = 0;
+    funcs.forEach(function(primeNumberCheck_VN){
+        it('should be false for numbers < 0 (V' + (i+1) + ')', function() {
+            assert.isFalse(primeNumberCheck_VN(-1));
+            assert.isFalse(primeNumberCheck_VN(-9999999));
+        });
+        it('should be false for 0, 1 (V' + (i+1) + ')', function() {
+            assert.isFalse(primeNumberCheck_VN(0));
+            assert.isFalse(primeNumberCheck_VN(1));
+        });
+        it('should be false for invalid input (V' + (i+1) + ')', function() {
+            assert.isFalse(primeNumberCheck_VN("sadasd"));
+            assert.isFalse(primeNumberCheck_VN());
+            assert.isFalse(primeNumberCheck_VN(null));
+            assert.isFalse(primeNumberCheck_VN(NaN));
+        });
+        it('should be false for numbers with floating point (V' + (i+1) + ')', function() {
+            assert.isFalse(primeNumberCheck_VN(3.5));
+            assert.isFalse(primeNumberCheck_VN(7.0000000001));
+        });
 
-    it('schould be true for M31', function() {
-        assert.isTrue(primeNumberCheck(Math.pow(2,31) - 1));
-    });
+        // it('schould be true for M31 (V' + (i+1) + ')', function() {
+        //     assert.isTrue(primeNumberCheck_VN(Math.pow(2,31) - 1));
+        // });
 
-    it('should be true for prime numbers', function() {
-        assert.isTrue(primeNumberCheck(2));
-        assert.isTrue(primeNumberCheck(13));
-        assert.isTrue(primeNumberCheck(173));
-        assert.isTrue(primeNumberCheck(992093291443));
-    });
-    it('should be false for non-prime numbers', function() {
-        assert.isFalse(primeNumberCheck(15));
-        assert.isFalse(primeNumberCheck(331973133));
-        assert.isFalse(primeNumberCheck(992093291442));
+        it('should be true for prime numbers (V' + (i+1) + ')', function() {
+            assert.isTrue(primeNumberCheck_VN(2));
+            assert.isTrue(primeNumberCheck_VN(13));
+            assert.isTrue(primeNumberCheck_VN(173));
+           // assert.isTrue(primeNumberCheck_VN(992093291443));
+        });
+        it('should be false for non-prime numbers (V' + (i+1) + ')', function() {
+            assert.isFalse(primeNumberCheck_VN(15));
+           // assert.isFalse(primeNumberCheck_VN(331973133));
+           // assert.isFalse(primeNumberCheck_VN(992093291442));
+        });
+        i++;
     });
   });
 
@@ -309,7 +315,7 @@ describe('Reverse digits of an integer.', function(){
 
     var i = 0;
     funcs.forEach(function(didgitsReverser_VN){
-        it('should return -1 for invalid value', function(){
+        it('should return -1 for invalid value (V' + (i+1) + ')', function(){
             assert.equal(didgitsReverser_VN(), -1);
             assert.equal(didgitsReverser_VN("jygiu"), -1);
             assert.equal(didgitsReverser_VN(null), -1);
@@ -317,7 +323,7 @@ describe('Reverse digits of an integer.', function(){
             assert.equal(didgitsReverser_VN(26.5), -1);
             assert.equal(didgitsReverser_VN(0), -1);
         });
-        it('should return reverced number', function(){
+        it('should return reverced number(V' + (i+1) + ')', function(){
             assert.equal(didgitsReverser_VN(1234), 4321);
             assert.equal(didgitsReverser_VN(35146540), 4564153);
             assert.equal(didgitsReverser_VN(-1234), -4321);
@@ -327,21 +333,30 @@ describe('Reverse digits of an integer.', function(){
 });
 
 describe('Count prime factor of a number', function() {
-    it('should return -1 for invalid input', function() {
-        assert.equal(primeNumbersCounter(-9999999), -1);
-        assert.equal(primeNumbersCounter(0), -1);
-        assert.equal(primeNumbersCounter(1), -1);
-        assert.equal(primeNumbersCounter("sadasd"), -1);
-        assert.equal(primeNumbersCounter(), -1);
-        assert.equal(primeNumbersCounter(null), -1);
-        assert.equal(primeNumbersCounter(NaN), -1);
-        assert.equal(primeNumbersCounter(3.00000000005), -1);
+    var funcs = [primeNumbersCounter_V1, primeNumbersCounter_V2];
+
+    var i = 0;
+    funcs.forEach(function(primeNumbersCounter_VN){
+        it('should return -1 for invalid input (V' + (i+1) + ')', function() {
+            assert.equal(primeNumbersCounter_VN(-9999999), -1);
+            assert.equal(primeNumbersCounter_VN(0), -1);
+            assert.equal(primeNumbersCounter_VN(1), -1);
+            assert.equal(primeNumbersCounter_VN("sadasd"), -1);
+            assert.equal(primeNumbersCounter_VN(), -1);
+            assert.equal(primeNumbersCounter_VN(null), -1);
+            assert.equal(primeNumbersCounter_VN(NaN), -1);
+            assert.equal(primeNumbersCounter_VN(3.00000000005), -1);
+        });
+        it('should return amount of prime numbers (V' + (i+1) + ')', function() {
+            assert.equal(primeNumbersCounter_VN(2), 0);
+            assert.equal(primeNumbersCounter_VN(15), 6);
+            assert.equal(primeNumbersCounter_VN(173), 39);
+            assert.equal(primeNumbersCounter_VN(1234), 202);
+            assert.equal(primeNumbersCounter_VN(324150), 27931);
+        });
+        i++;
     });
-    it('should return amount of prime numbers', function() {
-        assert.equal(primeNumbersCounter(2), 0);
-        assert.equal(primeNumbersCounter(173), 39);
-        assert.equal(primeNumbersCounter(1234), 202);
-        assert.equal(primeNumbersCounter(324150), 27931);
-        assert.equal(primeNumbersCounter(15), 6);
+  });
+
     });
   });

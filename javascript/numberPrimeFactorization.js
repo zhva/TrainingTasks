@@ -10,13 +10,13 @@ function numberPrimeFactorization(number){
     }
     for(var i = 3; i <= Math.floor(Math.sqrt(number)); i += 2){
         while(number % i == 0){
-            if(primeNumberCheck(i)){
+            if(primeNumberCheck_V1(i)){
                 primeFactorsArray.push(i);
             }
         number /= i;
         } 
     }
-    if(primeNumberCheck(number)){
+    if(primeNumberCheck_V1(number)){
         primeFactorsArray.push(number);
     }
     return primeFactorsArray;
