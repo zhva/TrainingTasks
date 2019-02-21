@@ -451,3 +451,20 @@ describe('Happy numbers', function() {
     });
   });
   
+  describe('Power of 3 numbers', function(){
+    it('schoud return false for numbers < 1', function(){
+          assert.isFalse(isPowerOfThree(0));
+          assert.isFalse(isPowerOfThree(-9));
+    });
+    it('schoud return false for numbers that are not power of 3', function(){
+        assert.isFalse(isPowerOfThree(15));
+        assert.isFalse(isPowerOfThree(45));
+    });
+    it('schoud return true for numbers that are power of 3', function(){
+        assert.isTrue(isPowerOfThree(3));
+        assert.isTrue(isPowerOfThree(9));
+        assert.isTrue(isPowerOfThree(27));
+        assert.isTrue(isPowerOfThree(243));
+        assert.isTrue(isPowerOfThree(19683));
+    });
+  });
