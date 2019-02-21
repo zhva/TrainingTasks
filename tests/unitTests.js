@@ -468,3 +468,29 @@ describe('Happy numbers', function() {
         assert.isTrue(isPowerOfThree(19683));
     });
   });
+
+  describe('Square root of a number', function() {
+    var funcs = [squareRoot_V1, squareRoot_V2];
+
+    var i = 0;
+    funcs.forEach(function(squareRoot_VN){
+        it('should return 0 for invalid input (V' + (i+1) + ')', function() {
+            assert.equal(squareRoot_VN(-999999999), 0);
+            assert.equal(squareRoot_VN(0), 0);
+            assert.equal(squareRoot_VN("sadasd"), 0);
+            assert.equal(squareRoot_VN(), 0);
+            assert.equal(squareRoot_VN(null), 0);
+            assert.equal(squareRoot_VN(NaN) , 0);
+        });
+        it('should return square root of a number (V' + (i+1) + ')', function() {
+            assert.equal(squareRoot_VN(1), 1);
+            assert.equal(squareRoot_VN(2), 1);
+            assert.equal(squareRoot_VN(36), 6);
+            assert.equal(squareRoot_VN(49), 7);
+            assert.equal(squareRoot_VN(125), 11);
+            assert.equal(squareRoot_VN(65536), 256);
+            assert.equal(squareRoot_VN(2147395599), 46339);
+        });
+        i++;
+    });
+  });
