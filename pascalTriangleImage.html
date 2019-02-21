@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/hexagon.css">
+    <script src="javascript/pascalTriangleGenerator.js"></script>
+    <script src="javascript/pascalTriangleDisplay.js"></script>
+    <title>Document</title>
+</head>
+<body onload="draw('useHexId', 'textId')">
+   <div class="container">
+    <svg style="background-color: gray" viewBox="-1 -1 100% 100%" >
+        <defs>
+            <polygon points="30,0 0,15 0,45 30,60 60,45 60,15" class="hexagon" id="hexagonId"></polygon>
+            <use href="#hexagonId" id="useHexId" x="0" y="0"/>
+            <text class="hex_content" id="textId" x="30" y="30"></text>
+        </defs>
+      </svg>
+    </div>
+</body>
+</html>

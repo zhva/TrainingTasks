@@ -25,6 +25,8 @@
     <script src="javascript/didgitsRevercer.js"></script>
     <script src="javascript/primeNumberCounter.js"></script>
     <script src="javascript/uglyNumbersDeterminer.js"></script>
+    <script src="javascript/pascalTriangleGenerator.js"></script>
+    <script src="javascript/pascalTriangleDisplay.js"></script>
     <title>Trainings</title>
 </head>
 <body>
@@ -230,6 +232,20 @@
                             <output type="text" name="mergedArray" id="mergedArrayId"></output>
                         </p>
                     </form> 
+                </li>
+                <li>
+                    <p>Given a non-negative integer numRows, generate the first numRows of 
+                       <a target="_blank" href="" class="disaktiv_link" id="pacsalLinkId" onclick="openPascalTriangle('pascalTriangleImage.html', readNumberValue('numberOfRowsId'))">Pascal's triangle.</a>
+                       </p>  
+                    <form>
+                        <p>Please, enter number of rows
+                            <input type="text" name="numberOfRows" id="numberOfRowsId">
+                            </p>
+                        <button onclick="printPascalTriangle('numberOfRowsId', 'pascalTringleId')">Submit</button>
+                        <p>Result:
+                            <output type="text" name="pascalTringle" id="pascalTringleId"></output>
+                        </p>
+                    </form>
                 </li>
             </ol>
         </div>

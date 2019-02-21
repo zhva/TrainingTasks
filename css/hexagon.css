@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ svg {
+    width: 100vw;
+    height: 100vw;
+} 
+
+.hexagon {
+    fill:aqua; 
+    stroke:black; 
+    stroke-width: 1;
+
+}
+.hex_content{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-anchor: middle;
+    alignment-baseline: central;
+}
+
+
+.hexagon, 
+.hex_content {
+    opacity: 0;
+    animation: fadeIn 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

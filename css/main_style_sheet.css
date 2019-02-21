@@ -1,4 +1,6 @@
-* {box-sizing: border-box;}
+* {
+    box-sizing: border-box;
+}
 
 body, html {
     height: 100%;
@@ -60,3 +62,10 @@ header,
 .ui-icon-loading ~h1 {
     display: none;
 }
+
+.disaktiv_link{
+    cursor: not-allowed;
+    text-decoration: none;
+    pointer-events: none;
+}
+
