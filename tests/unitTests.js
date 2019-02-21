@@ -420,4 +420,34 @@ describe('Count prime factor of a number', function() {
 
 // });
 
+describe('Happy numbers', function() {
+    var funcs = [isHappyNumber_V1, isHappyNumber_V2];
 
+    var i = 0;
+    funcs.forEach(function(isHappyNumber_VN){
+        it('should return false for invalid input (V' + (i+1) + ')', function() {
+            assert.isFalse(isHappyNumber_VN(-9999999));
+            assert.isFalse(isHappyNumber_VN(0));
+            assert.isFalse(isHappyNumber_VN("sadasd"));
+            assert.isFalse(isHappyNumber_VN());
+            assert.isFalse(isHappyNumber_VN(null));
+            assert.isFalse(isHappyNumber_VN(NaN));
+            assert.isFalse(isHappyNumber_VN(3.00000000005));
+        });
+        it('should return false for not happy numbers (V' + (i+1) + ')', function() {
+            assert.isFalse(isHappyNumber_VN(2));
+            assert.isFalse(isHappyNumber_VN(14));
+            assert.isFalse(isHappyNumber_VN(56));
+            assert.isFalse(isHappyNumber_VN(324150));
+        });
+        it('should return true of for happy numbers (V' + (i+1) + ')', function() {
+            assert.isTrue(isHappyNumber_VN(1));
+            assert.isTrue(isHappyNumber_VN(7));
+            assert.isTrue(isHappyNumber_VN(19));
+            assert.isTrue(isHappyNumber_VN(236));
+            assert.isTrue(isHappyNumber_VN(1111111));
+        });
+        i++;
+    });
+  });
+  

@@ -25,6 +25,13 @@
     <script src="javascript/didgitsRevercer.js"></script>
     <script src="javascript/primeNumberCounter.js"></script>
     <script src="javascript/uglyNumbersDeterminer.js"></script>
+    <script src="javascript/happyNumberDeterminer.js"></script>
+    
+   <!-- <script src="javascript/powerOfThreeDeterminer.js"></script>
+    <script src="javascript/squareRootOfNumber.js"></script>
+    <script src="javascript/arrayShifter.js"></script>
+    <script src="javascript/moveZeros.js"></script>
+-->
     <script src="javascript/pascalTriangleGenerator.js"></script>
     <script src="javascript/pascalTriangleDisplay.js"></script>
     <title>Trainings</title>
@@ -38,6 +45,7 @@
         </div>
     </header>
     <main>
+        <!-- Tasks with Numbers -->
         <div id="tabChars" class="tab_content_visible">
             <ol class="task_list_style">
                 <li>
@@ -69,7 +77,7 @@
                             <input type="number" name="primeFactorizationOfNumber" id="primeFactorizationOfNumberId" placeholder="0">
                         </p>
                         <p>Result:
-                            <button type="submit" onclick="printNumberPrimeFactorizationResult('primeFactorizationOfNumberId', 'primeFactorizationId')">Submit</button>
+                            <button onclick="printNumberPrimeFactorizationResult('primeFactorizationOfNumberId', 'primeFactorizationId')">Submit</button>
                             <output type="text" name="primeFactorization" id="primeFactorizationId"></output>
                         </p>
                     </form>
@@ -81,7 +89,7 @@
                             <input type="number" name="primeFactorsOfNumber" id="primeFactorsOfNumberId" placeholder="0">
                         </p>
                         <p>Result:
-                            <button type="submit" onclick="printPrimeFactorsResult('primeFactorsOfNumberId', 'primeFactorsId')">Submit</button>
+                            <button onclick="printPrimeFactorsResult('primeFactorsOfNumberId', 'primeFactorsId')">Submit</button>
                             <output type="text" name="primeFactors" id="primeFactorsId"></output>
                         </p>
                     </form>
@@ -93,7 +101,7 @@
                             <input type="number" name="idexForFibonacciNumber" id="idexForFibonacciNumberId" placeholder="0">
                         </p>
                         <p>Result:
-                            <button type="submit" onclick="printNthFibonacciNumber('idexForFibonacciNumberId', 'fibonacciNumberId')">Submit</button>
+                            <button onclick="printNthFibonacciNumber('idexForFibonacciNumberId', 'fibonacciNumberId')">Submit</button>
                             <output type="text" name="fibonacciNumber" id="fibonacciNumberId"></output>
                         </p>
                     </form>
@@ -106,7 +114,7 @@
                             <input type="number" name="secondNumberForCommonDivisors" id="secondNumberForCommonDivisorsId" placeholder="0">
                         </p>
                         <p>Result:
-                            <button type="submit" onclick="printGreatestCommonDivisorCounter('firstNumberForCommonDivisorsId', 'secondNumberForCommonDivisorsId', 'greatestCommonDivisorId')">Submit</button>
+                            <button onclick="printGreatestCommonDivisorCounter('firstNumberForCommonDivisorsId', 'secondNumberForCommonDivisorsId', 'greatestCommonDivisorId')">Submit</button>
                             <output type="text" name="greatestCommonDivisor" id="greatestCommonDivisorId"></output>
                         </p>
                     </form>
@@ -118,7 +126,7 @@
                             <input type="number" name="fizzBuzzNumber" id="fizzBuzzNumberId" placeholder="0">
                         </p>
                         <p>Result:
-                            <button type="submit" onclick="fizzBuzzPrint('fizzBuzzNumberId', 'fizzBuzzOutputId')">Submit</button>
+                            <button onclick="fizzBuzzPrint('fizzBuzzNumberId', 'fizzBuzzOutputId')">Submit</button>
                             <output type="text" name="fizzBuzzOutput" id="fizzBuzzOutputId"></output>
                         </p>
                     </form>
@@ -130,7 +138,7 @@
                             <input type="number" name="numberToReverce" id="numberToReverceId" placeholder="0">
                         </p>
                         <p>Result:
-                            <button type="submit" onclick="printDidgitsReverser('numberToReverceId', 'revercedNumberId')">Submit</button>
+                            <button onclick="printDidgitsReverser('numberToReverceId', 'revercedNumberId')">Submit</button>
                             <output type="text" name="revercedNumber" id="revercedNumberId"></output>
                         </p>
                     </form>
@@ -142,7 +150,7 @@
                             <input type="number" name="countPrimeNumbers" id="countPrimeNumbersId" placeholder="0">
                         </p>
                         <p>Result:
-                            <button type="submit" onclick="printPrimeNumbersCounter('countPrimeNumbersId', 'amountOfPrimeNumbersId')">Submit</button>
+                            <button onclick="printPrimeNumbersCounter('countPrimeNumbersId', 'amountOfPrimeNumbersId')">Submit</button>
                             <output type="text" name="amountOfPrimeNumbers" id="amountOfPrimeNumbersId"></output>
                         </p>
                     </form>
@@ -154,14 +162,51 @@
                             <input type="number" name="uglyNumber" id="uglyNumberId" placeholder="0">
                         </p>
                         <p>Result:
-                            <button type="submit" onclick="printisNumberUglyResult('uglyNumberId', 'uglyNumberResultId')">Submit</button>
+                            <button onclick="printisNumberUglyResult('uglyNumberId', 'uglyNumberResultId')">Submit</button>
                             <output type="text" name="uglyNumberResult" id="uglyNumberResultId"></output>
                         </p>
                     </form>
                 </li>
+                <li>
+                    <p>Write an algorithm to determine if a number is "happy".</p>
+                    <form action="">
+                        <p>Please, enter a number
+                            <input type="number" name="happyNumber" id="happyNumberId" placeholder="0">
+                        </p>
+                        <p>Result:
+                            <button onclick="printHappyNumberResult('happyNumberId', 'happyNumberResultId')">Submit</button>
+                            <output type="text" name="happyNumberResult" id="happyNumberResultId"></output>
+                        </p>
+                    </form>
+                </li>
+                <li>
+                    <p>Given an integer, write a function to determine if it is a power of three.</p>
+                        <form action="">
+                            <p>Please, enter a number
+                                <input type="number" name="powerOfThreeNumber" id="powerOfThreeNumberId" placeholder="0">
+                            </p>
+                            <p>Result:
+                                <button onclick="('', '')">Submit</button>
+                                <output type="text" name="powerOfThreeNumberResult" id="powerOfThreeNumberResultId"></output>
+                            </p>
+                        </form>
+                    </li>
+                <li>
+                    <p>Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
+                       Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.</p>
+                        <form action="">
+                            <p>Please, enter a number
+                                <input type="number" name="squareRootNumber" id="squareRootNumberId" placeholder="0">
+                            </p>
+                            <p>Result:
+                                <button onclick="printSquareRootResult('squareRootNumberId', 'squareRootResultId')">Submit</button>
+                                <output type="text" name="squareRootResult" id="squareRootResultId"></output>
+                            </p>
+                        </form>
+                 </li>
             </ol>        
         </div>
-                      
+        <!--Tasks with Strings-->      
         <div id="tabStrings" class="tab_content_hidden"> 
             <ol class="task_list_style">
                 <li>
@@ -172,7 +217,7 @@
                                 <input type="text" name="userStringForUnique" id="userStringForUniqueId" autofocus>
                             </p>
                             <p>Result: 
-                                <button type="submit" onclick="printUniqueCharactersResult('userStringForUniqueId','resultStringForUniqueId')">Check</button>
+                                <button onclick="printUniqueCharactersResult('userStringForUniqueId','resultStringForUniqueId')">Check</button>
                                 <pre><output type="" name="resultStringForUnique" id="resultStringForUniqueId"></output></pre>
                             </p>
                         </form>
@@ -202,19 +247,20 @@
                         <p>Please, enter space-separated numbers
                             <input type="text" name="userArray" id="userArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
                         </p>
-                        <button type="submit" onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Duplicate</button>
+                        <button onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Duplicate</button>
                         <p>Result:
                             <output type="text" name="duplicateUserArray" id="duplicateUserArrayId"></output>
                         </p>
                     </form>     
                 </li>
+
                 <li>
                     <p>How would you remove duplicate members from an array?</p>  
                     <form>
                         <p>Please, enter space-separated numbers
                             <input type="text" name="userDuplicatedArray" id="userDuplicatedArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
                         </p>
-                        <button type="submit" onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Submit</button>
+                        <button onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Submit</button>
                         <p>Result:
                             <output type="text" name="nonDuplicatedArray" id="nonDuplicatedArrayId"></output>
                         </p>
@@ -227,9 +273,34 @@
                             <input type="text" name="userArrayForMerge1" id="userArrayForMerge1Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
                             <input type="text" name="userArrayForMerge2" id="userArrayForMerge2Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
                         </p>
-                        <button type="submit" onclick="printMergedArray('userArrayForMerge1Id', 'userArrayForMerge2Id', 'mergedArrayId')">Submit</button>
+                        <button onclick="printMergedArray('userArrayForMerge1Id', 'userArrayForMerge2Id', 'mergedArrayId')">Submit</button>
                         <p>Result:
                             <output type="text" name="mergedArray" id="mergedArrayId"></output>
+                        </p>
+                    </form> 
+                </li>
+                <li>
+                    <p>Given an array, rotate the array to the right by k steps, where k is non-negative.</p>  
+                    <form>
+                        <p>Please, enter space-separated numbers
+                            <input type="text" name="arrayForShift" id="arrayForShiftId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                            <input type="number" name="shift" id="shiftId">
+                            </p>
+                        <button onclick="printShiftedArray('arrayForShiftId', 'shiftId','shiftedArrayId')">Submit</button>
+                        <p>Result:
+                            <output type="text" name="shiftedArray" id="shiftedArrayId"></output>
+                        </p>
+                    </form> 
+                </li>
+                <li>
+                    <p>Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.</p>  
+                    <form>
+                        <p>Please, enter space-separated numbers
+                            <input type="text" name="arrayMoveZeros" id="arrayMoveZerosId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                            </p>
+                        <button onclick="printMoveZeros('arrayMoveZerosId', 'arrayMovedZerosId')">Submit</button>
+                        <p>Result:
+                            <output type="text" name="arrayMovedZeros" id="arrayMovedZerosId"></output>
                         </p>
                     </form> 
                 </li>
