@@ -494,3 +494,27 @@ describe('Happy numbers', function() {
         i++;
     });
   });
+
+  describe('N-element shift of an array', function() {
+    var funcs = [arrayShift_V1, arrayShift_V2];
+
+    var i = 0;
+    funcs.forEach(function(arrayShift_VN){
+        it('should return 0 for invalid input (V' + (i+1) + ')', function() {
+            assert.sameDeepOrderedMembers(arrayShift_VN([], 2), []);
+            assert.sameDeepOrderedMembers(arrayShift_VN("sadasd", null), []);
+            assert.sameDeepOrderedMembers(arrayShift_VN(), []);
+            assert.sameDeepOrderedMembers(arrayShift_VN(null, 2), []);
+            assert.sameDeepOrderedMembers(arrayShift_VN(NaN ,"fsgsdfg") , []);
+        });
+        it('should return square root of a number (V' + (i+1) + ')', function() {
+            assert.sameDeepOrderedMembers(arrayShift_VN([1, 2, 3, 4], 2), [3, 4, 1, 2]);
+            assert.sameDeepOrderedMembers(arrayShift_VN([1, 2, 3, 4], -2), [3, 4, 1, 2]);
+            assert.sameDeepOrderedMembers(arrayShift_VN([1, 2, 3, 4, 5, 6],  5), [2, 3, 4, 5, 6, 1]);
+            assert.sameDeepOrderedMembers(arrayShift_VN([1, 2], 3), [2, 1]);
+            assert.sameDeepOrderedMembers(arrayShift_VN([1, 2], 0), [1, 2]);
+            assert.sameDeepOrderedMembers(arrayShift_VN([1], 1), [1]);
+        });
+        i++;
+    });
+  });

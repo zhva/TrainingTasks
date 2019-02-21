@@ -28,9 +28,8 @@
     <script src="javascript/happyNumberDeterminer.js"></script>
     <script src="javascript/powerOfThreeDeterminer.js"></script>
     <script src="javascript/squareRootOfNumber.js"></script>
-<!--
     <script src="javascript/arrayShifter.js"></script>
-    <script src="javascript/moveZeros.js"></script>
+ <!--   <script src="javascript/moveZeros.js"></script>
 -->
     <script src="javascript/pascalTriangleGenerator.js"></script>
     <script src="javascript/pascalTriangleDisplay.js"></script>
@@ -284,8 +283,10 @@
                     <form>
                         <p>Please, enter space-separated numbers
                             <input type="text" name="arrayForShift" id="arrayForShiftId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                            Please enter a number
                             <input type="number" name="shift" id="shiftId">
-                            </p>
+                        </p>
+
                         <button onclick="printShiftedArray('arrayForShiftId', 'shiftId','shiftedArrayId')">Submit</button>
                         <p>Result:
                             <output type="text" name="shiftedArray" id="shiftedArrayId"></output>
