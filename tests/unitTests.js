@@ -358,7 +358,7 @@ describe('Count prime factor of a number', function() {
     });
   });
 
-  describe('Ugly numbers', function() {
+describe('Ugly numbers', function() {
     var funcs = [isNumberUgly_V1, isNumberUgly_V2];
 
     var i = 0;
@@ -451,7 +451,7 @@ describe('Happy numbers', function() {
     });
   });
   
-  describe('Power of 3 numbers', function(){
+describe('Power of 3 numbers', function(){
     it('schoud return false for numbers < 1', function(){
           assert.isFalse(isPowerOfThree(0));
           assert.isFalse(isPowerOfThree(-9));
@@ -469,7 +469,7 @@ describe('Happy numbers', function() {
     });
   });
 
-  describe('Square root of a number', function() {
+describe('Square root of a number', function() {
     var funcs = [squareRoot_V1, squareRoot_V2];
 
     var i = 0;
@@ -495,19 +495,19 @@ describe('Happy numbers', function() {
     });
   });
 
-  describe('N-element shift of an array', function() {
+describe('N-element shift of an array', function() {
     var funcs = [arrayShift_V1, arrayShift_V2];
 
     var i = 0;
     funcs.forEach(function(arrayShift_VN){
-        it('should return 0 for invalid input (V' + (i+1) + ')', function() {
-            assert.sameDeepOrderedMembers(arrayShift_VN([], 2), []);
-            assert.sameDeepOrderedMembers(arrayShift_VN("sadasd", null), []);
-            assert.sameDeepOrderedMembers(arrayShift_VN(), []);
-            assert.sameDeepOrderedMembers(arrayShift_VN(null, 2), []);
-            assert.sameDeepOrderedMembers(arrayShift_VN(NaN ,"fsgsdfg") , []);
+        it('should return an empty array for invalid input (V' + (i+1) + ')', function() {
+            assert.isEmpty(arrayShift_VN([], 2), []);
+            assert.isEmpty(arrayShift_VN("sadasd", null), []);
+            assert.isEmpty(arrayShift_VN(), []);
+            assert.isEmpty(arrayShift_VN(null, 2), []);
+            assert.isEmpty(arrayShift_VN(NaN ,"fsgsdfg") , []);
         });
-        it('should return square root of a number (V' + (i+1) + ')', function() {
+        it('should return a shifted array (V' + (i+1) + ')', function() {
             assert.sameDeepOrderedMembers(arrayShift_VN([1, 2, 3, 4], 2), [3, 4, 1, 2]);
             assert.sameDeepOrderedMembers(arrayShift_VN([1, 2, 3, 4], -2), [3, 4, 1, 2]);
             assert.sameDeepOrderedMembers(arrayShift_VN([1, 2, 3, 4, 5, 6],  5), [2, 3, 4, 5, 6, 1]);
@@ -517,4 +517,23 @@ describe('Happy numbers', function() {
         });
         i++;
     });
+  });
+
+  describe('Moove zeros to the end of the array', function() {
+    it('should return an empty array for invalid input', function() {
+        assert.isEmpty(moveZeros([]), []);
+        assert.isEmpty(moveZeros("dfasdf"), []);
+        assert.isEmpty(moveZeros(), []);
+        assert.isEmpty(moveZeros(null), []);
+        assert.isEmpty(moveZeros(NaN), []);
+    });
+    it('should return an array with all 0 in the end of the array', function() {
+        assert.sameDeepOrderedMembers(moveZeros([1, 0, 3, 0, 12]), [1, 3, 12, 0, 0]);
+        assert.sameDeepOrderedMembers(moveZeros([1, 0, 0, 2, 8, 4, 0, 3, 1]), [1, 2, 8, 4, 3, 1, 0, 0, 0]);
+        assert.sameDeepOrderedMembers(moveZeros([0, 0, 0, 0]), [0, 0, 0, 0]);
+        assert.sameDeepOrderedMembers(moveZeros([0, 0, 0, 7, 3, 0]), [7, 3, 0, 0, 0, 0]);
+        assert.sameDeepOrderedMembers(moveZeros([0, 0, 0, 4]), [4, 0, 0, 0]);
+    });
+
+
   });
