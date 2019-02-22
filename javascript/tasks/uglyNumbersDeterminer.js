@@ -1,3 +1,8 @@
+ // require helper.js
+ // require primeNumberChecker.js
+ /************************************************************************
+                        uglyNumbersDeterminer.js
+ ***********************************************************************/
  function isNumberUgly_V1(number) {
     if(number <= 0 || number > Number.MAX_SAFE_INTEGER || !Number.isSafeInteger(number))
         return false; 

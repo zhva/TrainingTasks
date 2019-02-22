@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        moveZeros.js
+ ***********************************************************************/
 function moveZeros(arr){
 if(!Array.isArray(arr) || arr.length <= 0)
     return [];
@@ -18,11 +22,11 @@ if(!Array.isArray(arr) || arr.length <= 0)
     }
     
     return arr;
-}
+} 
 /***********************************************************************
 Events
 ***********************************************************************/
-function printMoveZeros(id1, id2){
+function printMoveZeros(id1, id2){  // eslint-disable-line no-unused-vars
     var userArray = readArray(id1);
     if(userArray.length < 0)
         alert("An array is empty or an object is not defined!");

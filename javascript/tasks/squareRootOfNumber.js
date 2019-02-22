@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        squareRootOfNumber.js
+ ***********************************************************************/
 function squareRoot_V1(number){
     if(number < 1 || number > Number.MAX_SAFE_INTEGER || !Number.isInteger(number))
         return 0;

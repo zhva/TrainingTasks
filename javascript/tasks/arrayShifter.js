@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        arraShifter.js
+ ***********************************************************************/
 function arrayShift_V1(arr, m) {
     if(!Array.isArray(arr) || arr.length <= 0 || !Number.isSafeInteger(m) )
         return [];

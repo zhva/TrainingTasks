@@ -1,4 +1,8 @@
-﻿function reverseString(str) {
+﻿// require helper.js
+/************************************************************************
+                        stringReverse.js
+ ***********************************************************************/
+function reverseString(str) {
     if(str == null )
         return "";
 

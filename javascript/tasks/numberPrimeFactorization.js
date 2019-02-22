@@ -1,3 +1,8 @@
+// require helper.js
+// require primeNumberChecker.js
+/************************************************************************
+                        numberPrimeFactorisation.js
+ ***********************************************************************/
 function numberPrimeFactorization(number){
     if(!Number.isInteger(number) || number < 2)
         return [];

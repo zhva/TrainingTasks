@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        fizzBuzzTask.js
+ ***********************************************************************/
 function fizzBuzzOutput(userNumber){
     if(!Number.isInteger(userNumber) || userNumber < 1 || userNumber > 100)
         return [];

@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        greatestCommonDivisorCounter.js
+ ***********************************************************************/
 function greatestCommonDivisorCounter(firstNumber, secondNumber){
     if(!Number.isInteger(firstNumber) || !Number.isInteger(secondNumber))
         return 0;

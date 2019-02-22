@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        arraDuplicate.js
+ ***********************************************************************/
 function duplicate(arr) {
     if(Array.isArray(arr) && arr.length > 0)
         return arr.concat(arr);

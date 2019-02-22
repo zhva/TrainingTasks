@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        totalZerosCounter.js
+ ***********************************************************************/
 function countZeros(numberN) {
     if(!Number.isInteger(numberN) || numberN < 1 || !Number.isSafeInteger(numberN))
         return -1;

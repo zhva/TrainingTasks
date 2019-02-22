@@ -1,4 +1,8 @@
-
+// require helper.js
+// require pascalTriangleGenerator.js
+/************************************************************************
+                        pascalTriangleDisplay.js
+ ***********************************************************************/
 function openPascalTriangle(url, param1){
     let dir = window.location.href;
     let fullURL = new URL(url, dir);

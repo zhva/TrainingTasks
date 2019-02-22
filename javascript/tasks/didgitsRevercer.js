@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        didgitsReverser.js
+ ***********************************************************************/
 function didgitsReverser_V1(number){
     if(!Number.isInteger(number) || !Number.isSafeInteger(number) || number == 0)
         return -1;

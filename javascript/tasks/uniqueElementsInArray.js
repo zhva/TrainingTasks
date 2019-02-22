@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        uniqueElementsInArray.js
+ ***********************************************************************/
 function deleteDuplicateMembers_v1(userArray){
     if(!Array.isArray(userArray) || userArray.length < 0)
         return [];
@@ -27,9 +31,8 @@ function deleteDuplicateMembers_v3(userArray){
     if(!Array.isArray(userArray) || userArray.length < 0)
         return [];
 
-    var elementIndex = this;
-    uniqueArray = userArray.filter(function(item, elementIndex) {
-            return userArray.indexOf(item) == elementIndex;
+    var uniqueArray = userArray.filter(function(item, elementIndex, arr) {
+            return arr.indexOf(item) == elementIndex;
     });
   
     return uniqueArray;

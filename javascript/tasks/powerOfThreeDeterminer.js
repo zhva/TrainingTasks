@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        powerOfThreeDeterminer.js
+ ***********************************************************************/
 function isPowerOfThree(number){
     if(number < 1 || number > Number.MAX_SAFE_INTEGER|| !Number.isInteger(number))
         return false;

@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        nthFibonacciNumberCounter.js
+ ***********************************************************************/
 function nthFibonacciNumberCounter(number){
     if(!Number.isInteger(number) || number < 0)
          return 0;

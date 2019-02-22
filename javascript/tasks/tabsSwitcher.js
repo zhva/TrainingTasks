@@ -1,3 +1,6 @@
+/************************************************************************
+                        tabsSwitcher.js
+ ***********************************************************************/
 function toggleObjectVisibility(elementId, isVisible){
 	var obj = document.getElementById(elementId);
 	

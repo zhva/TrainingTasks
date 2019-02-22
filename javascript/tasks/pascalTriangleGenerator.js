@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        pascalTriangleGenerator.js
+ ***********************************************************************/
 function generatePascalTriangle(numRows) {
     function countPascalRow(arr){
         let arrLength = arr.length;

@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        twoSortedArraysMerge.js
+ ***********************************************************************/
 function mergeSortedArrays(userArray1, userArray2){
     if(!Array.isArray(userArray1) && !Array.isArray(userArray2))
         return [];

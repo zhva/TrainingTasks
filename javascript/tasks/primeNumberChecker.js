@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        primeNumberChecker.js
+ ***********************************************************************/
 function primeNumberCheck_V1(number) {
     if(!Number.isInteger(number) || number < 2)
        return false;

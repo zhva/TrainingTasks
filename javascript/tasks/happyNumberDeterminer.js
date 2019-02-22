@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        happyNumberDeterminer.js
+ ***********************************************************************/
 function isHappyNumber_V1(number) {
     if(number < 1 || !Number.isInteger(number))
         return false;

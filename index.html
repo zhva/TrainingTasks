@@ -6,33 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/main_style_sheet.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src="javascript/helper.js"></script>
     <script src="javascript/jquery/jquery-1.11.3.min.js"></script>
 	<script src="javascript/jquery//jquery.mobile-1.4.5.min.js"></script>
-    <script src="javascript/tabsSwitcher.js"></script>
-    <script src="javascript/totalZerosCounter.js"></script>
-    <script src="javascript/stringReverse.js"></script>
-    <script src="javascript/primeNumberChecker.js"></script>
-    <script src="javascript/arrayDuplicate.js"></script>
-    <script src="javascript/uniqueStringCharactersCheck.js"></script>
-    <script src="javascript/numberPrimeFactorization.js"></script>
-    <script src="javascript/primeFactorsOfNumber.js"></script>
-    <script src="javascript/nthFibonacciNumberCounter.js"></script>
-    <script src="javascript/greatestCommonDivisorCounter.js"></script>
-    <script src="javascript/uniqueElementsInArray.js"></script>
-    <script src="javascript/twoSortedArraysMerge.js"></script>
-    <script src="javascript/fizzBuzzTask.js"></script>
-    <script src="javascript/didgitsRevercer.js"></script>
-    <script src="javascript/primeNumberCounter.js"></script>
-    <script src="javascript/uglyNumbersDeterminer.js"></script>
-    <script src="javascript/happyNumberDeterminer.js"></script>
-    <script src="javascript/powerOfThreeDeterminer.js"></script>
-    <script src="javascript/squareRootOfNumber.js"></script>
-    <script src="javascript/arrayShifter.js"></script>
-    <script src="javascript/moveZeros.js"></script>
-
-    <script src="javascript/pascalTriangleGenerator.js"></script>
-    <script src="javascript/pascalTriangleDisplay.js"></script>
+    <script src="javascript/script.js"></script>
     <title>Trainings</title>
 </head>
 <body>
@@ -71,7 +47,7 @@
                 </li>
                 <li>
                     <p>Prime factorization of a number?</p>
-                    <form action="">
+                    <form>
                         <p>Please, enter a number
                             <input type="number" name="primeFactorizationOfNumber" id="primeFactorizationOfNumberId" placeholder="0">
                         </p>
@@ -83,7 +59,7 @@
                 </li>
                 <li>
                     <p>How could you find all prime factors of a number?</p>
-                    <form action="">
+                    <form>
                         <p>Please, enter a number
                             <input type="number" name="primeFactorsOfNumber" id="primeFactorsOfNumberId" placeholder="0">
                         </p>
@@ -95,7 +71,7 @@
                 </li>
                 <li>
                     <p>How to get nth Fibonacci number?</p>
-                    <form action="">
+                    <form>
                         <p>Please, enter an idex for Fibonacci number
                             <input type="number" name="idexForFibonacciNumber" id="idexForFibonacciNumberId" placeholder="0">
                         </p>
@@ -107,7 +83,7 @@
                 </li>
                 <li>
                     <p>How would you find the greatest common divisor of two numbers?</p>
-                    <form action="">
+                    <form>
                         <p>Please, enter two numbers
                             <input type="number" name="firstNumberForCommonDivisors" id="firstNumberForCommonDivisorsId" placeholder="0">
                             <input type="number" name="secondNumberForCommonDivisors" id="secondNumberForCommonDivisorsId" placeholder="0">
@@ -120,7 +96,7 @@
                 </li>
                 <li>
                     <p>Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.</p>
-                    <form action="">
+                    <form>
                         <p>Please, enter a number
                             <input type="number" name="fizzBuzzNumber" id="fizzBuzzNumberId" placeholder="0">
                         </p>
@@ -132,7 +108,7 @@
                 </li>
                 <li>
                     <p>Given a 32-bit signed integer, reverse digits of an integer.</p>
-                    <form action="">
+                    <form >
                         <p>Please, enter a number
                             <input type="number" name="numberToReverce" id="numberToReverceId" placeholder="0">
                         </p>
@@ -144,7 +120,7 @@
                 </li>
                 <li>
                     <p>Count the number of prime numbers less than a non-negative number, n.</p>
-                    <form action="">
+                    <form>
                         <p>Please, enter a number
                             <input type="number" name="countPrimeNumbers" id="countPrimeNumbersId" placeholder="0">
                         </p>
@@ -156,7 +132,7 @@
                 </li>
                 <li>
                     <p>Write a program to check whether a given number is an ugly number.</p>
-                    <form action="">
+                    <form>
                         <p>Please, enter a number
                             <input type="number" name="uglyNumber" id="uglyNumberId" placeholder="0">
                         </p>
@@ -168,7 +144,7 @@
                 </li>
                 <li>
                     <p>Write an algorithm to determine if a number is "happy".</p>
-                    <form action="">
+                    <form>
                         <p>Please, enter a number
                             <input type="number" name="happyNumber" id="happyNumberId" placeholder="0">
                         </p>
@@ -180,7 +156,7 @@
                 </li>
                 <li>
                     <p>Given an integer, write a function to determine if it is a power of three.</p>
-                        <form action="">
+                        <form>
                             <p>Please, enter a number
                                 <input type="number" name="powerOfThreeNumber" id="powerOfThreeNumberId" placeholder="0">
                             </p>
@@ -193,7 +169,7 @@
                 <li>
                     <p>Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
                        Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.</p>
-                        <form action="">
+                        <form >
                             <p>Please, enter a number
                                 <input type="number" name="squareRootNumber" id="squareRootNumberId" placeholder="0">
                             </p>
@@ -237,7 +213,7 @@
                 </li>
             </ol>
         </div>
-                      
+        <!--Tasks with Arrays-->            
         <div id="tabArrays" class="tab_content_hidden">
             <ol class="task_list_style">
                 <li>

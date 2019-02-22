@@ -1,3 +1,7 @@
+// require helper.js
+/************************************************************************
+                        uniqueStringCharactersCheck.js
+ ***********************************************************************/
 function isStringConsistOfUniqueCharacters(userString) {
     if(userString == null)
         return false;
