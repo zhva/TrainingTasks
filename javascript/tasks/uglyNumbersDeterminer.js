@@ -1,8 +1,8 @@
- // require helper.js
- // require primeNumberChecker.js
- /************************************************************************
-                        uglyNumbersDeterminer.js
- ***********************************************************************/
+// require helper.js
+// require primeNumberChecker.js
+//---------------------------------------------------------------------------
+//                        uglyNumbersDeterminer.js
+//---------------------------------------------------------------------------
  function isNumberUgly_V1(number) {
     if(number <= 0 || number > Number.MAX_SAFE_INTEGER || !Number.isSafeInteger(number))
         return false; 
@@ -65,10 +65,9 @@ function isNumberUgly_V2(number) {
 //     }
 //     return isUgly;
 // }
-
-/***********************************************************************
-Events
-***********************************************************************/
+//---------------------------------------------------------------------------
+// Events
+//---------------------------------------------------------------------------
 function printisNumberUglyResult(id1, id2){
     var userNumber = readNumberValue(id1);
     if (userNumber == -1)

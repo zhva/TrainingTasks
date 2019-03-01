@@ -1,8 +1,8 @@
 // require helper.js
 // require primeNumberChecker.js
-/************************************************************************
-                        numberPrimeFactorisation.js
- ***********************************************************************/
+//---------------------------------------------------------------------------
+//                        numberPrimeFactorisation.js
+//---------------------------------------------------------------------------
 function numberPrimeFactorization(number){
     if(!Number.isInteger(number) || number < 2)
         return [];
@@ -27,9 +27,9 @@ function numberPrimeFactorization(number){
     return primeFactorsArray;
 }
 
-/***********************************************************************
-Events
-***********************************************************************/
+//---------------------------------------------------------------------------
+// Events
+//---------------------------------------------------------------------------
 function printNumberPrimeFactorizationResult(id1, id2){
     var userNumber = readNumberValue(id1);
     if(userNumber == -1)
