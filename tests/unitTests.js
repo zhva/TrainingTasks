@@ -209,9 +209,9 @@ describe('Greatest common divisor of two numbers', function(){
 
 describe('Delete duplicates from an Array', function(){
 
-  var funcs = [deleteDuplicateMembers_v1, deleteDuplicateMembers_v2, deleteDuplicateMembers_v3, 
-         deleteDuplicateMembers_v4, deleteDuplicateMembers_v5, deleteDuplicateMembers_v6, 
-         deleteDuplicateMembers_v7];
+  var funcs = [deleteDuplicateMembers_V1, deleteDuplicateMembers_V2, deleteDuplicateMembers_V3, 
+         deleteDuplicateMembers_V4, deleteDuplicateMembers_V5, deleteDuplicateMembers_V6, 
+         deleteDuplicateMembers_V7];
   
   var i = 0;
   funcs.forEach(function(deleteDuplicateMembers_vN){
@@ -281,11 +281,11 @@ describe('Megre of two sorted arrays', function(){
   });
   it('should return merged sorted array', function(){
     assert.sameDeepOrderedMembers(mergeSortedArrays([1, 2, 3], [1, 2, 3]), [1, 1, 2, 2, 3, 3]);
-    assert.sameDeepOrderedMembers(mergeSortedArrays(['a', 'b', 'c'], ['b', 'd', 'e']), []);
     assert.sameDeepOrderedMembers(mergeSortedArrays([1, 2, 3, null], [4, 7, 9]), [1, 2, 3, 4, 7, 9]);
     assert.sameDeepOrderedMembers(mergeSortedArrays([1, 2], [1, 2, 3]), [1, 1, 2, 2, 3, ]);
     assert.sameDeepOrderedMembers(mergeSortedArrays([2, 4, 5], [1, 2, 3]), [1, 2, 2, 3, 4, 5]);
     assert.sameDeepOrderedMembers(mergeSortedArrays([1, 2, 3, 'b'], [1, 2, 'a']), [1, 1, 2, 2, 3]);
+    assert.sameDeepOrderedMembers(mergeSortedArrays(['a', 'b', 'c'], ['b', 'd', 'e']), []);
 
     
   });

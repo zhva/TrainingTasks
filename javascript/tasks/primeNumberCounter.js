@@ -3,6 +3,7 @@
 //---------------------------------------------------------------------------
 //                        primeNumberCounter.js
 //---------------------------------------------------------------------------
+// eslint-disable-next-line camelcase
 function primeNumbersCounter_V1(number) {
   if (!Number.isInteger(number) || number < 2) {
     return -1;
@@ -18,6 +19,7 @@ function primeNumbersCounter_V1(number) {
   return primeFactorsCount;
 }
 
+// eslint-disable-next-line camelcase
 function primeNumbersCounter_V2(number) {
   if (!Number.isInteger(number) || number < 2) {
     return -1;

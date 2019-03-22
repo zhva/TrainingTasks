@@ -2,6 +2,7 @@
 //---------------------------------------------------------------------------
 //     happyNumberDeterminer.js
 //---------------------------------------------------------------------------
+// eslint-disable-next-line camelcase
 function isHappyNumber_V1(num) {
   if (num < 1 || !Number.isInteger(num)) {
     return false;
@@ -24,6 +25,7 @@ function isHappyNumber_V1(num) {
   return false;
 }
 
+// eslint-disable-next-line camelcase
 function isHappyNumber_V2(num) {
   if (num < 1 || !Number.isInteger(num)) {
     return false;
