@@ -1,4 +1,6 @@
-// require helper.js
+/* requires:
+    helper.js
+*/
 //---------------------------------------------------------------------------
 //                        squareRootOfNumber.js
 //---------------------------------------------------------------------------
@@ -28,7 +30,7 @@ function squareRoot_V2(num) {
   let left = 0;
   let right = number;
   let middle = number / 2;
-
+  // eslint-disable-next-line no-constant-condition
   while (true) {
     const multipl = Math.floor(middle * middle);
     if (multipl === number) {

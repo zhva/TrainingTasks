@@ -1,5 +1,7 @@
-// require helper.js
-// require pascalTriangleGenerator.js
+/* requires:
+    helper.js
+    pascalTriangleGenerator.js
+*/
 //---------------------------------------------------------------------------
 //                        pascalTriangleDisplay.js
 //---------------------------------------------------------------------------

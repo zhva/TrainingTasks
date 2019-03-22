@@ -1,5 +1,7 @@
-// require helper.js
-// require primeNumberChecker.js
+/* requires:
+    helper.js
+    primeNumberChecker.js
+*/
 //---------------------------------------------------------------------------
 //                        numberPrimeFactorisation.js
 //---------------------------------------------------------------------------

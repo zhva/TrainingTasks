@@ -1,8 +1,11 @@
-// require helper.js
-// require primeNumberChecker.js
+/* requires:
+    helper.js
+    primeNumberChecker.js
+*/
 //---------------------------------------------------------------------------
 //                        uglyNumbersDeterminer.js
 //---------------------------------------------------------------------------
+// eslint-disable-next-line camelcase
 function isNumberUgly_V1(number) {
   if (number <= 0 || number > Number.MAX_SAFE_INTEGER || !Number.isSafeInteger(number)) {
     return false;
@@ -24,6 +27,7 @@ function isNumberUgly_V1(number) {
   return true;
 }
 
+// eslint-disable-next-line camelcase
 function isNumberUgly_V2(num) {
   if (num <= 0 || num > Number.MAX_SAFE_INTEGER || !Number.isSafeInteger(num)) {
     return false;
