@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
 }
+p {
+  padding: 0px;
+  margin: 0px;
+}
 
 body, html {
     height: 100%;
@@ -13,59 +17,110 @@ body, html {
 }
 header,
 .tabs_style {
-    width: inherit;
-    height: 40px;
+  width: inherit;
+  height: 40px;
 }
 
 
 .tab_link {
-    background-color: rgb(54, 144, 169) ;
-    color: white;
-    float: left;
-    border: none;
-    height: 40px;
-    outline: none;
-    cursor: pointer;
-    font-size: 17px;
-    width: 33.33%;
-    padding: 0px;
-    border: 1px solid rgb(255, 255, 255);
-    border-right: none;
-    border-bottom: none;
-    border-radius: 10px 10px 0px 0px;
+  background-color: rgb(54, 144, 169) ;
+  color: white;
+  float: left;
+  border: none;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+  font-size: 17px;
+  width: 33.33%;
+  padding: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-right: none;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .tab_link > button:last-child {
-    border-right: 1px solid rgb(255, 255, 255);
+  border-right: 1px solid rgb(255, 255, 255);
 }
 
 .tab_link:hover,
 .tab_link_visible {
-    background: rgb(100, 197, 208);
+  background: rgb(100, 197, 208);
 }
 
 .tab_content_hidden {
-    display: none;
+  display: none;
 }
 
 .tab_content_visible {
-    display: block;
-    padding: 100px 20px;
-    height: 100%;
+  display: block;
+  margin: 30px;
+  height: 100%;
 }
 
 .task_list_style {
-    color: rgb(134, 135, 135);
+  color: rgb(134, 135, 135);
+  padding-left: 0px;
+}
+.task_element {
+  border: 1px solid rgb(134, 135, 135);
+  display: list-item;
+  list-style: none;
+  width: 100%;
+  margin-bottom: 20px;
+
+}
+.task_name {
+  width: inherit;
+  border-bottom: 1px solid rgb(134, 135, 135);
+  vertical-align: middle;
+  margin: 0px;
+}
+.task_name h4 {
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.task_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.task_body {
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
+.task_body > p {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+.task_column {
+  float: left;
+  width: 50%;
+  margin-bottom: 0.5em;
+}
+.task_subcolumn {
+  float: left;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+.task_tags {
+  float: left;
+  font-size: 14px;
+}
+.task_complexity img{
+  width: 1em;
+  float: right;
+}
 
 .ui-icon-loading ~h1 {
-    display: none;
+  display: none;
 }
 
 .disaktiv_link{
-    cursor: not-allowed;
-    text-decoration: none;
-    pointer-events: none;
+  cursor: not-allowed;
+  text-decoration: none;
+  pointer-events: none;
 }
 

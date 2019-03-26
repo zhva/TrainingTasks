@@ -12,294 +12,518 @@
     <title>Trainings</title>
 </head>
 <body>
-    <header>
-        <div class="tabs_style">
-            <button class="tab_link" onclick="onTabClick('tabChars')" >Chars</button>
-            <button class="tab_link" onclick="onTabClick('tabStrings')">Strings</button>
-            <button class="tab_link" onclick="onTabClick('tabArrays')">Arrays</button>
+  <header>
+    <div class="tabs_style">
+      <button class="tab_link" onclick="onTabClick('tabChars')" >Chars</button>
+      <button class="tab_link" onclick="onTabClick('tabStrings')">Strings</button>
+      <button class="tab_link" onclick="onTabClick('tabArrays')">Arrays</button>
+    </div>
+  </header>
+  <main>
+    <!-- Tasks with Numbers -->
+    <div id="tabChars" class="tab_content_visible">
+      <ol class="task_list_style">
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Zeros Counter</h4>
+          </div>
+          <div class="task_body">
+            <p>Count total number of zeros from 1 upto n? Do not use string!</p>
+            <form class="task_row" oninput="printZerosCountResult('countOfZerosNumberNId','countOfZerosId')">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter a number</p>
+                <input type="number" name="countOfZerosNumber" class="task_subcolumn" id="countOfZerosNumberNId" placeholder="0" autofocus>
+              </div>
+              <div class="task_column">
+                <p class="task_subcolumn">Result:</p>
+                <output type="number" name="countOfZeros" class="task_subcolumn" id="countOfZerosId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>number,</a>
+                <a>zeros</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Prime Numbers Checker</h4>
+          </div>
+          <div class="task_body">
+            <p>How would you verify a prime number?</p>
+            <form class="task_row" oninput="printPrimeNumberCheckResult('checkPrimeNumberId','checkPrimeId')">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter a number</p>
+                <input type="number" name="checkPrimeNumber" class="task_subcolumn" id="checkPrimeNumberId" placeholder="0" autofocus>
+              </div>
+              <div class="task_column">
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="checkPrime" class="task_subcolumn" id="checkPrimeId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>number,</a>
+                  <a>prime</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <img src="img\stars.png" alt="stars">
+                </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Number Fuctorization</h4>
+          </div>
+          <div class="task_body">
+            <p>Prime factorization of a number?</p>
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter a number</p>
+                <input type="number" name="primeFactorizationOfNumber" class="task_subcolumn" id="primeFactorizationOfNumberId" placeholder="0">
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printNumberPrimeFactorizationResult('primeFactorizationOfNumberId', 'primeFactorizationId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output class="task_subcolumn" class="task_subcolumn" type="text" name="primeFactorization" id="primeFactorizationId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>number,</a>
+                  <a>prime,</a>
+                  <a>factorization</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <img src="img\stars.png" alt="stars">
+                </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Prime Fuctors of Number</h4>
         </div>
-    </header>
-    <main>
-        <!-- Tasks with Numbers -->
-        <div id="tabChars" class="tab_content_visible">
-            <ol class="task_list_style">
-                <li>
-                    <p>Count total number of zeros from 1 upto n? Do not use string!</p>
-                    <form oninput="printZerosCountResult('countOfZerosNumberNId','countOfZerosId')">
-                        <p>Please, enter a number
-                            <input type="number" name="countOfZerosNumber" id="countOfZerosNumberNId" placeholder="0" autofocus>
-                        </p>
-                        <p>Result: 
-                            <output type="number" name="countOfZeros" id="countOfZerosId">0</output>
-                        </p>
-                    </form>
-                </li>
-                <li>
-                    <p>How would you verify a prime number?</p>
-                    <form oninput="printPrimeNumberCheckResult('checkPrimeNumberId','checkPrimeId')">
-                        <p>Please, enter a number
-                            <input type="number" name="checkPrimeNumber" id="checkPrimeNumberId" placeholder="0" autofocus>
-                        </p>
-                        <p>Result: 
-                            <output type="text" name="checkPrime" id="checkPrimeId"></output>
-                        </p>
-                    </form>
-                </li>
-                <li>
-                    <p>Prime factorization of a number?</p>
-                    <form>
-                        <p>Please, enter a number
-                            <input type="number" name="primeFactorizationOfNumber" id="primeFactorizationOfNumberId" placeholder="0">
-                        </p>
-                        <p>Result:
-                            <button onclick="printNumberPrimeFactorizationResult('primeFactorizationOfNumberId', 'primeFactorizationId')">Submit</button>
-                            <output type="text" name="primeFactorization" id="primeFactorizationId"></output>
-                        </p>
-                    </form>
-                </li>
-                <li>
-                    <p>How could you find all prime factors of a number?</p>
-                    <form>
-                        <p>Please, enter a number
-                            <input type="number" name="primeFactorsOfNumber" id="primeFactorsOfNumberId" placeholder="0">
-                        </p>
-                        <p>Result:
-                            <button onclick="printPrimeFactorsResult('primeFactorsOfNumberId', 'primeFactorsId')">Submit</button>
-                            <output type="text" name="primeFactors" id="primeFactorsId"></output>
-                        </p>
-                    </form>
-                </li>
-                <li>
-                    <p>How to get nth Fibonacci number?</p>
-                    <form>
-                        <p>Please, enter an idex for Fibonacci number
-                            <input type="number" name="idexForFibonacciNumber" id="idexForFibonacciNumberId" placeholder="0">
-                        </p>
-                        <p>Result:
-                            <button onclick="printNthFibonacciNumber('idexForFibonacciNumberId', 'fibonacciNumberId')">Submit</button>
-                            <output type="text" name="fibonacciNumber" id="fibonacciNumberId"></output>
-                        </p>
-                    </form>
-                </li>
-                <li>
-                    <p>How would you find the greatest common divisor of two numbers?</p>
-                    <form>
-                        <p>Please, enter two numbers
-                            <input type="number" name="firstNumberForCommonDivisors" id="firstNumberForCommonDivisorsId" placeholder="0">
-                            <input type="number" name="secondNumberForCommonDivisors" id="secondNumberForCommonDivisorsId" placeholder="0">
-                        </p>
-                        <p>Result:
-                            <button onclick="printGreatestCommonDivisorCounter('firstNumberForCommonDivisorsId', 'secondNumberForCommonDivisorsId', 'greatestCommonDivisorId')">Submit</button>
-                            <output type="text" name="greatestCommonDivisor" id="greatestCommonDivisorId"></output>
-                        </p>
-                    </form>
-                </li>
-                <li>
-                    <p>Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.</p>
-                    <form>
-                        <p>Please, enter a number
-                            <input type="number" name="fizzBuzzNumber" id="fizzBuzzNumberId" placeholder="0">
-                        </p>
-                        <p>Result:
-                            <button onclick="fizzBuzzPrint('fizzBuzzNumberId', 'fizzBuzzOutputId')">Submit</button>
-                            <output type="text" name="fizzBuzzOutput" id="fizzBuzzOutputId"></output>
-                        </p>
-                    </form>
-                </li>
-                <li>
-                    <p>Given a 32-bit signed integer, reverse digits of an integer.</p>
-                    <form >
-                        <p>Please, enter a number
-                            <input type="number" name="numberToReverce" id="numberToReverceId" placeholder="0">
-                        </p>
-                        <p>Result:
-                            <button onclick="printDidgitsReverser('numberToReverceId', 'revercedNumberId')">Submit</button>
-                            <output type="text" name="revercedNumber" id="revercedNumberId"></output>
-                        </p>
-                    </form>
-                </li>
-                <li>
-                    <p>Count the number of prime numbers less than a non-negative number, n.</p>
-                    <form>
-                        <p>Please, enter a number
-                            <input type="number" name="countPrimeNumbers" id="countPrimeNumbersId" placeholder="0">
-                        </p>
-                        <p>Result:
-                            <button onclick="printPrimeNumbersCounter('countPrimeNumbersId', 'amountOfPrimeNumbersId')">Submit</button>
-                            <output type="text" name="amountOfPrimeNumbers" id="amountOfPrimeNumbersId"></output>
-                        </p>
-                    </form>
-                </li>
-                <li>
-                    <p>Write a program to check whether a given number is an ugly number.</p>
-                    <form>
-                        <p>Please, enter a number
-                            <input type="number" name="uglyNumber" id="uglyNumberId" placeholder="0">
-                        </p>
-                        <p>Result:
-                            <button onclick="printisNumberUglyResult('uglyNumberId', 'uglyNumberResultId')">Submit</button>
-                            <output type="text" name="uglyNumberResult" id="uglyNumberResultId"></output>
-                        </p>
-                    </form>
-                </li>
-                <li>
-                    <p>Write an algorithm to determine if a number is "happy".</p>
-                    <form>
-                        <p>Please, enter a number
-                            <input type="number" name="happyNumber" id="happyNumberId" placeholder="0">
-                        </p>
-                        <p>Result:
-                            <button onclick="printHappyNumberResult('happyNumberId', 'happyNumberResultId')">Submit</button>
-                            <output type="text" name="happyNumberResult" id="happyNumberResultId"></output>
-                        </p>
-                    </form>
-                </li>
-                <li>
-                    <p>Given an integer, write a function to determine if it is a power of three.</p>
-                        <form>
-                            <p>Please, enter a number
-                                <input type="number" name="powerOfThreeNumber" id="powerOfThreeNumberId" placeholder="0">
-                            </p>
-                            <p>Result:
-                                <button onclick="printPowerOfThreeresult('powerOfThreeNumberId', 'powerOfThreeNumberResultId')">Submit</button>
-                                <output type="text" name="powerOfThreeNumberResult" id="powerOfThreeNumberResultId"></output>
-                            </p>
-                        </form>
-                    </li>
-                <li>
-                    <p>Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
-                       Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.</p>
-                        <form >
-                            <p>Please, enter a number
-                                <input type="number" name="squareRootNumber" id="squareRootNumberId" placeholder="0">
-                            </p>
-                            <p>Result:
-                                <button onclick="printSquareRootResult('squareRootNumberId', 'squareRootResultId')">Submit</button>
-                                <output type="text" name="squareRootResult" id="squareRootResultId"></output>
-                            </p>
-                        </form>
-                 </li>
-            </ol>        
+        <div class="task_body">
+          <p>How could you find all prime factors of a number?</p>
+          <form class="task_row">
+            <div class="task_column">
+                <p class="task_subcolumn">Please, enter a number</p>
+                <input type="number" name="primeFactorsOfNumber" class="task_subcolumn" id="primeFactorsOfNumberId" placeholder="0">
+            </div>
+            <div class="task_column">
+              <button class="task_subcolumn" onclick="printPrimeFactorsResult('primeFactorsOfNumberId', 'primeFactorsId')">Submit</button>
+              <p class="task_subcolumn">Result:</p>
+              <output type="text" name="primeFactors" class="task_subcolumn" id="primeFactorsId"></output>
+            </div>
+          </form>
+          <div class="task_row">
+            <div class="task_column task_tags">
+              <a>number,</a>
+              <a>zeros</a>
+            </div>
+            <div class="task_column task_complexity">
+              <img src="img\stars.png" alt="stars">
+            </div>
+          </div>
         </div>
-        <!--Tasks with Strings-->      
-        <div id="tabStrings" class="tab_content_hidden"> 
-            <ol class="task_list_style">
-                <li>
-                    <p>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?</p>
-                    <div>
-                        <form>
-                            <p>Please, enter a string
-                                <input type="text" name="userStringForUnique" id="userStringForUniqueId" autofocus>
-                            </p>
-                            <p>Result: 
-                                <button onclick="printUniqueCharactersResult('userStringForUniqueId','resultStringForUniqueId')">Check</button>
-                                <pre><output type="" name="resultStringForUnique" id="resultStringForUniqueId"></output></pre>
-                            </p>
-                        </form>
-                    </div>
-                </li>
-                <li>
-                   <p>How would you reverse a string in JavaScript?</p>
-                    <div>
-                        <form oninput="printReversedStringResult('userStringId', 'reverseUserStringId')">
-                            <p>Please, enter a string
-                                <input type="text" name="userString" id="userStringId" autofocus>
-                            </p>
-                            <p>Result: 
-                                <pre><output type="" name="reverseUserString" id="reverseUserStringId"></output></pre>
-                            </p>
-                        </form>
-                    </div>
-                </li>
-            </ol>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Nth Fibonacci Number</h4>
+          </div>
+          <div class="task_body">
+            <p>How to get nth Fibonacci number?</p>
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter an idex for Fibonacci number</p>
+                <input type="number" name="idexForFibonacciNumber" id="idexForFibonacciNumberId" placeholder="0">
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printNthFibonacciNumber('idexForFibonacciNumberId', 'fibonacciNumberId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output class="task_subcolumn" type="text" name="fibonacciNumber" id="fibonacciNumberId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>number,</a>
+                <a>fibonacci</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Common Divisor</h4>
+          </div>
+          <div class="task_body">
+            <p>How would you find the greatest common divisor of two numbers?</p>
+            <form class="task_row">
+              <div class="task_column">
+              <p class="task_subcolumn">Please, enter two numbers</p>
+              <input type="number" name="firstNumberForCommonDivisors" class="task_subcolumn" id="firstNumberForCommonDivisorsId" placeholder="number 1">
+              <input type="number" name="secondNumberForCommonDivisors" class="task_subcolumn" id="secondNumberForCommonDivisorsId" placeholder="number 2">
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printGreatestCommonDivisorCounter('firstNumberForCommonDivisorsId', 'secondNumberForCommonDivisorsId', 'greatestCommonDivisorId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="greatestCommonDivisor" class="task_subcolumn" id="greatestCommonDivisorId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>number,</a>
+                <a>divisor</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Fizz Buzz Task</h4>
+          </div>
+          <div class="task_body">
+            <p>Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.</p>
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter a number</p>
+                <input type="number" name="fizzBuzzNumber" class="task_subcolumn" id="fizzBuzzNumberId" placeholder="0">
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="fizzBuzzPrint('fizzBuzzNumberId', 'fizzBuzzOutputId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="fizzBuzzOutput" class="task_subcolumn" id="fizzBuzzOutputId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>number,</a>
+                <a>multiplication,</a>
+                <a>fizz buzz</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Didgits Reverser</h4>
+          </div>
+          <div class="task_body">
+            <p>Given a 32-bit signed integer, reverse digits of an integer.</p>
+            <form class="task_row">
+              <p>Please, enter a number
+                <input type="number" name="numberToReverce" id="numberToReverceId" placeholder="0">
+              </p>
+              <p>Result:
+                <button onclick="printDidgitsReverser('numberToReverceId', 'revercedNumberId')">Submit</button>
+                <output type="text" name="revercedNumber" id="revercedNumberId"></output>
+              </p>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>number,</a>
+                <a>zeros</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Prime Numbers Counter</h4>
+          </div>
+          <div class="task_body">
+            <p>Count the number of prime numbers less than a non-negative number, n.</p>
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter a number</p>
+                <input type="number" name="countPrimeNumbers" class="task_subcolumn" id="countPrimeNumbersId" placeholder="0">
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printPrimeNumbersCounter('countPrimeNumbersId', 'amountOfPrimeNumbersId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="amountOfPrimeNumbers" class="task_subcolumn" id="amountOfPrimeNumbersId"></output>
+            </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>number,</a>
+                <a>prime</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
         </div>
-        <!--Tasks with Arrays-->            
-        <div id="tabArrays" class="tab_content_hidden">
-            <ol class="task_list_style">
-                <li>
-                   <p>Make this work: duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]</p>  
-                    <form>
-                        <p>Please, enter space-separated numbers
-                            <input type="text" name="userArray" id="userArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                        </p>
-                        <button onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Duplicate</button>
-                        <p>Result:
-                            <output type="text" name="duplicateUserArray" id="duplicateUserArrayId"></output>
-                        </p>
-                    </form>     
-                </li>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Ugly Numbers</h4>
+          </div>
+          <div class="task_body">
+            <p>Write a program to check whether a given number is an ugly number.</p>
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter a number</p>
+                <input type="number" name="uglyNumber" class="task_subcolumn" id="uglyNumberId" placeholder="0">
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printisNumberUglyResult('uglyNumberId', 'uglyNumberResultId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output class="task_subcolumn" type="text" name="uglyNumberResult" id="uglyNumberResultId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>number,</a>
+                <a>ugly</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Happy Numbers</h4>
+          </div>
+          <div class="task_body">
+            <p>Write an algorithm to determine if a number is "happy".</p>
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter a number</p>
+                <input type="number" name="happyNumber" class="task_subcolumn" id="happyNumberId" placeholder="0">
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printHappyNumberResult('happyNumberId', 'happyNumberResultId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="happyNumberResult" class="task_subcolumn" id="happyNumberResultId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>number,</a>
+                <a>happy</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Power of Three</h4>
+          </div>
+          <div class="task_body">
+            <p>Given an integer, write a function to determine if it is a power of three.</p>
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter a number</p>
+                <input type="number" name="powerOfThreeNumber" class="task_subcolumn" id="powerOfThreeNumberId" placeholder="0">
+              </div>
+              <div class="task_column">
+                <button onclick="printPowerOfThreeresult('powerOfThreeNumberId', 'powerOfThreeNumberResultId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output class="task_subcolumn" type="text" name="powerOfThreeNumberResult" id="powerOfThreeNumberResultId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>number,</a>
+                <a>power</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+         </div>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Square Root</h4>
+          </div>
+          <div class="task_body">
+            <p>Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
+                Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.</p>
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter a number</p>
+                <input type="number" name="squareRootNumber" class="task_subcolumn" id="squareRootNumberId" placeholder="0">
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printSquareRootResult('squareRootNumberId', 'squareRootResultId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="squareRootResult" class="task_subcolumn" id="squareRootResultId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>number,</a>
+                <a>root</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+      <!--Tasks with Strings-->
+    <div id="tabStrings" class="tab_content_hidden"> 
+      <ol class="task_list_style">
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Unique Charaaters in a String</h4>
+          </div>
+          <p>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?</p>
+          <form class="task_row">
+            <p>Please, enter a string
+              <input type="text" name="userStringForUnique" id="userStringForUniqueId" autofocus>
+            </p>
+            <p>Result: 
+              <button onclick="printUniqueCharactersResult('userStringForUniqueId','resultStringForUniqueId')">Check</button>
+              <pre><output type="" name="resultStringForUnique" id="resultStringForUniqueId"></output></pre>
+            </p>
+          </form>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>String Reverser</h4>
+          </div>
+          <p>How would you reverse a string in JavaScript?</p>
+          <form oninput="printReversedStringResult('userStringId', 'reverseUserStringId')">
+            <p>Please, enter a string
+              <input type="text" name="userString" id="userStringId" autofocus>
+            </p>
+            <p>Result: 
+              <pre><output type="" name="reverseUserString" id="reverseUserStringId"></output></pre>
+            </p>
+          </form>
+        </li>
+      </ol>
+    </div>
+    <!--Tasks with Arrays-->
+    <div id="tabArrays" class="tab_content_hidden">
+      <ol class="task_list_style">
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Array Duplicator</h4>
+          </div>
+          <p>Make this work: duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]</p>  
+          <form class="task_row">
+            <p>Please, enter space-separated numbers
+              <input type="text" name="userArray" id="userArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+            </p>
+            <button onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Duplicate</button>
+            <p>Result:
+              <output type="text" name="duplicateUserArray" id="duplicateUserArrayId"></output>
+            </p>
+          </form>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Non Duplicated Array</h4>
+          </div>
+          <p>How would you remove duplicate members from an array?</p>  
+          <form class="task_row">
+            <p>Please, enter space-separated numbers
+              <input type="text" name="userDuplicatedArray" id="userDuplicatedArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+            </p>
+            <button onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Submit</button>
+            <p>Result:
+              <output type="text" name="nonDuplicatedArray" id="nonDuplicatedArrayId"></output>
+            </p>
+          </form>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Two Arrays Merge</h4>
+          </div>
+          <p>How would you merge two sorted array?</p>  
+          <form class="task_row">
+            <p>Please, enter space-separated numbers
+              <input type="text" name="userArrayForMerge1" id="userArrayForMerge1Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+              <input type="text" name="userArrayForMerge2" id="userArrayForMerge2Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+            </p>
+            <button onclick="printMergedArray('userArrayForMerge1Id', 'userArrayForMerge2Id', 'mergedArrayId')">Submit</button>
+            <p>Result:
+              <output type="text" name="mergedArray" id="mergedArrayId"></output>
+            </p>
+          </form>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Array Shift</h4>
+          </div>
+          <p>Given an array, rotate the array to the right by k steps, where k is non-negative.</p>  
+          <form class="task_row">
+            <p>Please, enter space-separated numbers
+              <input type="text" name="arrayForShift" id="arrayForShiftId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+              Please enter a number
+              <input type="number" name="shift" id="shiftId">
+            </p>
+            <button onclick="printShiftedArray('arrayForShiftId', 'shiftId','shiftedArrayId')">Submit</button>
+            <p>Result:
+              <output type="text" name="shiftedArray" id="shiftedArrayId"></output>
+            </p>
+          </form>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Moove Zeros in an Array</h4>
+          </div>
+          <p>Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.</p>  
+          <form class="task_row">
+            <p>Please, enter space-separated numbers
+              <input type="text" name="arrayMoveZeros" id="arrayMoveZerosId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+            </p>
+            <button onclick="printMoveZeros('arrayMoveZerosId', 'arrayMovedZerosId')">Submit</button>
+            <p>Result:
+              <output type="text" name="arrayMovedZeros" id="arrayMovedZerosId"></output>
+            </p>
+          </form>
+        </li>
+        <li class="task_element">
+          <div class="task_name">
+            <h4>Pascal's Triangle</h4>
+          </div>
+          <p>Given a non-negative integer numRows, generate the first numRows of 
+            <a target="_blank" href="" class="disaktiv_link" id="pacsalLinkId" onclick="openPascalTriangle('pascalTriangleImage.html', readNumberValue('numberOfRowsId'))">Pascal's triangle.</a>
+          </p>
+          <form class="task_row">
+            <p>Please, enter number of rows
+              <input type="text" name="numberOfRows" id="numberOfRowsId">
+             </p>
+            <button onclick="printPascalTriangle('numberOfRowsId', 'pascalTringleId')">Submit</button>
+            <p>Result:
+              <output type="text" name="pascalTringle" id="pascalTringleId"></output>
+            </p>
+            </form>
+        </li>
+      </ol>
+    </div>
+  </main>
 
-                <li>
-                    <p>How would you remove duplicate members from an array?</p>  
-                    <form>
-                        <p>Please, enter space-separated numbers
-                            <input type="text" name="userDuplicatedArray" id="userDuplicatedArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                        </p>
-                        <button onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Submit</button>
-                        <p>Result:
-                            <output type="text" name="nonDuplicatedArray" id="nonDuplicatedArrayId"></output>
-                        </p>
-                    </form> 
-                </li>
-                <li>
-                    <p>How would you merge two sorted array?</p>  
-                    <form>
-                        <p>Please, enter space-separated numbers
-                            <input type="text" name="userArrayForMerge1" id="userArrayForMerge1Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                            <input type="text" name="userArrayForMerge2" id="userArrayForMerge2Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                        </p>
-                        <button onclick="printMergedArray('userArrayForMerge1Id', 'userArrayForMerge2Id', 'mergedArrayId')">Submit</button>
-                        <p>Result:
-                            <output type="text" name="mergedArray" id="mergedArrayId"></output>
-                        </p>
-                    </form> 
-                </li>
-                <li>
-                    <p>Given an array, rotate the array to the right by k steps, where k is non-negative.</p>  
-                    <form>
-                        <p>Please, enter space-separated numbers
-                            <input type="text" name="arrayForShift" id="arrayForShiftId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                            Please enter a number
-                            <input type="number" name="shift" id="shiftId">
-                        </p>
-
-                        <button onclick="printShiftedArray('arrayForShiftId', 'shiftId','shiftedArrayId')">Submit</button>
-                        <p>Result:
-                            <output type="text" name="shiftedArray" id="shiftedArrayId"></output>
-                        </p>
-                    </form> 
-                </li>
-                <li>
-                    <p>Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.</p>  
-                    <form>
-                        <p>Please, enter space-separated numbers
-                            <input type="text" name="arrayMoveZeros" id="arrayMoveZerosId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                            </p>
-                        <button onclick="printMoveZeros('arrayMoveZerosId', 'arrayMovedZerosId')">Submit</button>
-                        <p>Result:
-                            <output type="text" name="arrayMovedZeros" id="arrayMovedZerosId"></output>
-                        </p>
-                    </form> 
-                </li>
-                <li>
-                    <p>Given a non-negative integer numRows, generate the first numRows of 
-                       <a target="_blank" href="" class="disaktiv_link" id="pacsalLinkId" onclick="openPascalTriangle('pascalTriangleImage.html', readNumberValue('numberOfRowsId'))">Pascal's triangle.</a>
-                       </p>  
-                    <form>
-                        <p>Please, enter number of rows
-                            <input type="text" name="numberOfRows" id="numberOfRowsId">
-                            </p>
-                        <button onclick="printPascalTriangle('numberOfRowsId', 'pascalTringleId')">Submit</button>
-                        <p>Result:
-                            <output type="text" name="pascalTringle" id="pascalTringleId"></output>
-                        </p>
-                    </form>
-                </li>
-            </ol>
-        </div>
-    </main>
-
-        
-    
 </body>
 </html>
