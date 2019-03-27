@@ -227,13 +227,15 @@
           <div class="task_body">
             <p>Given a 32-bit signed integer, reverse digits of an integer.</p>
             <form class="task_row">
-              <p>Please, enter a number
-                <input type="number" name="numberToReverce" id="numberToReverceId" placeholder="0">
-              </p>
-              <p>Result:
-                <button onclick="printDidgitsReverser('numberToReverceId', 'revercedNumberId')">Submit</button>
-                <output type="text" name="revercedNumber" id="revercedNumberId"></output>
-              </p>
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter a number</p>
+                <input type="number" name="numberToReverce"  class="task_subcolumn" id="numberToReverceId" placeholder="0">
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printDidgitsReverser('numberToReverceId', 'revercedNumberId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="revercedNumber" class="task_subcolumn" id="revercedNumberId"></output>
+              </div>
             </form>
             <div class="task_row">
               <div class="task_column task_tags">
@@ -342,7 +344,7 @@
                 <input type="number" name="powerOfThreeNumber" class="task_subcolumn" id="powerOfThreeNumberId" placeholder="0">
               </div>
               <div class="task_column">
-                <button onclick="printPowerOfThreeresult('powerOfThreeNumberId', 'powerOfThreeNumberResultId')">Submit</button>
+                <button class="task_subcolumn" onclick="printPowerOfThreeresult('powerOfThreeNumberId', 'powerOfThreeNumberResultId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output class="task_subcolumn" type="text" name="powerOfThreeNumberResult" id="powerOfThreeNumberResultId"></output>
               </div>
@@ -396,30 +398,56 @@
           <div class="task_name">
             <h4>Unique Charaaters in a String</h4>
           </div>
-          <p>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?</p>
-          <form class="task_row">
-            <p>Please, enter a string
-              <input type="text" name="userStringForUnique" id="userStringForUniqueId" autofocus>
-            </p>
-            <p>Result: 
-              <button onclick="printUniqueCharactersResult('userStringForUniqueId','resultStringForUniqueId')">Check</button>
-              <pre><output type="" name="resultStringForUnique" id="resultStringForUniqueId"></output></pre>
-            </p>
-          </form>
+            <div class="task_body">
+            <p>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?</p>
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter a string</p>
+                <input type="text" name="userStringForUnique" class="task_subcolumn" id="userStringForUniqueId" autofocus>
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printUniqueCharactersResult('userStringForUniqueId','resultStringForUniqueId')">Check</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="resultStringForUnique" class="task_subcolumn" id="resultStringForUniqueId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>string,</a>
+                <a>unique</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
         </li>
         <li class="task_element">
           <div class="task_name">
             <h4>String Reverser</h4>
           </div>
-          <p>How would you reverse a string in JavaScript?</p>
-          <form oninput="printReversedStringResult('userStringId', 'reverseUserStringId')">
-            <p>Please, enter a string
-              <input type="text" name="userString" id="userStringId" autofocus>
-            </p>
-            <p>Result: 
-              <pre><output type="" name="reverseUserString" id="reverseUserStringId"></output></pre>
-            </p>
-          </form>
+          <div class="task_body">
+            <p>How would you reverse a string in JavaScript?</p>
+            <form oninput="printReversedStringResult('userStringId', 'reverseUserStringId')">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter a string</p>
+                <input type="text" name="userString" class="task_subcolumn" id="userStringId" autofocus>
+              </div>
+              <div class="task_column">
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="reverseUserString" class="task_subcolumn" id="reverseUserStringId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>string,</a>
+                <a>reverse</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
         </li>
       </ol>
     </div>
@@ -430,96 +458,175 @@
           <div class="task_name">
             <h4>Array Duplicator</h4>
           </div>
-          <p>Make this work: duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]</p>  
-          <form class="task_row">
-            <p>Please, enter space-separated numbers
-              <input type="text" name="userArray" id="userArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-            </p>
-            <button onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Duplicate</button>
-            <p>Result:
-              <output type="text" name="duplicateUserArray" id="duplicateUserArrayId"></output>
-            </p>
-          </form>
+          <div class="task_body">
+            <p>Make this work: duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]</p>  
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter space-separated numbers</p>
+                <input type="text" name="userArray" class="task_subcolumn" id="userArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Duplicate</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="duplicateUserArray" class="task_subcolumn" id="duplicateUserArrayId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>array,</a>
+                <a>duplicate</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
         </li>
         <li class="task_element">
           <div class="task_name">
             <h4>Non Duplicated Array</h4>
           </div>
-          <p>How would you remove duplicate members from an array?</p>  
-          <form class="task_row">
-            <p>Please, enter space-separated numbers
-              <input type="text" name="userDuplicatedArray" id="userDuplicatedArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-            </p>
-            <button onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Submit</button>
-            <p>Result:
-              <output type="text" name="nonDuplicatedArray" id="nonDuplicatedArrayId"></output>
-            </p>
-          </form>
+          <div class="task_body">
+            <p>How would you remove duplicate members from an array?</p>
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter space-separated numbers</p>
+                <input type="text" name="userDuplicatedArray" class="task_subcolumn" id="userDuplicatedArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="nonDuplicatedArray" class="task_subcolumn" id="nonDuplicatedArrayId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>array,</a>
+                <a>unique</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
         </li>
         <li class="task_element">
           <div class="task_name">
             <h4>Two Arrays Merge</h4>
           </div>
-          <p>How would you merge two sorted array?</p>  
-          <form class="task_row">
-            <p>Please, enter space-separated numbers
-              <input type="text" name="userArrayForMerge1" id="userArrayForMerge1Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-              <input type="text" name="userArrayForMerge2" id="userArrayForMerge2Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-            </p>
-            <button onclick="printMergedArray('userArrayForMerge1Id', 'userArrayForMerge2Id', 'mergedArrayId')">Submit</button>
-            <p>Result:
-              <output type="text" name="mergedArray" id="mergedArrayId"></output>
-            </p>
-          </form>
+          <div class="task_body">
+            <p>How would you merge two sorted array?</p>
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter space-separated numbers</p>
+                <input type="text" name="userArrayForMerge1" class="task_subcolumn" id="userArrayForMerge1Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <input type="text" name="userArrayForMerge2" class="task_subcolumn" id="userArrayForMerge2Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printMergedArray('userArrayForMerge1Id', 'userArrayForMerge2Id', 'mergedArrayId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="mergedArray" id="mergedArrayId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>array,</a>
+                <a>merge</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
         </li>
         <li class="task_element">
           <div class="task_name">
             <h4>Array Shift</h4>
           </div>
-          <p>Given an array, rotate the array to the right by k steps, where k is non-negative.</p>  
-          <form class="task_row">
-            <p>Please, enter space-separated numbers
-              <input type="text" name="arrayForShift" id="arrayForShiftId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-              Please enter a number
-              <input type="number" name="shift" id="shiftId">
-            </p>
-            <button onclick="printShiftedArray('arrayForShiftId', 'shiftId','shiftedArrayId')">Submit</button>
-            <p>Result:
-              <output type="text" name="shiftedArray" id="shiftedArrayId"></output>
-            </p>
-          </form>
+          <div class="task_body">
+            <p>Given an array, rotate the array to the right by k steps, where k is non-negative.</p>  
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter space-separated numbers</p>
+                <input type="text" name="arrayForShift" class="task_subcolumn" id="arrayForShiftId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <p class="task_subcolumn new_line">Please enter a number</p>
+                <input type="number" name="shift" class="task_subcolumn" id="shiftId">
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printShiftedArray('arrayForShiftId', 'shiftId','shiftedArrayId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="shiftedArray" class="task_subcolumn" id="shiftedArrayId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>array,</a>
+                <a>rotate</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
         </li>
         <li class="task_element">
           <div class="task_name">
             <h4>Moove Zeros in an Array</h4>
           </div>
-          <p>Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.</p>  
-          <form class="task_row">
-            <p>Please, enter space-separated numbers
-              <input type="text" name="arrayMoveZeros" id="arrayMoveZerosId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-            </p>
-            <button onclick="printMoveZeros('arrayMoveZerosId', 'arrayMovedZerosId')">Submit</button>
-            <p>Result:
-              <output type="text" name="arrayMovedZeros" id="arrayMovedZerosId"></output>
-            </p>
-          </form>
+          <div class="task_body">
+            <p>Given an array nums, write a function to move all zeros to the end of it while maintaining the relative order of the non-zero elements.</p>  
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter space-separated numbers</p>
+                <input type="text" name="arrayMoveZeros" class="task_subcolumn" id="arrayMoveZerosId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printMoveZeros('arrayMoveZerosId', 'arrayMovedZerosId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="arrayMovedZeros" class="task_subcolumn" id="arrayMovedZerosId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>array,</a>
+                <a>zeros,</a>
+                <a>move</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\stars.png" alt="stars">
+              </div>
+            </div>
+          </div>
         </li>
         <li class="task_element">
           <div class="task_name">
             <h4>Pascal's Triangle</h4>
           </div>
-          <p>Given a non-negative integer numRows, generate the first numRows of 
-            <a target="_blank" href="" class="disaktiv_link" id="pacsalLinkId" onclick="openPascalTriangle('pascalTriangleImage.html', readNumberValue('numberOfRowsId'))">Pascal's triangle.</a>
-          </p>
-          <form class="task_row">
-            <p>Please, enter number of rows
-              <input type="text" name="numberOfRows" id="numberOfRowsId">
-             </p>
-            <button onclick="printPascalTriangle('numberOfRowsId', 'pascalTringleId')">Submit</button>
-            <p>Result:
-              <output type="text" name="pascalTringle" id="pascalTringleId"></output>
+          <div class="task_body">
+            <p>Given a non-negative integer numRows, generate the first numRows of 
+              <a target="_blank" href="" class="disaktiv_link" id="pacsalLinkId" onclick="openPascalTriangle('pascalTriangleImage.html', readNumberValue('numberOfRowsId'))">Pascal's triangle.</a>
             </p>
-            </form>
+            <form class="task_row">
+              <div class="task_column">
+                <p class="task_subcolumn">Please, enter number of rows</p>
+                <input type="text" name="numberOfRows" class="task_subcolumn" id="numberOfRowsId">
+              </div>
+              <div class="task_column">
+                <button class="task_subcolumn" onclick="printPascalTriangle('numberOfRowsId', 'pascalTringleId')">Submit</button>
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="pascalTringle" class="task_subcolumn" id="pascalTringleId"></output>
+              </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>number,</a>
+                  <a>zeros</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <img src="img\stars.png" alt="stars">
+                </div>
+              </div>
+          </div>
         </li>
       </ol>
     </div>

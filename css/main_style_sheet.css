@@ -105,6 +105,9 @@ header,
   margin-right: 1em;
   margin-bottom: 1em;
 }
+.new_line{
+  clear: both;
+}
 .task_tags {
   float: left;
   font-size: 14px;
