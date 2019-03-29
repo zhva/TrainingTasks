@@ -21,7 +21,6 @@ header,
   height: 40px;
 }
 
-
 .tab_link {
   background-color: rgb(54, 144, 169) ;
   color: white;
@@ -62,6 +61,7 @@ header,
   color: rgb(134, 135, 135);
   padding-left: 0px;
 }
+
 .task_element {
   border: 1px solid rgb(134, 135, 135);
   display: list-item;
@@ -72,46 +72,89 @@ header,
 }
 .task_name {
   width: inherit;
-  border-bottom: 1px solid rgb(134, 135, 135);
   vertical-align: middle;
   margin: 0px;
 }
-.task_name h4 {
-  margin-left: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
+
+.task_name:after {
+  content: "";
+  display: table;
+  clear: both;
 }
+
+.task_name h4 {
+  margin: 1em;
+  width: 80%;
+  float: left;
+}
+
+.task_body_button_up {
+  width: 0;
+  height: 0;
+  float: right;
+  margin-right: 1em;
+  margin-top: 22px;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+  border-bottom: 10px solid  rgb(134, 135, 135);
+}
+
+.task_body_button_down {
+  width: 0;
+  height: 0;
+  float: right;
+  margin-right: 1em;
+  margin-top: 22px;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-top: 10px solid rgb(134, 135, 135);
+}
+
 .task_row:after {
   content: "";
   display: table;
   clear: both;
 }
+
 .task_body {
-  margin-left: 1em;
-  margin-right: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-top: 1px solid rgb(134, 135, 135);
+  transition: all .5s ease-in-out;
+  max-height: 300px;
+  overflow: hidden;
+}
+.task_body_up {
+  max-height: 0px;
+  border-width: 0px;
 }
 
 .task_body > p {
   margin-top: 1.5em;
   margin-bottom: 1em;
 }
+
 .task_column {
   float: left;
   width: 50%;
   margin-bottom: 0.5em;
 }
+
 .task_subcolumn {
   float: left;
   margin-right: 1em;
   margin-bottom: 1em;
 }
+
 .new_line{
   clear: both;
 }
+
 .task_tags {
   float: left;
   font-size: 14px;
 }
+
 .task_complexity img{
   width: 1em;
   float: right;

@@ -31,4 +31,3 @@ function printReversedStringResult(id1, id2) {
     printStringValue(id2, reverseString(userStr));
   }
 }
-

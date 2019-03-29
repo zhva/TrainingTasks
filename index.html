@@ -26,8 +26,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Zeros Counter</h4>
+            <div class="task_body_button_up" id="taskNameId1" onclick="toggleTaskVisibility('taskNameId1', 'numberOfZerosId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="numberOfZerosId">
             <p>Count total number of zeros from 1 upto n? Do not use string!</p>
             <form class="task_row" oninput="printZerosCountResult('countOfZerosNumberNId','countOfZerosId')">
               <div class="task_column">
@@ -53,8 +54,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Prime Numbers Checker</h4>
+            <div class="task_body_button_up" id="taskNameId2" onclick="toggleTaskVisibility('taskNameId2', 'primeNumberId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="primeNumberId">
             <p>How would you verify a prime number?</p>
             <form class="task_row" oninput="printPrimeNumberCheckResult('checkPrimeNumberId','checkPrimeId')">
               <div class="task_column">
@@ -80,8 +82,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Number Fuctorization</h4>
+            <div class="task_body_button_up" id="taskNameId3" onclick="toggleTaskVisibility('taskNameId3', 'primeFactorizationId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id='primeFactorizationId'>
             <p>Prime factorization of a number?</p>
             <form class="task_row">
               <div class="task_column">
@@ -89,9 +92,9 @@
                 <input type="number" name="primeFactorizationOfNumber" class="task_subcolumn" id="primeFactorizationOfNumberId" placeholder="0">
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printNumberPrimeFactorizationResult('primeFactorizationOfNumberId', 'primeFactorizationId')">Submit</button>
+                <button class="task_subcolumn" onclick="printNumberPrimeFactorizationResult('primeFactorizationOfNumberId', 'showPrimeFactorizationId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
-                <output class="task_subcolumn" class="task_subcolumn" type="text" name="primeFactorization" id="primeFactorizationId"></output>
+                <output class="task_subcolumn" class="task_subcolumn" type="text" name="primeFactorizationTask" id="showPrimeFactorizationId"></output>
               </div>
             </form>
             <div class="task_row">
@@ -109,8 +112,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Prime Fuctors of Number</h4>
+            <div class="task_body_button_up" id="taskNameId4" onclick="toggleTaskVisibility('taskNameId4', 'bodyPrimeFactorsId')"></div>
         </div>
-        <div class="task_body">
+        <div class="task_body" id="bodyPrimeFactorsId">
           <p>How could you find all prime factors of a number?</p>
           <form class="task_row">
             <div class="task_column">
@@ -137,8 +141,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Nth Fibonacci Number</h4>
+            <div class="task_body_button_up" id="taskNameId5" onclick="toggleTaskVisibility('taskNameId5', 'fibonacciNumberId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="fibonacciNumberId">
             <p>How to get nth Fibonacci number?</p>
             <form class="task_row">
               <div class="task_column">
@@ -146,9 +151,9 @@
                 <input type="number" name="idexForFibonacciNumber" id="idexForFibonacciNumberId" placeholder="0">
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printNthFibonacciNumber('idexForFibonacciNumberId', 'fibonacciNumberId')">Submit</button>
+                <button class="task_subcolumn" onclick="printNthFibonacciNumber('idexForFibonacciNumberId', 'printFibonacciNumberId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
-                <output class="task_subcolumn" type="text" name="fibonacciNumber" id="fibonacciNumberId"></output>
+                <output class="task_subcolumn" type="text" name="fibonacciNumber" id="printFibonacciNumberId"></output>
               </div>
             </form>
             <div class="task_row">
@@ -165,8 +170,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Common Divisor</h4>
+            <div class="task_body_button_up" id="taskNameId6" onclick="toggleTaskVisibility('taskNameId6', 'commonDivisorId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="commonDivisorId">
             <p>How would you find the greatest common divisor of two numbers?</p>
             <form class="task_row">
               <div class="task_column">
@@ -194,8 +200,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Fizz Buzz Task</h4>
+            <div class="task_body_button_up" id="taskNameId7" onclick="toggleTaskVisibility('taskNameId7', 'fizzBuzzId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="fizzBuzzId">
             <p>Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.</p>
             <form class="task_row">
               <div class="task_column">
@@ -223,8 +230,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Didgits Reverser</h4>
+            <div class="task_body_button_up" id="taskNameId8" onclick="toggleTaskVisibility('taskNameId8', 'revercedNumberId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="revercedNumberId">
             <p>Given a 32-bit signed integer, reverse digits of an integer.</p>
             <form class="task_row">
               <div class="task_column">
@@ -232,9 +240,9 @@
                 <input type="number" name="numberToReverce"  class="task_subcolumn" id="numberToReverceId" placeholder="0">
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printDidgitsReverser('numberToReverceId', 'revercedNumberId')">Submit</button>
+                <button class="task_subcolumn" onclick="printDidgitsReverser('numberToReverceId', 'printRevercedNumberId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
-                <output type="text" name="revercedNumber" class="task_subcolumn" id="revercedNumberId"></output>
+                <output type="text" name="revercedNumber" class="task_subcolumn" id="printRevercedNumberId"></output>
               </div>
             </form>
             <div class="task_row">
@@ -251,8 +259,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Prime Numbers Counter</h4>
+            <div class="task_body_button_up" id="taskNameId9" onclick="toggleTaskVisibility('taskNameId9', 'amountOfPrimeNumbersId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="amountOfPrimeNumbersId">
             <p>Count the number of prime numbers less than a non-negative number, n.</p>
             <form class="task_row">
               <div class="task_column">
@@ -260,9 +269,9 @@
                 <input type="number" name="countPrimeNumbers" class="task_subcolumn" id="countPrimeNumbersId" placeholder="0">
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printPrimeNumbersCounter('countPrimeNumbersId', 'amountOfPrimeNumbersId')">Submit</button>
+                <button class="task_subcolumn" onclick="printPrimeNumbersCounter('countPrimeNumbersId', 'printAmountOfPrimeNumbersId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
-                <output type="text" name="amountOfPrimeNumbers" class="task_subcolumn" id="amountOfPrimeNumbersId"></output>
+                <output type="text" name="amountOfPrimeNumbers" class="task_subcolumn" id="printAmountOfPrimeNumbersId"></output>
             </div>
             </form>
             <div class="task_row">
@@ -279,8 +288,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Ugly Numbers</h4>
+            <div class="task_body_button_up" id="taskNameId10" onclick="toggleTaskVisibility('taskNameId10', 'isUglyNumberId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="isUglyNumberId">
             <p>Write a program to check whether a given number is an ugly number.</p>
             <form class="task_row">
               <div class="task_column">
@@ -307,8 +317,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Happy Numbers</h4>
+            <div class="task_body_button_up" id="taskNameId11" onclick="toggleTaskVisibility('taskNameId11', 'isHappyNumberId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="isHappyNumberId">
             <p>Write an algorithm to determine if a number is "happy".</p>
             <form class="task_row">
               <div class="task_column">
@@ -335,8 +346,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Power of Three</h4>
+            <div class="task_body_button_up" id="taskNameId12" onclick="toggleTaskVisibility('taskNameId12', 'powerOfThreeId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="powerOfThreeId">
             <p>Given an integer, write a function to determine if it is a power of three.</p>
             <form class="task_row">
               <div class="task_column">
@@ -363,8 +375,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Square Root</h4>
+            <div class="task_body_button_up" id="taskNameId13" onclick="toggleTaskVisibility('taskNameId13', 'squareRootId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="squareRootId">
             <p>Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
                 Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.</p>
             <form class="task_row">
@@ -397,8 +410,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Unique Charaaters in a String</h4>
+            <div class="task_body_button_up" id="taskNameId14" onclick="toggleTaskVisibility('taskNameId14', 'uniqueStringId')"></div>
           </div>
-            <div class="task_body">
+            <div class="task_body" id="uniqueStringId">
             <p>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?</p>
             <form class="task_row">
               <div class="task_column">
@@ -425,8 +439,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>String Reverser</h4>
+            <div class="task_body_button_up" id="taskNameId15" onclick="toggleTaskVisibility('taskNameId15', 'reverseStringId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="reverseStringId">
             <p>How would you reverse a string in JavaScript?</p>
             <form oninput="printReversedStringResult('userStringId', 'reverseUserStringId')">
               <div class="task_column">
@@ -457,8 +472,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Array Duplicator</h4>
+            <div class="task_body_button_up" id="taskNameId16" onclick="toggleTaskVisibility('taskNameId16', 'duplicateArrayId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="duplicateArrayId">
             <p>Make this work: duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]</p>  
             <form class="task_row">
               <div class="task_column">
@@ -485,8 +501,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Non Duplicated Array</h4>
+            <div class="task_body_button_up" id="taskNameId17" onclick="toggleTaskVisibility('taskNameId17', 'uniqueArrayId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="uniqueArrayId">
             <p>How would you remove duplicate members from an array?</p>
             <form class="task_row">
               <div class="task_column">
@@ -513,8 +530,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Two Arrays Merge</h4>
+            <div class="task_body_button_up" id="taskNameId18" onclick="toggleTaskVisibility('taskNameId18', 'arrayMergeId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body"  id="arrayMergeId">
             <p>How would you merge two sorted array?</p>
             <form class="task_row">
               <div class="task_column">
@@ -542,8 +560,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Array Shift</h4>
+            <div class="task_body_button_up" id="taskNameId19" onclick="toggleTaskVisibility('taskNameId19', 'arrayShiftId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="arrayShiftId">
             <p>Given an array, rotate the array to the right by k steps, where k is non-negative.</p>  
             <form class="task_row">
               <div class="task_column">
@@ -572,8 +591,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Moove Zeros in an Array</h4>
+            <div class="task_body_button_up" id="taskNameId20" onclick="toggleTaskVisibility('taskNameId20', 'moveZerosId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="moveZerosId">
             <p>Given an array nums, write a function to move all zeros to the end of it while maintaining the relative order of the non-zero elements.</p>  
             <form class="task_row">
               <div class="task_column">
@@ -601,8 +621,9 @@
         <li class="task_element">
           <div class="task_name">
             <h4>Pascal's Triangle</h4>
+            <div class="task_body_button_up" id="taskNameId21" onclick="toggleTaskVisibility('taskNameId21', 'pascalTringleId')"></div>
           </div>
-          <div class="task_body">
+          <div class="task_body" id="pascalTringleId">
             <p>Given a non-negative integer numRows, generate the first numRows of 
               <a target="_blank" href="" class="disaktiv_link" id="pacsalLinkId" onclick="openPascalTriangle('pascalTriangleImage.html', readNumberValue('numberOfRowsId'))">Pascal's triangle.</a>
             </p>
@@ -612,9 +633,9 @@
                 <input type="text" name="numberOfRows" class="task_subcolumn" id="numberOfRowsId">
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printPascalTriangle('numberOfRowsId', 'pascalTringleId')">Submit</button>
+                <button class="task_subcolumn" onclick="printPascalTriangle('numberOfRowsId', 'pascalTringleResultId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
-                <output type="text" name="pascalTringle" class="task_subcolumn" id="pascalTringleId"></output>
+                <output type="text" name="pascalTringle" class="task_subcolumn" id="pascalTringleResultId"></output>
               </div>
               </form>
               <div class="task_row">
