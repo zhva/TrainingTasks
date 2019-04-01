@@ -5,6 +5,14 @@ p {
   padding: 0px;
   margin: 0px;
 }
+input {
+  -webkit-appearance: unset;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 
 body, html {
     height: 100%;
@@ -120,7 +128,7 @@ header,
   padding-left: 1em;
   padding-right: 1em;
   border-top: 1px solid rgb(134, 135, 135);
-  transition: all .5s ease-in-out;
+  transition: all .5s ease;
   max-height: 300px;
   overflow: hidden;
 }
@@ -144,6 +152,13 @@ header,
   float: left;
   margin-right: 1em;
   margin-bottom: 1em;
+}
+
+.autofill_icon {
+  background-image: url(../img/auto_fill.svg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: 11%;
 }
 
 .new_line{

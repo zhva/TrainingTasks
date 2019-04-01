@@ -30,10 +30,11 @@
           </div>
           <div class="task_body" id="numberOfZerosId">
             <p>Count total number of zeros from 1 upto n? Do not use string!</p>
-            <form class="task_row" oninput="printZerosCountResult('countOfZerosNumberNId','countOfZerosId')">
+            <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter a number</p>
-                <input type="number" name="countOfZerosNumber" class="task_subcolumn" id="countOfZerosNumberNId" placeholder="0" autofocus>
+                <!--<p class="task_subcolumn">Please, enter a number</p>-->
+                <input type="number" name="countOfZerosNumber" class="task_subcolumn" id="countOfZerosNumberNId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printZerosCountResult('countOfZerosNumberNId','countOfZerosId')">Count</button>
               </div>
               <div class="task_column">
                 <p class="task_subcolumn">Result:</p>
@@ -58,10 +59,11 @@
           </div>
           <div class="task_body" id="primeNumberId">
             <p>How would you verify a prime number?</p>
-            <form class="task_row" oninput="printPrimeNumberCheckResult('checkPrimeNumberId','checkPrimeId')">
+            <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter a number</p>
-                <input type="number" name="checkPrimeNumber" class="task_subcolumn" id="checkPrimeNumberId" placeholder="0" autofocus>
+                <!--<p class="task_subcolumn">Please, enter a number</p>-->
+                <input type="number" name="checkPrimeNumber" class="task_subcolumn" id="checkPrimeNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printPrimeNumberCheckResult('checkPrimeNumberId','checkPrimeId')">Verify</button>
               </div>
               <div class="task_column">
                 <p class="task_subcolumn">Result:</p>
@@ -85,14 +87,14 @@
             <div class="task_body_button_up" id="taskNameId3" onclick="toggleTaskVisibility('taskNameId3', 'primeFactorizationId')"></div>
           </div>
           <div class="task_body" id='primeFactorizationId'>
-            <p>Prime factorization of a number?</p>
+            <p>Calculate prime factorization of a number.</p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter a number</p>
-                <input type="number" name="primeFactorizationOfNumber" class="task_subcolumn" id="primeFactorizationOfNumberId" placeholder="0">
+                <!--<p class="task_subcolumn">Please, enter a number</p>-->
+                <input type="number" name="primeFactorizationOfNumber" class="task_subcolumn" id="primeFactorizationOfNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printNumberPrimeFactorizationResult('primeFactorizationOfNumberId', 'showPrimeFactorizationId')">Calculate</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printNumberPrimeFactorizationResult('primeFactorizationOfNumberId', 'showPrimeFactorizationId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output class="task_subcolumn" class="task_subcolumn" type="text" name="primeFactorizationTask" id="showPrimeFactorizationId"></output>
               </div>
@@ -118,11 +120,11 @@
           <p>How could you find all prime factors of a number?</p>
           <form class="task_row">
             <div class="task_column">
-                <p class="task_subcolumn">Please, enter a number</p>
-                <input type="number" name="primeFactorsOfNumber" class="task_subcolumn" id="primeFactorsOfNumberId" placeholder="0">
+                <!--<p class="task_subcolumn">Please, enter a number</p>-->
+                <input type="number" name="primeFactorsOfNumber" class="task_subcolumn" id="primeFactorsOfNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printPrimeFactorsResult('primeFactorsOfNumberId', 'primeFactorsId')">Find</button>
             </div>
             <div class="task_column">
-              <button class="task_subcolumn" onclick="printPrimeFactorsResult('primeFactorsOfNumberId', 'primeFactorsId')">Submit</button>
               <p class="task_subcolumn">Result:</p>
               <output type="text" name="primeFactors" class="task_subcolumn" id="primeFactorsId"></output>
             </div>
@@ -147,11 +149,11 @@
             <p>How to get nth Fibonacci number?</p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter an idex for Fibonacci number</p>
-                <input type="number" name="idexForFibonacciNumber" id="idexForFibonacciNumberId" placeholder="0">
+                <!--<p class="task_subcolumn">Please, enter an idex for Fibonacci number</p>-->
+                <input type="number" name="idexForFibonacciNumber" class="task_subcolumn" id="idexForFibonacciNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printNthFibonacciNumber('idexForFibonacciNumberId', 'printFibonacciNumberId')">Get</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printNthFibonacciNumber('idexForFibonacciNumberId', 'printFibonacciNumberId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output class="task_subcolumn" type="text" name="fibonacciNumber" id="printFibonacciNumberId"></output>
               </div>
@@ -176,12 +178,12 @@
             <p>How would you find the greatest common divisor of two numbers?</p>
             <form class="task_row">
               <div class="task_column">
-              <p class="task_subcolumn">Please, enter two numbers</p>
-              <input type="number" name="firstNumberForCommonDivisors" class="task_subcolumn" id="firstNumberForCommonDivisorsId" placeholder="number 1">
-              <input type="number" name="secondNumberForCommonDivisors" class="task_subcolumn" id="secondNumberForCommonDivisorsId" placeholder="number 2">
+              <!--<p class="task_subcolumn">Please, enter two numbers</p>-->
+              <input type="number" name="firstNumberForCommonDivisors" class="task_subcolumn" id="firstNumberForCommonDivisorsId" placeholder="number 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number 1'">
+              <input type="number" name="secondNumberForCommonDivisors" class="task_subcolumn" id="secondNumberForCommonDivisorsId" placeholder="number 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number 2'">
+              <button class="task_subcolumn" onclick="printGreatestCommonDivisorCounter('firstNumberForCommonDivisorsId', 'secondNumberForCommonDivisorsId', 'greatestCommonDivisorId')">Find</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printGreatestCommonDivisorCounter('firstNumberForCommonDivisorsId', 'secondNumberForCommonDivisorsId', 'greatestCommonDivisorId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="greatestCommonDivisor" class="task_subcolumn" id="greatestCommonDivisorId"></output>
               </div>
@@ -203,14 +205,14 @@
             <div class="task_body_button_up" id="taskNameId7" onclick="toggleTaskVisibility('taskNameId7', 'fizzBuzzId')"></div>
           </div>
           <div class="task_body" id="fizzBuzzId">
-            <p>Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.</p>
+            <p>Create a for loop that iterates up to N (max 100) while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.</p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter a number</p>
-                <input type="number" name="fizzBuzzNumber" class="task_subcolumn" id="fizzBuzzNumberId" placeholder="0">
+                <!--<p class="task_subcolumn">Please, enter a number</p>-->
+                <input type="number" name="fizzBuzzNumber" class="task_subcolumn" id="fizzBuzzNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="fizzBuzzPrint('fizzBuzzNumberId', 'fizzBuzzOutputId')">Create</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="fizzBuzzPrint('fizzBuzzNumberId', 'fizzBuzzOutputId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="fizzBuzzOutput" class="task_subcolumn" id="fizzBuzzOutputId"></output>
               </div>
@@ -236,11 +238,11 @@
             <p>Given a 32-bit signed integer, reverse digits of an integer.</p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter a number</p>
-                <input type="number" name="numberToReverce"  class="task_subcolumn" id="numberToReverceId" placeholder="0">
+                <!--<p class="task_subcolumn">Please, enter a number</p>-->
+                <input type="number" name="numberToReverce"  class="task_subcolumn" id="numberToReverceId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printDidgitsReverser('numberToReverceId', 'printRevercedNumberId')">Reverse</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printDidgitsReverser('numberToReverceId', 'printRevercedNumberId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="revercedNumber" class="task_subcolumn" id="printRevercedNumberId"></output>
               </div>
@@ -265,11 +267,11 @@
             <p>Count the number of prime numbers less than a non-negative number, n.</p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter a number</p>
-                <input type="number" name="countPrimeNumbers" class="task_subcolumn" id="countPrimeNumbersId" placeholder="0">
+                <!--<p class="task_subcolumn">Please, enter a number</p>-->
+                <input type="number" name="countPrimeNumbers" class="task_subcolumn" id="countPrimeNumbersId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printPrimeNumbersCounter('countPrimeNumbersId', 'printAmountOfPrimeNumbersId')">Count</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printPrimeNumbersCounter('countPrimeNumbersId', 'printAmountOfPrimeNumbersId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="amountOfPrimeNumbers" class="task_subcolumn" id="printAmountOfPrimeNumbersId"></output>
             </div>
@@ -294,11 +296,11 @@
             <p>Write a program to check whether a given number is an ugly number.</p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter a number</p>
-                <input type="number" name="uglyNumber" class="task_subcolumn" id="uglyNumberId" placeholder="0">
+                <!--<p class="task_subcolumn">Please, enter a number</p>-->
+                <input type="number" name="uglyNumber" class="task_subcolumn autofill_icon" id="uglyNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printisNumberUglyResult('uglyNumberId', 'uglyNumberResultId')">Check</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printisNumberUglyResult('uglyNumberId', 'uglyNumberResultId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output class="task_subcolumn" type="text" name="uglyNumberResult" id="uglyNumberResultId"></output>
               </div>
@@ -323,11 +325,11 @@
             <p>Write an algorithm to determine if a number is "happy".</p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter a number</p>
-                <input type="number" name="happyNumber" class="task_subcolumn" id="happyNumberId" placeholder="0">
+                <!--<p class="task_subcolumn">Please, enter a number</p>-->
+                <input type="number" name="happyNumber" class="task_subcolumn autofill_icon" id="happyNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printHappyNumberResult('happyNumberId', 'happyNumberResultId')">Determine</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printHappyNumberResult('happyNumberId', 'happyNumberResultId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="happyNumberResult" class="task_subcolumn" id="happyNumberResultId"></output>
               </div>
@@ -352,11 +354,11 @@
             <p>Given an integer, write a function to determine if it is a power of three.</p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter a number</p>
-                <input type="number" name="powerOfThreeNumber" class="task_subcolumn" id="powerOfThreeNumberId" placeholder="0">
+                <!--<p class="task_subcolumn">Please, enter a number</p>-->
+                <input type="number" name="powerOfThreeNumber" class="task_subcolumn" id="powerOfThreeNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printPowerOfThreeresult('powerOfThreeNumberId', 'powerOfThreeNumberResultId')">Determine</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printPowerOfThreeresult('powerOfThreeNumberId', 'powerOfThreeNumberResultId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output class="task_subcolumn" type="text" name="powerOfThreeNumberResult" id="powerOfThreeNumberResultId"></output>
               </div>
@@ -382,11 +384,11 @@
                 Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.</p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter a number</p>
-                <input type="number" name="squareRootNumber" class="task_subcolumn" id="squareRootNumberId" placeholder="0">
+                <!--<p class="task_subcolumn">Please, enter a number</p>-->
+                <input type="number" name="squareRootNumber" class="task_subcolumn" id="squareRootNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printSquareRootResult('squareRootNumberId', 'squareRootResultId')">Compute</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printSquareRootResult('squareRootNumberId', 'squareRootResultId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="squareRootResult" class="task_subcolumn" id="squareRootResultId"></output>
               </div>
@@ -416,11 +418,11 @@
             <p>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?</p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter a string</p>
-                <input type="text" name="userStringForUnique" class="task_subcolumn" id="userStringForUniqueId" autofocus>
+                <!--<p class="task_subcolumn">Please, enter a string</p>-->
+                <input type="text" name="userStringForUnique" class="task_subcolumn autofill_icon" id="userStringForUniqueId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                <button class="task_subcolumn" onclick="printUniqueCharactersResult('userStringForUniqueId','resultStringForUniqueId')">Check</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printUniqueCharactersResult('userStringForUniqueId','resultStringForUniqueId')">Check</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="resultStringForUnique" class="task_subcolumn" id="resultStringForUniqueId"></output>
               </div>
@@ -443,10 +445,11 @@
           </div>
           <div class="task_body" id="reverseStringId">
             <p>How would you reverse a string in JavaScript?</p>
-            <form oninput="printReversedStringResult('userStringId', 'reverseUserStringId')">
+            <form>
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter a string</p>
-                <input type="text" name="userString" class="task_subcolumn" id="userStringId" autofocus>
+                <!--<p class="task_subcolumn">Please, enter a string</p>-->
+                <input type="text" name="userString" class="task_subcolumn autofill_icon" id="userStringId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                <button class="task_subcolumn" onclick="printReversedStringResult('userStringId', 'reverseUserStringId')">Reverse</button>
               </div>
               <div class="task_column">
                 <p class="task_subcolumn">Result:</p>
@@ -478,11 +481,11 @@
             <p>Make this work: duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]</p>  
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter space-separated numbers</p>
-                <input type="text" name="userArray" class="task_subcolumn" id="userArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
+                <input type="text" name="userArray" class="task_subcolumn autofill_icon" id="userArrayId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                <button class="task_subcolumn" onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Duplicate</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Duplicate</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="duplicateUserArray" class="task_subcolumn" id="duplicateUserArrayId"></output>
               </div>
@@ -507,11 +510,11 @@
             <p>How would you remove duplicate members from an array?</p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter space-separated numbers</p>
-                <input type="text" name="userDuplicatedArray" class="task_subcolumn" id="userDuplicatedArrayId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
+                <input type="text" name="userDuplicatedArray" class="task_subcolumn autofill_icon" id="userDuplicatedArrayId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                <button class="task_subcolumn" onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Remove</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="nonDuplicatedArray" class="task_subcolumn" id="nonDuplicatedArrayId"></output>
               </div>
@@ -536,12 +539,12 @@
             <p>How would you merge two sorted array?</p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter space-separated numbers</p>
-                <input type="text" name="userArrayForMerge1" class="task_subcolumn" id="userArrayForMerge1Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                <input type="text" name="userArrayForMerge2" class="task_subcolumn" id="userArrayForMerge2Id" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
+                <input type="text" name="userArrayForMerge1" class="task_subcolumn autofill_icon" id="userArrayForMerge1Id" placeholder="array 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <input type="text" name="userArrayForMerge2" class="task_subcolumn autofill_icon" id="userArrayForMerge2Id" placeholder="array 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 2'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <button class="task_subcolumn" onclick="printMergedArray('userArrayForMerge1Id', 'userArrayForMerge2Id', 'mergedArrayId')">Merge</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printMergedArray('userArrayForMerge1Id', 'userArrayForMerge2Id', 'mergedArrayId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="mergedArray" id="mergedArrayId"></output>
               </div>
@@ -566,13 +569,13 @@
             <p>Given an array, rotate the array to the right by k steps, where k is non-negative.</p>  
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter space-separated numbers</p>
-                <input type="text" name="arrayForShift" class="task_subcolumn" id="arrayForShiftId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                <p class="task_subcolumn new_line">Please enter a number</p>
-                <input type="number" name="shift" class="task_subcolumn" id="shiftId">
+                <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
+                <input type="text" name="arrayForShift" class="task_subcolumn autofill_icon" id="arrayForShiftId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <!--<p class="task_subcolumn new_line">Please enter a number</p>-->
+                <input type="number" name="shift" class="task_subcolumn" id="shiftId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printShiftedArray('arrayForShiftId', 'shiftId','shiftedArrayId')">Rotate</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printShiftedArray('arrayForShiftId', 'shiftId','shiftedArrayId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="shiftedArray" class="task_subcolumn" id="shiftedArrayId"></output>
               </div>
@@ -597,11 +600,11 @@
             <p>Given an array nums, write a function to move all zeros to the end of it while maintaining the relative order of the non-zero elements.</p>  
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter space-separated numbers</p>
-                <input type="text" name="arrayMoveZeros" class="task_subcolumn" id="arrayMoveZerosId" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
+                <input type="text" name="arrayMoveZeros" class="task_subcolumn autofill_icon" id="arrayMoveZerosId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <button class="task_subcolumn" onclick="printMoveZeros('arrayMoveZerosId', 'arrayMovedZerosId')">Move</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printMoveZeros('arrayMoveZerosId', 'arrayMovedZerosId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="arrayMovedZeros" class="task_subcolumn" id="arrayMovedZerosId"></output>
               </div>
@@ -629,11 +632,11 @@
             </p>
             <form class="task_row">
               <div class="task_column">
-                <p class="task_subcolumn">Please, enter number of rows</p>
-                <input type="text" name="numberOfRows" class="task_subcolumn" id="numberOfRowsId">
+                <!--<p class="task_subcolumn">Please, enter number of rows</p>-->
+                <input type="text" name="numberOfRows" class="task_subcolumn" id="numberOfRowsId"  placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <button class="task_subcolumn" onclick="printPascalTriangle('numberOfRowsId', 'pascalTringleResultId')">Generate</button>
               </div>
               <div class="task_column">
-                <button class="task_subcolumn" onclick="printPascalTriangle('numberOfRowsId', 'pascalTringleResultId')">Submit</button>
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="pascalTringle" class="task_subcolumn" id="pascalTringleResultId"></output>
               </div>
