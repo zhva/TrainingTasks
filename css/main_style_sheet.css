@@ -159,6 +159,17 @@ header,
   background-position: top right;
   background-repeat: no-repeat;
   background-size: 11%;
+  position: relative;
+}
+.clicable_icon {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  margin-left: 150px;
+  cursor: pointer;
+}
+.clicable_icon_lastelem {
+  margin-left: 335px;
 }
 
 .new_line{

@@ -298,6 +298,7 @@
               <div class="task_column">
                 <!--<p class="task_subcolumn">Please, enter a number</p>-->
                 <input type="number" name="uglyNumber" class="task_subcolumn autofill_icon" id="uglyNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <div class="clicable_icon" onclick="autoFillNumber('uglyNumberId')"></div>
                 <button class="task_subcolumn" onclick="printisNumberUglyResult('uglyNumberId', 'uglyNumberResultId')">Check</button>
               </div>
               <div class="task_column">
@@ -327,6 +328,7 @@
               <div class="task_column">
                 <!--<p class="task_subcolumn">Please, enter a number</p>-->
                 <input type="number" name="happyNumber" class="task_subcolumn autofill_icon" id="happyNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                <div class="clicable_icon" onclick="autoFillNumber('happyNumberId')"></div>
                 <button class="task_subcolumn" onclick="printHappyNumberResult('happyNumberId', 'happyNumberResultId')">Determine</button>
               </div>
               <div class="task_column">
@@ -420,6 +422,7 @@
               <div class="task_column">
                 <!--<p class="task_subcolumn">Please, enter a string</p>-->
                 <input type="text" name="userStringForUnique" class="task_subcolumn autofill_icon" id="userStringForUniqueId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                <div class="clicable_icon" onclick="autoFillString('userStringForUniqueId')"></div>
                 <button class="task_subcolumn" onclick="printUniqueCharactersResult('userStringForUniqueId','resultStringForUniqueId')">Check</button>
               </div>
               <div class="task_column">
@@ -449,6 +452,7 @@
               <div class="task_column">
                 <!--<p class="task_subcolumn">Please, enter a string</p>-->
                 <input type="text" name="userString" class="task_subcolumn autofill_icon" id="userStringId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                <div class="clicable_icon" onclick="autoFillString('userStringId')"></div>
                 <button class="task_subcolumn" onclick="printReversedStringResult('userStringId', 'reverseUserStringId')">Reverse</button>
               </div>
               <div class="task_column">
@@ -483,6 +487,7 @@
               <div class="task_column">
                 <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
                 <input type="text" name="userArray" class="task_subcolumn autofill_icon" id="userArrayId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                <div class="clicable_icon" onclick="autoFillArray('userArrayId')"></div>
                 <button class="task_subcolumn" onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Duplicate</button>
               </div>
               <div class="task_column">
@@ -512,6 +517,7 @@
               <div class="task_column">
                 <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
                 <input type="text" name="userDuplicatedArray" class="task_subcolumn autofill_icon" id="userDuplicatedArrayId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                <div class="clicable_icon" onclick="autoFillArray('userDuplicatedArrayId')"></div>
                 <button class="task_subcolumn" onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Remove</button>
               </div>
               <div class="task_column">
@@ -540,8 +546,10 @@
             <form class="task_row">
               <div class="task_column">
                 <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
-                <input type="text" name="userArrayForMerge1" class="task_subcolumn autofill_icon" id="userArrayForMerge1Id" placeholder="array 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                <input type="text" name="userArrayForMerge2" class="task_subcolumn autofill_icon" id="userArrayForMerge2Id" placeholder="array 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 2'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <input type="text" name="userArrayForMerge1" class="task_subcolumn autofill_icon" id="userArrayForMerge1Id" placeholder="array 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                <div class="clicable_icon" onclick="autoFillArray('userArrayForMerge1Id')"></div>
+                <input type="text" name="userArrayForMerge2" class="task_subcolumn autofill_icon" id="userArrayForMerge2Id" placeholder="array 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 2'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                <div class="clicable_icon clicable_icon_lastelem" onclick="autoFillArray('userArrayForMerge2Id')"></div>
                 <button class="task_subcolumn" onclick="printMergedArray('userArrayForMerge1Id', 'userArrayForMerge2Id', 'mergedArrayId')">Merge</button>
               </div>
               <div class="task_column">
@@ -571,6 +579,7 @@
               <div class="task_column">
                 <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
                 <input type="text" name="arrayForShift" class="task_subcolumn autofill_icon" id="arrayForShiftId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <div class="clicable_icon" onclick="autoFillArray('arrayForShiftId')"></div>
                 <!--<p class="task_subcolumn new_line">Please enter a number</p>-->
                 <input type="number" name="shift" class="task_subcolumn" id="shiftId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
                 <button class="task_subcolumn" onclick="printShiftedArray('arrayForShiftId', 'shiftId','shiftedArrayId')">Rotate</button>
@@ -602,6 +611,7 @@
               <div class="task_column">
                 <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
                 <input type="text" name="arrayMoveZeros" class="task_subcolumn autofill_icon" id="arrayMoveZerosId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <div class="clicable_icon" onclick="autoFillArray('arrayMoveZerosId')"></div>
                 <button class="task_subcolumn" onclick="printMoveZeros('arrayMoveZerosId', 'arrayMovedZerosId')">Move</button>
               </div>
               <div class="task_column">
