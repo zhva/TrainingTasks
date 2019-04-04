@@ -124,6 +124,6 @@ function printArayWithUniqueMembers(id1, id2) {
     alert('An array is empty or an object is not defined!');
   }
   else {
-    printArray(id2, deleteDuplicateMembers_v2(userArray));
+    printArray(id2, deleteDuplicateMembers_V2(userArray));
   }
 }
