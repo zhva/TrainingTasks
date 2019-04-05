@@ -4,6 +4,17 @@
 //---------------------------------------------------------------------------
 //                        twoSortedArraysMerge.js
 //---------------------------------------------------------------------------
+function compareAsc(a, b) {
+  if (a > b) {
+    return 1;
+  }
+  if (a < b) {
+    return -1;
+  }
+  // if (a===b)
+  return 0;
+}
+
 function mergeSortedArrays(array1, array2) {
   if (!Array.isArray(array1) && !Array.isArray(array2)) {
     return [];
@@ -16,10 +27,10 @@ function mergeSortedArrays(array1, array2) {
   }
 
   // if(!sorted)
-  const userArray1 = array1.sort();
-  const userArray2 = array2.sort();
-  const arr1 = userArray1;
-  const arr2 = userArray2;
+  const userArray1 = [...array1].sort(compareAsc);
+  const userArray2 = [...array2].sort(compareAsc);
+  const arr1 = [];
+  const arr2 = [];
 
   for (let i = 0; i < userArray1.length; i++) {
     if (userArray1[i] != null && typeof userArray1[i] === 'number') {

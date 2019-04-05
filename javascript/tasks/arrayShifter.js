@@ -9,7 +9,7 @@ function arrayShift_V1(arr, m) {
   if (!Array.isArray(arr) || arr.length <= 0 || !Number.isSafeInteger(m)) {
     return [];
   }
-  const array = arr;
+  const array = [...arr];
   const n = array.length;
   let k = m % n;
   if (k < 0) {
@@ -46,7 +46,7 @@ function arrayShift_V2(arr, k) {
     return [];
   }
   let m = k;
-  const array = arr;
+  const array = [...arr];
   let lastElement = 0;
   const n = array.length;
   if (k < 0) {

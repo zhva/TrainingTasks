@@ -35,6 +35,10 @@ function readArray(ctrlId) {
   }
 
   const arr = ctrl.value.replace(/\s\s+/g, ' ').split(' ');
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = parseInt(arr[i], 10);
+  }
+  const intArray = arr.filter(n => !Number.isNaN(n));
   return arr;
 }
 //---------------------------------------------------------------------------
@@ -64,4 +68,15 @@ function printArray(ctrlId, arr) {
   }
 
   ctrl.value = arr.join(' ');
+}
+//---------------------------------------------------------------------------
+function compareAsc(a, b) {
+  if (a > b) {
+    return 1;
+  }
+  if (a < b) {
+    return -1;
+  }
+
+  return 0;
 }

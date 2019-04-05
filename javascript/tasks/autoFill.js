@@ -23,5 +23,4 @@ function autoFillArray(elemId) {
   }
   const obj = document.getElementById(elemId);
   obj.value = randomArray.join(' ');
-  
 }
