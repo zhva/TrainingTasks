@@ -4,17 +4,6 @@
 //---------------------------------------------------------------------------
 //                        twoSortedArraysMerge.js
 //---------------------------------------------------------------------------
-function compareAsc(a, b) {
-  if (a > b) {
-    return 1;
-  }
-  if (a < b) {
-    return -1;
-  }
-  // if (a===b)
-  return 0;
-}
-
 function mergeSortedArrays(array1, array2) {
   if (!Array.isArray(array1) && !Array.isArray(array2)) {
     return [];
