@@ -8,8 +8,8 @@ p {
 input {
   -webkit-appearance: unset;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none; 
   margin: 0; 
 }
@@ -26,33 +26,47 @@ body, html {
 header,
 .tabs_style {
   width: inherit;
-  height: 40px;
 }
 
-.tab_link {
-  background-color: rgb(54, 144, 169) ;
-  color: white;
-  float: left;
-  border: none;
-  height: 40px;
-  outline: none;
-  cursor: pointer;
-  font-size: 17px;
-  width: 33.33%;
+.navigation {
+  width: 15%;
+  height: 100%;
+  background-color: #f1f1f1;
+  overflow: auto;
+  position: fixed;
+}
+
+.side_menu div p{
+  padding: 10px;
+  margin: 0px;
+  font-weight: 600;
+}
+.side_menu_list {
+  margin: 0px;
   padding: 0px;
-  border: 1px solid rgb(255, 255, 255);
-  border-right: none;
-  border-bottom: none;
-  border-radius: 10px 10px 0px 0px;
+  list-style-type: none;
+  background-color: #d6d6d6;
 }
 
-.tab_link > button:last-child {
-  border-right: 1px solid rgb(255, 255, 255);
+.side_menu_list_item {
+  text-decoration: none;
+  color: rgb(49, 49, 49);
+  padding: 10px 10px 10px 20px;
 }
 
-.tab_link:hover,
-.tab_link_visible {
-  background: rgb(100, 197, 208);
+.side_menu_list_item:hover {
+  background-color: #ddd;
+}
+
+.side_menu_list_item.active {
+  background-color: #666;
+  color: white;
+}
+
+.disaktiv_link{
+  cursor: not-allowed;
+  text-decoration: none;
+  pointer-events: none;
 }
 
 .tab_content_hidden {
@@ -69,13 +83,17 @@ header,
   color: rgb(134, 135, 135);
   padding-left: 0px;
 }
-
+.body_style {
+  width: 85%;
+  margin-left: 15%;
+}
 .task_element {
   border: 1px solid rgb(134, 135, 135);
-  display: list-item;
+  /*display: list-item;*/
   list-style: none;
   width: 100%;
   margin-bottom: 20px;
+  display: none;
 
 }
 .task_name {
@@ -190,9 +208,6 @@ header,
   display: none;
 }
 
-.disaktiv_link{
-  cursor: not-allowed;
-  text-decoration: none;
-  pointer-events: none;
+.items_show {
+  display: block;
 }
-
