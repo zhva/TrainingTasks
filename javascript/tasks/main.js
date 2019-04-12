@@ -3,13 +3,13 @@
 */
 
 function onFilterElementClick(event, siblingElements) {
-  const dataType = this.getAttribute('data-type');
+  const dataType = event.currentTarget.getAttribute('data-type');
   filterSelection(dataType);
 
   for (let j = 0; j < siblingElements.length; j++) {
     siblingElements[j].classList.remove('active');
   }
-  this.classList.add('active');
+  event.currentTarget.classList.add('active');
 }
 
 function onPageLoad() {
@@ -23,13 +23,16 @@ function onPageLoad() {
 
   // adding event handlers
   for (let i = 0; i < elementsTypesFilterValue.length; i++) {
-    elementsTypesFilterValue[i].addEventListener('click', (event) => { onFilterElementClick(event, elementsTypesFilterValue); }, true);
+    elementsTypesFilterValue[i].addEventListener('click', (event) => { onFilterElementClick(event, elementsTypesFilterValue); });
   }
 
   for (let i = 0; i < elementsComplexityFilterValue.length; i++) {
-    elementsComplexityFilterValue[i].addEventListener('click', (event) => { onFilterElementClick(event, elementsComplexityFilterValue); }, true);
+    elementsComplexityFilterValue[i].addEventListener('click', (event) => { onFilterElementClick(event, elementsComplexityFilterValue); });
   }
 
+  for (let i = 0; i < elementsTagsFilterValue.length; i++) {
+    elementsTagsFilterValue[i].addEventListener('click', (event) => { onFilterElementClick(event, elementsTagsFilterValue); });
+  }
   // elementsTagsFilterValue.forEach((element) => {
   //   element.addEventListener('click', onFilterElementClick(elementsTagsFilterValue));
   // });
