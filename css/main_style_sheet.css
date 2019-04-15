@@ -69,11 +69,18 @@ header,
   pointer-events: none;
 }
 
-.tab_content_hidden {
-  display: none;
+.task_serch {
+  background-image: url('../img/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  border: 1px solid rgb(134, 135, 135);
 }
 
-.tab_content_visible {
+.tab_content {
   display: block;
   margin: 30px;
   height: 100%;
@@ -173,7 +180,7 @@ header,
 }
 
 .autofill_icon {
-  background-image: url(../img/auto_fill.svg);
+  background-image: url('../img/auto_fill.svg');
   background-position: top right;
   background-repeat: no-repeat;
   background-size: 11%;
@@ -204,10 +211,11 @@ header,
   float: right;
 }
 
-.ui-icon-loading ~h1 {
-  display: none;
-}
-
 .items_show {
   display: block;
+}
+
+.ui-icon-loading ~h1,
+.ui-input-clear {
+  display: none;
 }

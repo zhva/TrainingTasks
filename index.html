@@ -59,7 +59,10 @@
   </header>
   <main class="body_style">
     <!-- Tasks with Numbers -->
-    <div id="tabChars" class="tab_content_visible">
+    <div class="tab_content">
+      <input class="task_serch" type="search" name="taskSerch" id="taskSerchId" placeholder="Search for tasks name" title="Type in a name" onkeyup="tasksSerch('taskSerchId')" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search for tasks name'">
+    </div>
+    <div id="tabChars" class="tab_content">
       <ol class="task_list_style">
         <li class="task_element numbers easy zeros">
           <div class="task_name">
@@ -446,7 +449,7 @@
       </ol>
     </div>
       <!--Tasks with Strings-->
-    <div id="tabStrings" class="tab_content_visible"> 
+    <div id="tabStrings" class="tab_content"> 
       <ol class="task_list_style">
         <li class="task_element strings easy unique">
           <div class="task_name">
@@ -511,7 +514,7 @@
       </ol>
     </div>
     <!--Tasks with Arrays-->
-    <div id="tabArrays" class="tab_content_visible">
+    <div id="tabArrays" class="tab_content">
       <ol class="task_list_style">
         <li class="task_element arrays easy duplicate">
           <div class="task_name">
@@ -639,7 +642,7 @@
         </li>
         <li class="task_element arrays easy zeros move">
           <div class="task_name">
-            <h4>Moove Zeros in an Array</h4>
+            <h4>Move Zeros in an Array</h4>
             <div class="task_body_button_up" id="taskNameId20" onclick="toggleTaskVisibility('taskNameId20', 'moveZerosId')"></div>
           </div>
           <div class="task_body" id="moveZerosId">
@@ -694,6 +697,7 @@
                   <a>pascal</a>
                 </div>
                 <div class="task_column task_complexity">
+                  <img src="img\stars.png" alt="stars">
                   <img src="img\stars.png" alt="stars">
                 </div>
               </div>
