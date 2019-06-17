@@ -31,21 +31,29 @@ header,
 .navigation {
   width: 15%;
   height: 100%;
-  background-color: #f1f1f1;
   overflow: auto;
   position: fixed;
 }
 
-.side_menu div p{
-  padding: 10px;
-  margin: 0px;
+.side_menu_list_title {
+  margin: 10px 0px 10px 10px;
   font-weight: 600;
+  width: 70%;
+  float: left;
 }
+
+.side_menu_selection_delete {
+  height: 20px;
+  float: right;
+  margin: 10px 10px 10px 0px;
+}
+
 .side_menu_list {
   margin: 0px;
   padding: 0px;
   list-style-type: none;
   background-color: #d6d6d6;
+  clear: both;
 }
 
 .side_menu_list_item {
@@ -70,13 +78,12 @@ header,
 }
 
 .task_serch {
-  background-image: url('../img/searchicon.png');
+  background-image: url('../img/search_icon.png');
   background-position: 10px 12px;
   background-repeat: no-repeat;
   width: 100%;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
   border: 1px solid rgb(134, 135, 135);
 }
 
@@ -215,7 +222,22 @@ header,
   display: block;
 }
 
+.strings {
+  background-color: red;
+}
+
+.numbers {
+  background-color: green;
+}
+
+.arrays {
+  background-color: blue;
+}
+
 .ui-icon-loading ~h1,
 .ui-input-clear {
   display: none;
+}
+.ui-page {
+  overflow: hidden;
 }

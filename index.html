@@ -15,16 +15,21 @@
   <header class="navigation">
     <nav class="side_menu" id="sideMenuId">
       <div>
-        <p>Topics</p>
+        <div>
+          <p class="side_menu_list_title">Topics</p>
+          <img class="side_menu_selection_delete" id="topicSelectionDeleteId" src="img/delete_icon.png" alt="delete">
+        </div>
         <ul class="side_menu_list" id="typesListId">
-          <li class="side_menu_list_item active" data-type="all"><a>All Tasks</a></li>
           <li class="side_menu_list_item" data-type="numbers"><a>Chars</a></li>
           <li class="side_menu_list_item" data-type="strings"><a>Strings</a></li>
           <li class="side_menu_list_item" data-type="arrays"><a>Arrays</a></li>
         </ul>
       </div>
       <div>
-        <p>Complexity</p>
+        <div>
+          <p class="side_menu_list_title">Complexity</p>
+          <img class="side_menu_selection_delete" id="complexcitySelectionDeleteId" src="img/delete_icon.png" alt="delete">
+        </div>
         <ul class="side_menu_list" id="complexityListId">
           <li class="side_menu_list_item" data-type="easy">Easy</li>
           <li class="side_menu_list_item" data-type="medium">Medium</li>
@@ -32,11 +37,12 @@
         </ul>
       </div>
       <div>
-        <p>Tags</p>
+        <div>
+            <p class="side_menu_list_title">Tags</p>
+            <img class="side_menu_selection_delete" id="tagsSelectionDeleteId" src="img/delete_icon.png" alt="delete">
+        </div>
         <ul class="side_menu_list" id="tagsListId">
-          <li class="side_menu_list_item" data-type="numbers">numbers</li>
-          <li class="side_menu_list_item" data-type="strings">strings</li>
-          <li class="side_menu_list_item" data-type="arrays">arrays</li>
+
           <li class="side_menu_list_item" data-type="zeros">zeros</li>
           <li class="side_menu_list_item" data-type="prime">prime</li>
           <li class="side_menu_list_item" data-type="factorization">factorization</li>
@@ -64,7 +70,7 @@
     </div>
     <div id="tabChars" class="tab_content">
       <ol class="task_list_style">
-        <li class="task_element numbers easy zeros">
+        <li class="task_element numbers easy zeros" id="zeroCounterTaskId">
           <div class="task_name">
             <h4>Zeros Counter</h4>
             <div class="task_body_button_up" id="taskNameId1" onclick="toggleTaskVisibility('taskNameId1', 'numberOfZerosId')"></div>
@@ -84,16 +90,16 @@
             </form>
             <div class="task_row">
               <div class="task_column task_tags">
-                <a>number,</a>
+                <a>numbers,</a>
                 <a>zeros</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy prime">
+        <li class="task_element numbers easy prime" id="primeNumbersCheckerTaskId">
           <div class="task_name">
             <h4>Prime Numbers Checker</h4>
             <div class="task_body_button_up" id="taskNameId2" onclick="toggleTaskVisibility('taskNameId2', 'primeNumberId')"></div>
@@ -113,16 +119,16 @@
             </form>
             <div class="task_row">
                 <div class="task_column task_tags">
-                  <a>number,</a>
+                  <a>numbers,</a>
                   <a>prime</a>
                 </div>
                 <div class="task_column task_complexity">
-                  <img src="img\stars.png" alt="stars">
+                  <img src="img\star_icon.png" alt="stars">
                 </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy prime factorization">
+        <li class="task_element numbers easy prime factorization" id="numberFuctorizationTaskId">
           <div class="task_name">
             <h4>Number Fuctorization</h4>
             <div class="task_body_button_up" id="taskNameId3" onclick="toggleTaskVisibility('taskNameId3', 'primeFactorizationId')"></div>
@@ -142,17 +148,17 @@
             </form>
             <div class="task_row">
                 <div class="task_column task_tags">
-                  <a>number,</a>
+                  <a>numbers,</a>
                   <a>prime,</a>
                   <a>factorization</a>
                 </div>
                 <div class="task_column task_complexity">
-                  <img src="img\stars.png" alt="stars">
+                  <img src="img\star_icon.png" alt="stars">
                 </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy">
+        <li class="task_element numbers easy" id="primeFuctorsOfNumberTaskId">
           <div class="task_name">
             <h4>Prime Fuctors of Number</h4>
             <div class="task_body_button_up" id="taskNameId4" onclick="toggleTaskVisibility('taskNameId4', 'bodyPrimeFactorsId')"></div>
@@ -172,16 +178,16 @@
           </form>
           <div class="task_row">
             <div class="task_column task_tags">
-              <a>number,</a>
+              <a>numbers,</a>
               <a>zeros</a>
             </div>
             <div class="task_column task_complexity">
-              <img src="img\stars.png" alt="stars">
+              <img src="img\star_icon.png" alt="stars">
             </div>
           </div>
         </div>
         </li>
-        <li class="task_element numbers easy fibonacci">
+        <li class="task_element numbers easy fibonacci" id="nthFibonacciNumberTaskId">
           <div class="task_name">
             <h4>Nth Fibonacci Number</h4>
             <div class="task_body_button_up" id="taskNameId5" onclick="toggleTaskVisibility('taskNameId5', 'fibonacciNumberId')"></div>
@@ -201,18 +207,18 @@
             </form>
             <div class="task_row">
               <div class="task_column task_tags">
-                <a>number,</a>
+                <a>numbers,</a>
                 <a>fibonacci</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy division">
+        <li class="task_element numbers easy division" id="findCommonDivisorTaskId">
           <div class="task_name">
-            <h4>Common Divisor</h4>
+            <h4>Find Common Divisor</h4>
             <div class="task_body_button_up" id="taskNameId6" onclick="toggleTaskVisibility('taskNameId6', 'commonDivisorId')"></div>
           </div>
           <div class="task_body" id="commonDivisorId">
@@ -231,16 +237,16 @@
             </form>
             <div class="task_row">
               <div class="task_column task_tags">
-                <a>number,</a>
+                <a>numbers,</a>
                 <a>division</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy multiplication">
+        <li class="task_element numbers easy multiplication" id="fizzBuzzTaskId">
           <div class="task_name">
             <h4>Fizz Buzz Task</h4>
             <div class="task_body_button_up" id="taskNameId7" onclick="toggleTaskVisibility('taskNameId7', 'fizzBuzzId')"></div>
@@ -260,16 +266,16 @@
             </form>
             <div class="task_row">
               <div class="task_column task_tags">
-                <a>number,</a>
+                <a>numbers,</a>
                 <a>multiplication</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy reverse">
+        <li class="task_element numbers easy reverse" id="didgitsReverserTaskId">
           <div class="task_name">
             <h4>Didgits Reverser</h4>
             <div class="task_body_button_up" id="taskNameId8" onclick="toggleTaskVisibility('taskNameId8', 'revercedNumberId')"></div>
@@ -289,16 +295,16 @@
             </form>
             <div class="task_row">
               <div class="task_column task_tags">
-                <a>number,</a>
+                <a>numbers,</a>
                 <a>reverse</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy prime">
+        <li class="task_element numbers easy prime" id="primeNumbersCounterTaskId">
           <div class="task_name">
             <h4>Prime Numbers Counter</h4>
             <div class="task_body_button_up" id="taskNameId9" onclick="toggleTaskVisibility('taskNameId9', 'amountOfPrimeNumbersId')"></div>
@@ -318,16 +324,16 @@
             </form>
             <div class="task_row">
               <div class="task_column task_tags">
-                <a>number,</a>
+                <a>numbers,</a>
                 <a>prime</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
         </div>
         </li>
-        <li class="task_element numbers easy ugly">
+        <li class="task_element numbers easy ugly" id="uglyNumbersTaskId">
           <div class="task_name">
             <h4>Ugly Numbers</h4>
             <div class="task_body_button_up" id="taskNameId10" onclick="toggleTaskVisibility('taskNameId10', 'isUglyNumberId')"></div>
@@ -348,16 +354,16 @@
             </form>
             <div class="task_row">
               <div class="task_column task_tags">
-                <a>number,</a>
+                <a>numbers,</a>
                 <a>ugly</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy happy">
+        <li class="task_element numbers easy happy" id="happyNumbersTaskId">
           <div class="task_name">
             <h4>Happy Numbers</h4>
             <div class="task_body_button_up" id="taskNameId11" onclick="toggleTaskVisibility('taskNameId11', 'isHappyNumberId')"></div>
@@ -378,16 +384,16 @@
             </form>
             <div class="task_row">
               <div class="task_column task_tags">
-                <a>number,</a>
+                <a>numbers,</a>
                 <a>happy</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy power">
+        <li class="task_element numbers easy power" id="powerOfThreeTaskId">
           <div class="task_name">
             <h4>Power of Three</h4>
             <div class="task_body_button_up" id="taskNameId12" onclick="toggleTaskVisibility('taskNameId12', 'powerOfThreeId')"></div>
@@ -408,15 +414,15 @@
             <div class="task_row">
               <div class="task_column task_tags">
                 <a>number,</a>
-                <a>power</a>
+                <a>powers</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
          </div>
         </li>
-        <li class="task_element numbers easy root">
+        <li class="task_element numbers easy root" id="squareRootTaskId">
           <div class="task_name">
             <h4>Square Root</h4>
             <div class="task_body_button_up" id="taskNameId13" onclick="toggleTaskVisibility('taskNameId13', 'squareRootId')"></div>
@@ -437,11 +443,11 @@
             </form>
             <div class="task_row">
               <div class="task_column task_tags">
-                <a>number,</a>
+                <a>numbers,</a>
                 <a>root</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
@@ -451,7 +457,7 @@
       <!--Tasks with Strings-->
     <div id="tabStrings" class="tab_content"> 
       <ol class="task_list_style">
-        <li class="task_element strings easy unique">
+        <li class="task_element strings easy unique" id="uniqueStringTaskId">
           <div class="task_name">
             <h4>Unique Charaaters in a String</h4>
             <div class="task_body_button_up" id="taskNameId14" onclick="toggleTaskVisibility('taskNameId14', 'uniqueStringId')"></div>
@@ -472,16 +478,16 @@
             </form>
             <div class="task_row">
               <div class="task_column task_tags">
-                <a>string,</a>
+                <a>strings,</a>
                 <a>unique</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element strings easy reverse">
+        <li class="task_element strings easy reverse" id="stringReverserTaskId">
           <div class="task_name">
             <h4>String Reverser</h4>
             <div class="task_body_button_up" id="taskNameId15" onclick="toggleTaskVisibility('taskNameId15', 'reverseStringId')"></div>
@@ -502,11 +508,11 @@
             </form>
             <div class="task_row">
               <div class="task_column task_tags">
-                <a>string,</a>
+                <a>strings,</a>
                 <a>reverse</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
@@ -516,7 +522,7 @@
     <!--Tasks with Arrays-->
     <div id="tabArrays" class="tab_content">
       <ol class="task_list_style">
-        <li class="task_element arrays easy duplicate">
+        <li class="task_element arrays easy duplicate" id="arrayDuplicatorTaskId">
           <div class="task_name">
             <h4>Array Duplicator</h4>
             <div class="task_body_button_up" id="taskNameId16" onclick="toggleTaskVisibility('taskNameId16', 'duplicateArrayId')"></div>
@@ -541,12 +547,12 @@
                 <a>duplicate</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays easy unique">
+        <li class="task_element arrays easy unique" id="uniqueArrayTaskId">
           <div class="task_name">
             <h4>Non Duplicated Array</h4>
             <div class="task_body_button_up" id="taskNameId17" onclick="toggleTaskVisibility('taskNameId17', 'uniqueArrayId')"></div>
@@ -571,12 +577,12 @@
                 <a>unique</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays easy merge">
+        <li class="task_element arrays easy merge" id="twoArraysMergeTaskId">
           <div class="task_name">
             <h4>Two Arrays Merge</h4>
             <div class="task_body_button_up" id="taskNameId18" onclick="toggleTaskVisibility('taskNameId18', 'arrayMergeId')"></div>
@@ -603,12 +609,12 @@
                 <a>merge</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays easy rotate">
+        <li class="task_element arrays easy rotate" id="arrayShiftTaskId">
           <div class="task_name">
             <h4>Array Shift</h4>
             <div class="task_body_button_up" id="taskNameId19" onclick="toggleTaskVisibility('taskNameId19', 'arrayShiftId')"></div>
@@ -635,12 +641,12 @@
                 <a>rotate</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays easy zeros move">
+        <li class="task_element arrays easy zeros move" id="moveZerosInArrayTaskId">
           <div class="task_name">
             <h4>Move Zeros in an Array</h4>
             <div class="task_body_button_up" id="taskNameId20" onclick="toggleTaskVisibility('taskNameId20', 'moveZerosId')"></div>
@@ -666,12 +672,12 @@
                 <a>move</a>
               </div>
               <div class="task_column task_complexity">
-                <img src="img\stars.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays medium pascal">
+        <li class="task_element arrays medium pascal" id="pascalsTriangleTaskId">
           <div class="task_name">
             <h4>Pascal's Triangle</h4>
             <div class="task_body_button_up" id="taskNameId21" onclick="toggleTaskVisibility('taskNameId21', 'pascalTringleId')"></div>
@@ -693,12 +699,12 @@
               </form>
               <div class="task_row">
                 <div class="task_column task_tags">
-                  <a>number,</a>
+                  <a>array,</a>
                   <a>pascal</a>
                 </div>
                 <div class="task_column task_complexity">
-                  <img src="img\stars.png" alt="stars">
-                  <img src="img\stars.png" alt="stars">
+                  <img src="img\star_icon.png" alt="stars">
+                  <img src="img\star_icon.png" alt="stars">
                 </div>
               </div>
           </div>
