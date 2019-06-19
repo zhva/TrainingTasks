@@ -221,7 +221,7 @@ header,
 .items_show {
   display: block;
 }
-
+/*
 .strings {
   background-color: red;
 }
@@ -233,7 +233,7 @@ header,
 .arrays {
   background-color: blue;
 }
-
+*/
 .ui-icon-loading ~h1,
 .ui-input-clear {
   display: none;

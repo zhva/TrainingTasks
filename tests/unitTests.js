@@ -534,6 +534,20 @@ describe('N-element shift of an array', function() {
     assert.sameDeepOrderedMembers(moveZeros([0, 0, 0, 7, 3, 0]), [7, 3, 0, 0, 0, 0]);
     assert.sameDeepOrderedMembers(moveZeros([0, 0, 0, 4]), [4, 0, 0, 0]);
   });
+  });
 
-
+  describe('Single Element in an Array', function() {
+    it('should return null for invalid input', function() {
+      assert.isNull(singleNumber());
+      assert.isNull(singleNumber(null));
+      assert.isNull(singleNumber([]));
+      assert.isNull(singleNumber("dfdgbh rfgh"));
+    });
+    it('should return single element in an array', function() {
+      assert.equal(singleNumber([1, 0, 1]), 0);
+      assert.equal(singleNumber([4,1,2,1,2]), 4);
+      assert.equal(singleNumber([2,2,1]), 1);
+      assert.equal(singleNumber([3]), 3);
+      assert.equal(singleNumber([3, 1, 2, 1, "a", 2, 3]), "a");
+    });
   });

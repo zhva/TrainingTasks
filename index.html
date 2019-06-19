@@ -64,10 +64,10 @@
     </nav>
   </header>
   <main class="body_style">
-    <!-- Tasks with Numbers -->
     <div class="tab_content">
       <input class="task_serch" type="search" name="taskSerch" id="taskSerchId" placeholder="Search for tasks name" title="Type in a name" onkeyup="tasksSerch('taskSerchId')" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search for tasks name'">
     </div>
+    <!-- Tasks with Numbers -->
     <div id="tabChars" class="tab_content">
       <ol class="task_list_style">
         <li class="task_element numbers easy zeros" id="zeroCounterTaskId">
@@ -707,6 +707,37 @@
                   <img src="img\star_icon.png" alt="stars">
                 </div>
               </div>
+          </div>
+        </li>
+        <li class="task_element arrays easy unique" id="singleNumberTaskId">
+          <div class="task_name">
+            <h4>Single Number</h4>
+            <div class="task_body_button_up" id="singleNumberTaskNameId" onclick="toggleTaskVisibility('singleNumberTaskNameId', 'singleNumberId')"></div>
+          </div>
+          <div class="task_body" id="singleNumberId">
+            <p>Given a non-empty array of integers, every element appears twice except for one. Find that single one.</p>  
+            <form class="task_row">
+              <div class="task_column">
+                <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
+                <input type="text" name="arrayForSingleNumber" class="task_subcolumn autofill_icon" id="arrayForSingleNumberId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <div class="clicable_icon" onclick="autoFillArray('arrayForSingleNumberId')"></div>
+                <button class="task_subcolumn" onclick="printsingleNumber('arrayForSingleNumberId', 'singleNumberInArrayId')">Generate</button>
+                <!--<p class="task_subcolumn new_line">Please enter a number</p>-->
+              </div>
+              <div class="task_column">
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="singleNumberInArray" class="task_subcolumn" id="singleNumberInArrayId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>array,</a>
+                <a>unique</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\star_icon.png" alt="stars">
+              </div>
+            </div>
           </div>
         </li>
       </ol>
