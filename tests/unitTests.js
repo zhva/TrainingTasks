@@ -566,3 +566,25 @@ describe('N-element shift of an array', function() {
       assert.equal(majorityElement([1, 2, 1, 1, 1, 4, 1, 5, 2, 3, 1]), 1);
     });
   });
+
+  describe('Valid Anagram', function() {
+    it('should return an empty string for invalid input', function() {
+      assert.isEmpty(isAnagram());
+      assert.isEmpty(isAnagram(null, null));
+      assert.isEmpty(isAnagram(null, ""));
+    });
+    it('should return true for anagram', function() {
+      assert.isTrue(isAnagram("", ""));
+      assert.isTrue(isAnagram("anagram", "nagaram"));
+      assert.isTrue(isAnagram("aaa", "aaa"));
+      assert.isTrue(isAnagram("caaa", "aaac"));
+      assert.isTrue(isAnagram("c", "c"));
+    });
+    it('should return false for anagram', function() {
+      assert.isFalse(isAnagram("qwqer", "dsfddds"));
+      assert.isFalse(isAnagram("anagramr", "nagaram"));
+      assert.isFalse(isAnagram("cat", "rat"));
+      assert.isFalse(isAnagram("aaabb", "aabbb"));
+      assert.isFalse(isAnagram("a", "A"));
+    });
+  });

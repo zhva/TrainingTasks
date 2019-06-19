@@ -491,11 +491,11 @@
         <li class="task_element strings easy reverse" id="stringReverserTaskId">
           <div class="task_name">
             <h4>String Reverser</h4>
-            <div class="task_body_button_up" id="taskNameId15" onclick="toggleTaskVisibility('taskNameId15', 'reverseStringId')"></div>
+            <div class="task_body_button_up" id="reverseStringTaskNameId" onclick="toggleTaskVisibility('reverseStringTaskNameId', 'reverseStringId')"></div>
           </div>
           <div class="task_body" id="reverseStringId">
             <p>How would you reverse a string in JavaScript?</p>
-            <form>
+            <form class="task_row">
               <div class="task_column">
                 <!--<p class="task_subcolumn">Please, enter a string</p>-->
                 <input type="text" name="userString" class="task_subcolumn autofill_icon" id="userStringId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
@@ -511,6 +511,37 @@
               <div class="task_column task_tags">
                 <a>strings,</a>
                 <a>reverse</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\star_icon.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element strings easy" id="validAnagramTaskId">
+          <div class="task_name">
+            <h4>Valid Anagram</h4>
+            <div class="task_body_button_up" id="validAnagramTaskNameId" onclick="toggleTaskVisibility('validAnagramTaskNameId', 'validAnagramId')"></div>
+          </div>
+          <div class="task_body"  id="validAnagramId">
+            <p>Given two strings s and t, write a function to determine if t is an anagram of s.</p>
+            <form class="task_row">
+              <div class="task_column">
+                <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
+                <input type="text" name="strinForAnagram1" class="task_subcolumn autofill_icon" id="strinForAnagram1Id" placeholder="string 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string 1'">
+                <div class="clicable_icon" onclick="autoFillArray('userArrayForMerge1Id')"></div>
+                <input type="text" name="strinForAnagram2" class="task_subcolumn autofill_icon" id="strinForAnagram2Id" placeholder="string 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string 2'">
+                <div class="clicable_icon clicable_icon_lastelem" onclick="autoFillArray('userArrayForMerge2Id')"></div>
+                <button class="task_subcolumn" onclick="printFrequencyArray('strinForAnagram1Id', 'strinForAnagram2Id', 'strinForAnagramResultId')">Determine</button>
+              </div>
+              <div class="task_column">
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="strinForAnagramResult" id="strinForAnagramResultId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>string</a>
               </div>
               <div class="task_column task_complexity">
                 <img src="img\star_icon.png" alt="stars">
