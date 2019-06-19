@@ -545,9 +545,24 @@ describe('N-element shift of an array', function() {
     });
     it('should return single element in an array', function() {
       assert.equal(singleNumber([1, 0, 1]), 0);
-      assert.equal(singleNumber([4,1,2,1,2]), 4);
-      assert.equal(singleNumber([2,2,1]), 1);
+      assert.equal(singleNumber([4, 1, 2, 1, 2]), 4);
+      assert.equal(singleNumber([2, 2, 1]), 1);
       assert.equal(singleNumber([3]), 3);
-      assert.equal(singleNumber([3, 1, 2, 1, "a", 2, 3]), "a");
+    });
+  });
+
+  describe('Major Element in an Array', function() {
+    it('should return null for invalid input', function() {
+      assert.isNull(majorityElement());
+      assert.isNull(majorityElement(null));
+      assert.isNull(majorityElement([]));
+      assert.isNull(majorityElement("dfdgbh rfgh"));
+    });
+    it('should return major element in an array', function() {
+      assert.equal(majorityElement([3, 2, 3, 1, 3]), 3);
+      assert.equal(majorityElement([2, 2, 1, 1, 1, 2, 2]), 2);
+      assert.equal(majorityElement([2, 2, 1]), 2);
+      assert.equal(majorityElement([3]), 3);
+      assert.equal(majorityElement([1, 2, 1, 1, 1, 4, 1, 5, 2, 3, 1]), 1);
     });
   });

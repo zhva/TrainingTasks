@@ -60,6 +60,7 @@
           <li class="side_menu_list_item" data-type="rotate">rotate</li>
           <li class="side_menu_list_item" data-type="move">move</li>
           <li class="side_menu_list_item" data-type="pascal">pascal</li>
+          <li class="side_menu_list_item" data-type="majority">majority</li>
         </div>
     </nav>
   </header>
@@ -721,7 +722,7 @@
                 <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
                 <input type="text" name="arrayForSingleNumber" class="task_subcolumn autofill_icon" id="arrayForSingleNumberId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
                 <div class="clicable_icon" onclick="autoFillArray('arrayForSingleNumberId')"></div>
-                <button class="task_subcolumn" onclick="printsingleNumber('arrayForSingleNumberId', 'singleNumberInArrayId')">Generate</button>
+                <button class="task_subcolumn" onclick="printsingleNumber('arrayForSingleNumberId', 'singleNumberInArrayId')">Find</button>
                 <!--<p class="task_subcolumn new_line">Please enter a number</p>-->
               </div>
               <div class="task_column">
@@ -733,6 +734,38 @@
               <div class="task_column task_tags">
                 <a>array,</a>
                 <a>unique</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\star_icon.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element arrays easy majority" id="majorityElementTaskId">
+          <div class="task_name">
+            <h4>Majority Element</h4>
+            <div class="task_body_button_up" id="majorityElementTaskNameId" onclick="toggleTaskVisibility('majorityElementTaskNameId', 'majorityElementId')"></div>
+          </div>
+          <div class="task_body" id="majorityElementId">
+            <p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+              You may assume that the array is non-empty and the majority element always exist in the array.</p>
+            <form class="task_row">
+              <div class="task_column">
+                <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
+                <input type="text" name="arrayForMajorElement" class="task_subcolumn autofill_icon" id="arrayForMajorElementId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                <div class="clicable_icon" onclick="autoFillArray('arrayForMajorElementId')"></div>
+                <button class="task_subcolumn" onclick="printMajorityElement('arrayForMajorElementId', 'majorElementInArrayId')">Find</button>
+                <!--<p class="task_subcolumn new_line">Please enter a number</p>-->
+              </div>
+              <div class="task_column">
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="majorElementInArray" class="task_subcolumn" id="majorElementInArrayId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>array,</a>
+                <a>majority</a>
               </div>
               <div class="task_column task_complexity">
                 <img src="img\star_icon.png" alt="stars">
