@@ -61,6 +61,7 @@
           <li class="side_menu_list_item" data-type="move">move</li>
           <li class="side_menu_list_item" data-type="pascal">pascal</li>
           <li class="side_menu_list_item" data-type="majority">majority</li>
+          <li class="side_menu_list_item" data-type="missing">missing</li>
         </div>
     </nav>
   </header>
@@ -797,6 +798,36 @@
               <div class="task_column task_tags">
                 <a>array,</a>
                 <a>majority</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\star_icon.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element arrays easy missing" id="missingNumberTaskId">
+          <div class="task_name">
+            <h4>Two Arrays Merge</h4>
+            <div class="task_body_button_up" id="missingNumberTaskNameId" onclick="toggleTaskVisibility('missingNumberTaskNameId', 'missingNumberId')"></div>
+          </div>
+          <div class="task_body"  id="missingNumberId">
+            <p>Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.</p>
+            <form class="task_row">
+              <div class="task_column">
+                <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
+                <input type="text" name="userArrayForMissingNumber" class="task_subcolumn autofill_icon" id="userArrayForMissingNumberId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                <div class="clicable_icon" onclick="autoFillArray('userArrayForMissingNumberId')"></div>
+                <button class="task_subcolumn" onclick="printMissingNumber('userArrayForMissingNumberId', 'singleNumberResultId')">Find</button>
+              </div>
+              <div class="task_column">
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="singleNumberResult" id="singleNumberResultId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>array,</a>
+                <a>missing</a>
               </div>
               <div class="task_column task_complexity">
                 <img src="img\star_icon.png" alt="stars">

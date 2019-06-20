@@ -588,3 +588,17 @@ describe('N-element shift of an array', function() {
       assert.isFalse(isAnagram("a", "A"));
     });
   });
+
+  describe('Missing Number in an array', function() {
+    it('should return an empty array for invalid input', function() {
+      assert.isEmpty(missingNumber());
+      assert.isEmpty(missingNumber(null));
+      assert.isEmpty(missingNumber("dfsgffdgfdg"));
+    });
+    it('should return a missing number in the array', function() {
+      assert.equal(missingNumber([]), 0);
+      assert.equal(missingNumber([3, 0, 1]), 2);
+      assert.equal(missingNumber([9, 6, 4, 2, 3, 5, 7, 0, 1]), 8);
+      assert.equal(missingNumber([1, 0, 2]), 3);
+    });
+  });
