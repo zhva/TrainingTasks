@@ -80,3 +80,45 @@ function compareAsc(a, b) {
 
   return 0;
 }
+//---------------------------------------------------------------------------
+/* Single Linked List node */
+
+class SLLNode {
+  constructor(val, next) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+function generateLinkedList(array, position) {
+  if (!Array.isArray(array) || array.length < 1) {
+    return null;
+  }
+
+  const head = new SLLNode(array[0], null);
+  if (array.length === 1) {
+    if (position === 0) {
+      head.next = head;
+    }
+    return head;
+  }
+
+  let runner = head;
+  let cycleNode = null;
+  for (let i = 1; i < array.length; i++) {
+    runner.next = new SLLNode(array[i], null);
+    runner = runner.next;
+    if (i === position) {
+      cycleNode = runner;
+    }
+  }
+
+  if (position === 0) {
+    runner.next = head;
+  }
+  else {
+    runner.next = cycleNode;
+  }
+
+  return head;
+}

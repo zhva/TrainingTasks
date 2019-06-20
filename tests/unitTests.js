@@ -602,3 +602,28 @@ describe('N-element shift of an array', function() {
       assert.equal(missingNumber([1, 0, 2]), 3);
     });
   });
+
+  describe('Linked List Cycle', function() {
+    it('should return false for invalid input', function() {
+      assert.isFalse(hasCycle());
+      assert.isFalse(hasCycle([]));
+      assert.isFalse(hasCycle(null));
+      assert.isFalse(hasCycle("dfsgffdgfdg"));
+      assert.isFalse(hasCycle(generateLinkedList()));
+      assert.isFalse(hasCycle(generateLinkedList([])));
+      assert.isFalse(hasCycle(generateLinkedList(null)));
+      assert.isFalse(hasCycle(generateLinkedList("dfsgffdgfdg")));
+    });
+    it('should return true in the provided list has cycle', function() {
+      assert.isTrue(hasCycle(generateLinkedList([1], 0)));
+      assert.isTrue(hasCycle(generateLinkedList([1, 2, 3, 4], 1)));
+      assert.isTrue(hasCycle(generateLinkedList([3, 2, 0, -4], 3)));
+      assert.isTrue(hasCycle(generateLinkedList([1, 2], 1)));
+    });
+    it('should return false in the provided list has no cycle', function() {
+      assert.isFalse(hasCycle(generateLinkedList([], 0)));
+      assert.isFalse(hasCycle(generateLinkedList([1], 1)));
+      assert.isFalse(hasCycle(generateLinkedList([1, 2, 3, 4], -1)));
+      assert.isFalse(hasCycle(generateLinkedList([1, 2, 3, 4], 5)));
+    });
+  });

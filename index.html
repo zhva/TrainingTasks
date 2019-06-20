@@ -22,7 +22,8 @@
         <ul class="side_menu_list" id="typesListId">
           <li class="side_menu_list_item" data-type="numbers"><a>Chars</a></li>
           <li class="side_menu_list_item" data-type="strings"><a>Strings</a></li>
-          <li class="side_menu_list_item" data-type="arrays"><a>Arrays</a></li>
+          <li class="side_menu_list_item" data-type="arrays"><a>Arrays</a></li> 
+          <li class="side_menu_list_item" data-type="lists"><a>Lists</a></li>
         </ul>
       </div>
       <div>
@@ -62,6 +63,7 @@
           <li class="side_menu_list_item" data-type="pascal">pascal</li>
           <li class="side_menu_list_item" data-type="majority">majority</li>
           <li class="side_menu_list_item" data-type="missing">missing</li>
+          <li class="side_menu_list_item" data-type="cycle">cycle</li>
         </div>
     </nav>
   </header>
@@ -828,6 +830,45 @@
               <div class="task_column task_tags">
                 <a>array,</a>
                 <a>missing</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\star_icon.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <!--Tasks with Lists-->
+    <div id="tabLists" class="tab_content"> 
+      <ol class="task_list_style">
+        <li class="task_element lists easy" id="linkedListCycleTaskId">
+          <div class="task_name">
+            <h4>Linked List Cycle</h4>
+            <div class="task_body_button_up" id="linkedListCycleTaskNameId" onclick="toggleTaskVisibility('linkedListCycleTaskNameId', 'linkedListCycleId')"></div>
+          </div>
+            <div class="task_body" id="linkedListCycleId">
+            <p>Given a linked list, determine if it has a cycle in it. 
+              To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail connects to. 
+              If pos is -1, then there is no cycle in the linked list.</p>
+            <form class="task_row">
+              <div class="task_column">
+                <!--<p class="task_subcolumn">Please, enter a string</p>-->
+                <input type="text" name="userArrayForList" class="task_subcolumn autofill_icon" id="userArrayForListId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                <div class="clicable_icon" onclick="autoFillString('userArrayForListId')"></div>
+                <input type="number" name="indexForListCycle" class="task_subcolumn" id="indexForListCycleId" placeholder="position" onfocus="this.placeholder = ''" onblur="this.placeholder = 'position'">
+                <button class="task_subcolumn" onclick="printHasCycle('userArrayForListId','indexForListCycleId','resultLinkedListCycleId')">Check</button>
+              </div>
+              <div class="task_column">
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="resultLinkedListCycle" class="task_subcolumn" id="resultLinkedListCycleId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>lists,</a>
+                <a>cycle</a>
+                <a></a>
               </div>
               <div class="task_column task_complexity">
                 <img src="img\star_icon.png" alt="stars">
