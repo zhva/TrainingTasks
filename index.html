@@ -66,6 +66,7 @@
           <li class="side_menu_list_item" data-type="cycle">cycle</li>
           <li class="side_menu_list_item" data-type="matrix">matrix</li>
           <li class="side_menu_list_item" data-type="transpose">transpose</li>
+          <li class="side_menu_list_item" data-type="sorte">sort</li>
         </div>
     </nav>
   </header>
@@ -863,6 +864,36 @@
                 <a>array,</a>
                 <a>matrix,</a>
                 <a>transpose</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\star_icon.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element arrays easy sort" id="sortArrayByParityTaskId">
+          <div class="task_name">
+            <h4>Sort Array By Parity</h4>
+            <div class="task_body_button_up" id="sortArrayByParityNameId" onclick="toggleTaskVisibility('transposeMatrixTaskNameId', 'sortArrayByParityId')"></div>
+          </div>
+          <div class="task_body"  id="sortArrayByParityId">
+            <p>Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
+               You may return any answer array that satisfies this condition.</p>
+            <form class="task_row">
+              <div class="task_column">
+                <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
+                <input type="text" name="userArrayForSortByParity" class="task_subcolumn autofill_icon" id="userArrayForSortByParityId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'">
+                <button class="task_subcolumn" onclick="printSortedArrayByParity('userArrayForSortByParityId', 'sortedArrayByParityResultId')">Transpose</button>
+              </div>
+              <div class="task_column">
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="sortedArrayByParityResult" id="sortedArrayByParityResultId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>array,</a>
+                <a>sort</a>
               </div>
               <div class="task_column task_complexity">
                 <img src="img\star_icon.png" alt="stars">

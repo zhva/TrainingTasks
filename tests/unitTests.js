@@ -643,4 +643,24 @@ describe('N-element shift of an array', function() {
       assert.sameDeepOrderedMembers(transposeMatrix([[1,2,3]]), [[1],[2],[3]]);
       assert.sameDeepOrderedMembers(transposeMatrix([[1]]), [[1]]);
     });
+  });
+
+    describe('Sort Array By Parity', function() {
+      it('should return an empty array for invalid input', function() {
+        assert.isEmpty(sortArrayByParity([]));
+        assert.isEmpty(sortArrayByParity("dfasdf"));
+        assert.isEmpty(sortArrayByParity());
+        assert.isEmpty(sortArrayByParity(null));
+        assert.isEmpty(sortArrayByParity(NaN));
+      });
+      it('should return a sorted by parity array', function() {
+        assert.sameDeepOrderedMembers(sortArrayByParity([3, 1, 2, 4]), [2, 4, 1, 3]);
+        assert.sameDeepOrderedMembers(sortArrayByParity([3, 1, 2, 5, 4]), [2, 4, 5, 1, 3]);
+        assert.sameDeepOrderedMembers(sortArrayByParity([0, 1]), [0, 1]);
+        assert.sameDeepOrderedMembers(sortArrayByParity([1, 0]), [0, 1]);
+        assert.sameDeepOrderedMembers(sortArrayByParity([1]), [1]);
+        assert.sameDeepOrderedMembers(sortArrayByParity([1, 3, 5, 7]), [7, 5, 3, 1]);
+        assert.sameDeepOrderedMembers(sortArrayByParity([0, 2, 4, 6]), [0, 2, 4, 6]);
+        assert.sameDeepOrderedMembers(sortArrayByParity([1, 1, 1, 1]), [1, 1, 1, 1]);
+      });
     });
