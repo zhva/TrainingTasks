@@ -42,6 +42,24 @@ function readArray(ctrlId) {
   return arr;
 }
 //---------------------------------------------------------------------------
+function readArrayOfArrays(ctrlId) {
+  const ctrl = document.getElementById(ctrlId);
+  if (ctrl == null) {
+    return [];
+  }
+  const arr = ctrl.value.split(',');
+  const arrOfArrays = [[]];
+  for (let i = 0; i < arr.length; i++) {
+    arrOfArrays[i] = arr[i].split(' ');
+  }
+  for (let i = 0; i < arrOfArrays.length; i++) {
+    for (let j = 0; j < arrOfArrays[0].length; j++) {
+      arrOfArrays[i][j] = parseInt(arrOfArrays[i][j], 10);
+    }
+  }
+  return arrOfArrays;
+}
+//---------------------------------------------------------------------------
 // Print Values
 //---------------------------------------------------------------------------
 function printStringValue(ctrlId, strValue) {

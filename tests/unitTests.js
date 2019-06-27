@@ -627,3 +627,20 @@ describe('N-element shift of an array', function() {
       assert.isFalse(hasCycle(generateLinkedList([1, 2, 3, 4], 5)));
     });
   });
+
+  describe('Transpose Matrix', function() {
+    it('should return an empty array for invalid input', function() {
+      assert.isEmpty(transposeMatrix([]));
+      assert.isEmpty(transposeMatrix("dfasdf"));
+      assert.isEmpty(transposeMatrix());
+      assert.isEmpty(transposeMatrix(null));
+      assert.isEmpty(transposeMatrix(NaN));
+    });
+    it('should return a transposed Matrix', function() {
+      assert.sameDeepOrderedMembers(transposeMatrix([[1,2,3],[4,5,6],[7,8,9]]), [[1,4,7],[2,5,8],[3,6,9]]);
+      assert.sameDeepOrderedMembers(transposeMatrix([[1,2,3],[4,5,6]]), [[1,4],[2,5],[3,6]]);
+      assert.sameDeepOrderedMembers(transposeMatrix( [[1,4],[2,5],[3,6]]), [[1,2,3],[4,5,6]]);
+      assert.sameDeepOrderedMembers(transposeMatrix([[1,2,3]]), [[1],[2],[3]]);
+      assert.sameDeepOrderedMembers(transposeMatrix([[1]]), [[1]]);
+    });
+    });

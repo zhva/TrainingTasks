@@ -64,6 +64,8 @@
           <li class="side_menu_list_item" data-type="majority">majority</li>
           <li class="side_menu_list_item" data-type="missing">missing</li>
           <li class="side_menu_list_item" data-type="cycle">cycle</li>
+          <li class="side_menu_list_item" data-type="matrix">matrix</li>
+          <li class="side_menu_list_item" data-type="transpose">transpose</li>
         </div>
     </nav>
   </header>
@@ -809,7 +811,7 @@
         </li>
         <li class="task_element arrays easy missing" id="missingNumberTaskId">
           <div class="task_name">
-            <h4>Two Arrays Merge</h4>
+            <h4>Missing Number</h4>
             <div class="task_body_button_up" id="missingNumberTaskNameId" onclick="toggleTaskVisibility('missingNumberTaskNameId', 'missingNumberId')"></div>
           </div>
           <div class="task_body"  id="missingNumberId">
@@ -830,6 +832,37 @@
               <div class="task_column task_tags">
                 <a>array,</a>
                 <a>missing</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\star_icon.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element arrays easy matrix transpose" id="transposeMatrixTaskId">
+          <div class="task_name">
+            <h4>Transpose Matrix</h4>
+            <div class="task_body_button_up" id="transposeMatrixTaskNameId" onclick="toggleTaskVisibility('transposeMatrixTaskNameId', 'transposeMatrixId')"></div>
+          </div>
+          <div class="task_body"  id="transposeMatrixId">
+            <p>Given a matrix A, return the transpose of A.
+              The transpose of a matrix is the matrix flipped over it's main diagonal, switching the row and column indices of the matrix.</p>
+            <form class="task_row">
+              <div class="task_column">
+                <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
+                <input type="text" name="userArrayFortransposeMatrix" class="task_subcolumn autofill_icon" id="userArrayFortransposeMatrixId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'">
+                <button class="task_subcolumn" onclick="printTransposedMatrix('userArrayFortransposeMatrixId', 'transposeMatrixtId')">Transpose</button>
+              </div>
+              <div class="task_column">
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="transposeMatrixResult" id="transposeMatrixtId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>array,</a>
+                <a>matrix,</a>
+                <a>transpose</a>
               </div>
               <div class="task_column task_complexity">
                 <img src="img\star_icon.png" alt="stars">
