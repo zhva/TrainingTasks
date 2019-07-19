@@ -671,10 +671,26 @@ describe('N-element shift of an array', function() {
         assert.isEmpty(toLowerCase(null));
         assert.isEmpty(toLowerCase(""));
       });
-      it('should return true for anagram', function() {
+      it('should return the string in lower case', function() {
         assert.equal(toLowerCase("Anagram"), "anagram");
         assert.equal(toLowerCase("aaa"), "aaa");
         assert.equal(toLowerCase("LOVELY"), "lovely");
         assert.equal(toLowerCase("Cdasfa1"), "cdasfa1");
+      });
+    });
+
+    describe('Big Numbers Multiplication', function() {
+      it('should return an empty string for invalid input', function() {
+        assert.isEmpty(bigNumbersMultipier());
+        assert.isEmpty(bigNumbersMultipier(null));
+        assert.isEmpty(bigNumbersMultipier(""));
+      });
+      it('should return multiplication of two big numbers result', function() {
+        assert.equal(bigNumbersMultipier("0", "0"), "0");
+        assert.equal(bigNumbersMultipier("123", "456"), "56088");
+        assert.equal(bigNumbersMultipier("23", "456"), "10488");
+        assert.equal(bigNumbersMultipier("123", "45"), "5535");
+        assert.equal(bigNumbersMultipier("1000000000001", "7000000000002"), "7000000000009000000000002");
+        assert.equal(bigNumbersMultipier("123456789", "987654321"), "121932631112635269");
       });
     });

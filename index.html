@@ -456,6 +456,40 @@
             </div>
           </div>
         </li>
+        <li class="task_element numbers medium multiplication" id="bigNumbersMultiplicationTaskId">
+          <div class="task_name">
+            <h4>Big Numbers Multiplication</h4>
+            <div class="task_body_button_up" id="bigNumbersMultiplicationNameId" onclick="toggleTaskVisibility('bigNumbersMultiplicationNameId', 'bigNumbersMultiplicationId')"></div>
+          </div>
+          <div class="task_body" id="bigNumbersMultiplicationId">
+            <p>Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
+               The length of both num1 and num2 is less then 110. Both num1 and num2 contain only digits 0-9.
+               Both num1 and num2 do not contain any leading zero, except the number 0 itself.
+               You must not use any built-in BigInteger library or convert the inputs to integer directly.
+            </p>
+            <form class="task_row">
+              <div class="task_column">
+                <input type="text" name="bigNumberForMultiplication1" class="task_subcolumn" id="bigNumberForMultiplication1Id" placeholder="number 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number 1'">
+                <input type="text" name="bigNumberForMultiplication2" class="task_subcolumn" id="bigNumberForMultiplication2Id" placeholder="number 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number 2'">
+                <button class="task_subcolumn" onclick="bigNumbersMultipierResult('bigNumberForMultiplication1Id', 'bigNumberForMultiplication2Id', 'bigNumberForMultiplicationResultId')">Multiply</button>
+              </div>
+              <div class="task_column">
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="bigNumberForMultiplicationResult" class="task_subcolumn" id="bigNumberForMultiplicationResultId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>numbers,</a>
+                <a>multiplication</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\star_icon.png" alt="stars">
+                <img src="img\star_icon.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
       </ol>
     </div>
       <!--Tasks with Strings-->
