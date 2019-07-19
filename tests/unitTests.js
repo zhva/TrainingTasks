@@ -664,3 +664,17 @@ describe('N-element shift of an array', function() {
         assert.sameDeepOrderedMembers(sortArrayByParity([1, 1, 1, 1]), [1, 1, 1, 1]);
       });
     });
+
+    describe('To Lower Case', function() {
+      it('should return an empty string for invalid input', function() {
+        assert.isEmpty(toLowerCase());
+        assert.isEmpty(toLowerCase(null));
+        assert.isEmpty(toLowerCase(""));
+      });
+      it('should return true for anagram', function() {
+        assert.equal(toLowerCase("Anagram"), "anagram");
+        assert.equal(toLowerCase("aaa"), "aaa");
+        assert.equal(toLowerCase("LOVELY"), "lovely");
+        assert.equal(toLowerCase("Cdasfa1"), "cdasfa1");
+      });
+    });

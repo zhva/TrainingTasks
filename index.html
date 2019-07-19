@@ -6,9 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/main_style_sheet.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src="javascript/jquery/jquery-1.11.3.min.js"></script>
-	  <script src="javascript/jquery//jquery.mobile-1.4.5.min.js"></script>
-    <script src="javascript/script.js"></script>
     <title>Trainings</title>
 </head>
 <body onload="onPageLoad()">
@@ -533,16 +530,43 @@
             <p>Given two strings s and t, write a function to determine if t is an anagram of s.</p>
             <form class="task_row">
               <div class="task_column">
-                <!--<p class="task_subcolumn">Please, enter space-separated numbers</p>-->
                 <input type="text" name="strinForAnagram1" class="task_subcolumn autofill_icon" id="strinForAnagram1Id" placeholder="string 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string 1'">
-                <div class="clicable_icon" onclick="autoFillArray('userArrayForMerge1Id')"></div>
+                <div class="clicable_icon" onclick="autoFillString('strinForAnagram1Id')"></div>
                 <input type="text" name="strinForAnagram2" class="task_subcolumn autofill_icon" id="strinForAnagram2Id" placeholder="string 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string 2'">
-                <div class="clicable_icon clicable_icon_lastelem" onclick="autoFillArray('userArrayForMerge2Id')"></div>
+                <div class="clicable_icon clicable_icon_lastelem" onclick="autoFillString('strinForAnagram2Id')"></div>
                 <button class="task_subcolumn" onclick="printFrequencyArray('strinForAnagram1Id', 'strinForAnagram2Id', 'strinForAnagramResultId')">Determine</button>
               </div>
               <div class="task_column">
                 <p class="task_subcolumn">Result:</p>
                 <output type="text" name="strinForAnagramResult" id="strinForAnagramResultId"></output>
+              </div>
+            </form>
+            <div class="task_row">
+              <div class="task_column task_tags">
+                <a>string</a>
+              </div>
+              <div class="task_column task_complexity">
+                <img src="img\star_icon.png" alt="stars">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element strings easy" id="toLowerCaseTaskId">
+          <div class="task_name">
+            <h4>To Lower Case</h4>
+            <div class="task_body_button_up" id="toLowerCaseTaskNameId" onclick="toggleTaskVisibility('toLowerCaseTaskNameId', 'toLowerCaseTaskId')"></div>
+          </div>
+          <div class="task_body" id="toLowerCaseId">
+            <p>Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.</p>
+            <form class="task_row">
+              <div class="task_column">
+                <input type="text" name="strinForLowerCase" class="task_subcolumn autofill_icon" id="strinForLowerCaseId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                <div class="clicable_icon" onclick="autoFillString('strinForLowerCaseId')"></div>
+                <button class="task_subcolumn" onclick="toLowerCasePrint('strinForLowerCaseId', 'strinForLowerCaseResultId')">To Lower Case</button>
+              </div>
+              <div class="task_column">
+                <p class="task_subcolumn">Result:</p>
+                <output type="text" name="strinForLowerCaseResult" id="strinForLowerCaseResultId"></output>
               </div>
             </form>
             <div class="task_row">
@@ -943,6 +967,8 @@
       </ol>
     </div>
   </main>
-
+  <script src="javascript/jquery/jquery-1.11.3.min.js"></script>
+  <script src="javascript/jquery//jquery.mobile-1.4.5.min.js"></script>
+  <script src="javascript/script.js"></script>
 </body>
 </html>
