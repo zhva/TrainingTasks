@@ -14,11 +14,88 @@ The following packages are required to run this page properly. Use [npm](https:/
 - Gulp
 - Mocha/Chai
 - JQuery
+- VS Code
+
+Configuration files in VS Code for standart launch and testing
+
+`launch.json`
+```
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "type": "chrome",
+          "request": "launch",
+          "name": "Run Tests",
+          "url": "${workspaceFolder}/TrainingTasks/testRunner.html",
+          "webRoot": "${workspaceFolder}",
+          "preLaunchTask": "gulp: gulp-training-tasks"
+      },
+      {
+          "type": "chrome",
+          "request": "launch",
+          "name": "Run Index",
+          "url": "${workspaceFolder}/TrainingTasks/index.html",
+          "webRoot": "${workspaceFolder}",
+          "preLaunchTask": "gulp: gulp-training-tasks"
+      }
+```
+
+`tasks.json`
+
+```
+{
+  "version" : "2.0.0",
+  "command": "gulp",
+  "type": "shell",
+  "args": [
+      "--no-color"
+  ],
+  "tasks": [
+      {
+          "type": "gulp",
+          "task": "gulp-training-tasks",
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "presentation": {
+              "reveal": "always"
+          },
+          "problemMatcher": [
+              "$eslint-compact"
+          ]
+      }
+  ]
+}
+```
+
+Also Gulp requers a configuration file outside the work directory.
+
+`gulpfile.js`
+
+```
+var gulp = require('gulp');
+var deporder = require('gulp-deporder');
+var concat = require('gulp-concat');
+
+gulp.task('gulp-training-tasks', function() {
+    return gulp.src(['TrainingTasks/javascript/utils/*.js',
+                     'TrainingTasks/javascript/tasks/arrays/*.js',
+                     'TrainingTasks/javascript/tasks/numbers/*.js',
+                     'TrainingTasks/javascript/tasks/strings/*.js',
+                     'TrainingTasks/javascript/tasks/lists/*.js'])
+                .pipe(deporder())
+                .pipe(concat('script.js'))
+                .pipe(gulp.dest('TrainingTasks/javascript/'));
+});
+```
 
 ## Folder structure
 
 ../javascript/tasks/ -> contains the JS solutions of the problems
+
 ../javascript/utils/ -> contains the utility routines to run the tasks and to show the UI
+
 ../tests/unitTests.js -> contains the unit-tests for every solution
 
 ## List of tasks
