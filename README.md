@@ -10,11 +10,11 @@ HTML, CSS, Javascript, Chai/Mocha
 
 ## Dependencies
 
-The following packages are required to run this page properly. Use [npm](https://www.google.com) to install the packages.
-- Gulp
-- Mocha/Chai
-- JQuery
-- VS Code
+The following packages are required to run this page properly. Use [npm](https://www.npmjs.com/package/download) to install the packages.
+- [Gulp](https://www.npmjs.com/package/gulp)
+- [Mocha](https://www.npmjs.com/package/mocha)/[Chai](https://www.npmjs.com/package/chai)
+- [JQuery](https://www.npmjs.com/package/jquery)
+- [VS Code](https://code.visualstudio.com/download)
 
 Configuration files in VS Code for standart launch and testing
 
