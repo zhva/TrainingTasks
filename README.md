@@ -69,7 +69,7 @@ Configuration files in VS Code for standart launch and testing
 }
 ```
 
-Also Gulp requers a configuration file outside the work directory.
+Also Gulp requers a configuration file outside of the working directory.
 
 `gulpfile.js`
 
