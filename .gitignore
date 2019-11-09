@@ -33,4 +33,6 @@ packages/
 
 # Custom ignore
 *.orig
-javascript/script.js
+/javascript/script.js
+/css/main_style_sheet.css
+/css/main_style_sheet.css.map
