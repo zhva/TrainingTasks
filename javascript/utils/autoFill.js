@@ -1,6 +1,6 @@
-function autoFillNumber(elemId) {
+function autoFillNumber(elemId, minV = 1, maxV = 10000) {
   const obj = document.getElementById(elemId);
-  obj.value = Math.floor(Math.random() * 10000) + 1;
+  obj.value = Math.floor(minV + Math.random() * (maxV - minV + 1));
 }
 
 function autoFillString(elemId) {
@@ -15,11 +15,11 @@ function autoFillString(elemId) {
   obj.value = randomStr;
 }
 
-function autoFillArray(elemId) {
+function autoFillArray(elemId, minL = 4, maxL = 10) {
   const randomArray = [];
-  const arrayLength = Math.floor(Math.random() * 8) + 1;
+  const arrayLength = Math.floor(minL + Math.random() * (maxL - minL));
   for (let i = 0; i < arrayLength; i++) {
-    randomArray[i] = Math.floor(Math.random() * 100) + 1;
+    randomArray[i] = Math.floor(Math.random() * 100);
   }
   const obj = document.getElementById(elemId);
   obj.value = randomArray.join(' ');

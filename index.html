@@ -74,405 +74,474 @@
     <!-- Tasks with Numbers -->
     <div id="tabNumbers" class="tab_content">
       <ol class="task_list_style">
-        <li class="task_element numbers easy zeros" id="zeroCounterTaskId">
-          <div class="task_name">
-            <h4>Zeros Counter</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId1" onclick="toggleTaskVisibility('taskNameId1', 'numberOfZerosId')"></div>
-          </div>
-          <div class="task_body" id="numberOfZerosId">
-            <p>Count total number of zeros from 1 upto n? Do not use string!</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="number" name="countOfZerosNumber" id="countOfZerosNumberNId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="action_button" onclick="printZerosCountResult('countOfZerosNumberNId','countOfZerosId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="number" name="countOfZeros" class="task_subcolumn" id="countOfZerosId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>numbers,</a>
-                <a>zeros</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
-              </div>
+        <li class="task_element numbers easy zeros" id="zeroCounterTaskId" onmousemove="startPerspective(event, 'zeroCounterTaskId', 'zeroCounterTaskInnerId')" onmouseout="stopPerspective('zeroCounterTaskId', 'zeroCounterTaskInnerId')">
+          <div class="task_element_inner" id="zeroCounterTaskInnerId">
+            <div class="task_name">
+              <h4>Zeros Counter</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId1" onclick="toggleTaskVisibility('taskNameId1', 'numberOfZerosId')"></div>
             </div>
-          </div>
-        </li>
-        <li class="task_element numbers easy prime" id="primeNumbersCheckerTaskId">
-          <div class="task_name">
-            <h4>Prime Numbers Checker</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId2" onclick="toggleTaskVisibility('taskNameId2', 'primeNumberId')"></div>
-          </div>
-          <div class="task_body" id="primeNumberId">
-            <p>How would you verify a prime number?</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="number" name="checkPrimeNumber" id="checkPrimeNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="action_button" onclick="printPrimeNumberCheckResult('checkPrimeNumberId','checkPrimeId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="checkPrime" class="task_subcolumn" id="checkPrimeId"></output>
-              </div>
-            </form>
-            <div class="task_row">
+            <div class="task_body" id="numberOfZerosId">
+              <p>Count total number of zeros from 1 upto n? Do not use string!</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="number" name="countOfZerosNumber" id="countOfZerosNumberNId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('countOfZerosNumberNId')"></button>
+                  <button class="action_button" onclick="printZerosCountResult('countOfZerosNumberNId','countOfZerosId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="number" name="countOfZeros" class="task_subcolumn" id="countOfZerosId"></output>
+                </div>
+              </form>
+              <div class="task_row">
                 <div class="task_column task_tags">
                   <a>numbers,</a>
-                  <a>prime</a>
+                  <a>zeros</a>
                 </div>
                 <div class="task_column task_complexity">
-                  <img src="img\star_icon.png" alt="stars">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
                 </div>
+              </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy prime factorization" id="numberFuctorizationTaskId">
-          <div class="task_name">
-            <h4>Number Fuctorization</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId3" onclick="toggleTaskVisibility('taskNameId3', 'primeFactorizationId')"></div>
+        <li class="task_element numbers easy prime" id="primeNumbersCheckerTaskId" onmousemove="startPerspective(event, 'primeNumbersCheckerTaskId', 'primeNumbersCheckerTaskInnerId')" onmouseout="stopPerspective('primeNumbersCheckerTaskId', 'primeNumbersCheckerTaskInnerId')">
+          <div class="task_element_inner" id="primeNumbersCheckerTaskInnerId">
+            <div class="task_name">
+              <h4>Prime Numbers Checker</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId2" onclick="toggleTaskVisibility('taskNameId2', 'primeNumberId')"></div>
+            </div>
+            <div class="task_body" id="primeNumberId">
+              <p>How would you verify a prime number?</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="number" name="checkPrimeNumber" id="checkPrimeNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('checkPrimeNumberId')"></button>
+                  <button class="action_button" onclick="printPrimeNumberCheckResult('checkPrimeNumberId','checkPrimeId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="checkPrime" class="task_subcolumn" id="checkPrimeId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                  <div class="task_column task_tags">
+                    <a>numbers,</a>
+                    <a>prime</a>
+                  </div>
+                  <div class="task_column task_complexity">
+                    <div>
+                      <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
-          <div class="task_body" id='primeFactorizationId'>
-            <p>Calculate prime factorization of a number.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="number" name="primeFactorizationOfNumber" id="primeFactorizationOfNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="action_button" onclick="printNumberPrimeFactorizationResult('primeFactorizationOfNumberId', 'showPrimeFactorizationId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output class="task_subcolumn" type="text" name="primeFactorizationTask" id="showPrimeFactorizationId"></output>
-              </div>
-            </form>
-            <div class="task_row">
+        </li>
+        <li class="task_element numbers easy prime factorization" id="numberFuctorizationTaskId" onmousemove="startPerspective(event, 'numberFuctorizationTaskId', 'numberFuctorizationTaskInnerId')" onmouseout="stopPerspective('numberFuctorizationTaskId', 'numberFuctorizationTaskInnerId')">
+          <div class="task_element_inner" id="numberFuctorizationTaskInnerId">
+            <div class="task_name">
+              <h4>Number Fuctorization</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId3" onclick="toggleTaskVisibility('taskNameId3', 'primeFactorizationId')"></div>
+            </div>
+            <div class="task_body" id='primeFactorizationId'>
+              <p>Calculate prime factorization of a number.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="number" name="primeFactorizationOfNumber" id="primeFactorizationOfNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('primeFactorizationOfNumberId')"></button>
+                  <button class="action_button" onclick="printNumberPrimeFactorizationResult('primeFactorizationOfNumberId', 'showPrimeFactorizationId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output class="task_subcolumn" type="text" name="primeFactorizationTask" id="showPrimeFactorizationId"></output>
+                </div>
+              </form>
+              <div class="task_row">
                 <div class="task_column task_tags">
                   <a>numbers,</a>
                   <a>prime,</a>
                   <a>factorization</a>
                 </div>
                 <div class="task_column task_complexity">
-                  <img src="img\star_icon.png" alt="stars">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
                 </div>
-            </div>
-          </div>
-        </li>
-        <li class="task_element numbers easy" id="primeFuctorsOfNumberTaskId">
-          <div class="task_name">
-            <h4>Prime Fuctors of Number</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId4" onclick="toggleTaskVisibility('taskNameId4', 'bodyPrimeFactorsId')"></div>
-        </div>
-        <div class="task_body" id="bodyPrimeFactorsId">
-          <p>How could you find all prime factors of a number?</p>
-          <form class="task_row">
-            <div class="task_column">
-                <input type="number" name="primeFactorsOfNumber" id="primeFactorsOfNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="action_button" onclick="printPrimeFactorsResult('primeFactorsOfNumberId', 'primeFactorsId')">Run</button>
-            </div>
-            <div class="task_column">
-              <p class="task_subcolumn">Result:</p>
-              <output type="text" name="primeFactors" class="task_subcolumn" id="primeFactorsId"></output>
-            </div>
-          </form>
-          <div class="task_row">
-            <div class="task_column task_tags">
-              <a>numbers,</a>
-              <a>zeros</a>
-            </div>
-            <div class="task_column task_complexity">
-              <img src="img\star_icon.png" alt="stars">
-            </div>
-          </div>
-        </div>
-        </li>
-        <li class="task_element numbers easy fibonacci" id="nthFibonacciNumberTaskId">
-          <div class="task_name">
-            <h4>Nth Fibonacci Number</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId5" onclick="toggleTaskVisibility('taskNameId5', 'fibonacciNumberId')"></div>
-          </div>
-          <div class="task_body" id="fibonacciNumberId">
-            <p>How to get nth Fibonacci number?</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="number" name="idexForFibonacciNumber" id="idexForFibonacciNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="action_button" onclick="printNthFibonacciNumber('idexForFibonacciNumberId', 'printFibonacciNumberId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output class="task_subcolumn" type="text" name="fibonacciNumber" id="printFibonacciNumberId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>numbers,</a>
-                <a>fibonacci</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy division" id="findCommonDivisorTaskId">
-          <div class="task_name">
-            <h4>Find Common Divisor</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId6" onclick="toggleTaskVisibility('taskNameId6', 'commonDivisorId')"></div>
-          </div>
-          <div class="task_body" id="commonDivisorId">
-            <p>How would you find the greatest common divisor of two numbers?</p>
-            <form class="task_row">
-              <div class="task_column">
-              <input type="number" name="firstNumberForCommonDivisors" id="firstNumberForCommonDivisorsId" placeholder="number 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number 1'">
-              <input type="number" name="secondNumberForCommonDivisors" id="secondNumberForCommonDivisorsId" placeholder="number 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number 2'">
-              <button class="action_button" onclick="printGreatestCommonDivisorCounter('firstNumberForCommonDivisorsId', 'secondNumberForCommonDivisorsId', 'greatestCommonDivisorId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="greatestCommonDivisor" class="task_subcolumn" id="greatestCommonDivisorId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>numbers,</a>
-                <a>division</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element numbers easy" id="primeFuctorsOfNumberTaskId" onmousemove="startPerspective(event, 'primeFuctorsOfNumberTaskId', 'primeFuctorsOfNumberTaskInnerId')" onmouseout="stopPerspective('primeFuctorsOfNumberTaskId', 'primeFuctorsOfNumberTaskInnerId')">
+          <div class="task_element_inner" id="primeFuctorsOfNumberTaskInnerId">
+            <div class="task_name">
+              <h4>Prime Fuctors of Number</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId4" onclick="toggleTaskVisibility('taskNameId4', 'bodyPrimeFactorsId')"></div>
+            </div>
+            <div class="task_body" id="bodyPrimeFactorsId">
+              <p>How could you find all prime factors of a number?</p>
+              <form class="task_row">
+                <div class="task_column">
+                    <input type="number" name="primeFactorsOfNumber" id="primeFactorsOfNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                    <button class="clickable_icon" onclick="autoFillNumber('primeFactorsOfNumberId')"></button>
+                    <button class="action_button" onclick="printPrimeFactorsResult('primeFactorsOfNumberId', 'primeFactorsId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="primeFactors" class="task_subcolumn" id="primeFactorsId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>numbers,</a>
+                  <a>zeros</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy multiplication" id="fizzBuzzTaskId">
-          <div class="task_name">
-            <h4>Fizz Buzz Task</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId7" onclick="toggleTaskVisibility('taskNameId7', 'fizzBuzzId')"></div>
-          </div>
-          <div class="task_body" id="fizzBuzzId">
-            <p>Create a for loop that iterates up to N (max 100) while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="number" name="fizzBuzzNumber" id="fizzBuzzNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="action_button" onclick="fizzBuzzPrint('fizzBuzzNumberId', 'fizzBuzzOutputId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="fizzBuzzOutput" class="task_subcolumn" id="fizzBuzzOutputId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>numbers,</a>
-                <a>multiplication</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element numbers easy fibonacci" id="nthFibonacciNumberTaskId" onmousemove="startPerspective(event, 'nthFibonacciNumberTaskId', 'nthFibonacciNumberTaskInnerId')" onmouseout="stopPerspective('nthFibonacciNumberTaskId', 'nthFibonacciNumberTaskInnerId')">
+          <div class="task_element_inner" id="nthFibonacciNumberTaskInnerId">
+            <div class="task_name">
+              <h4>Nth Fibonacci Number</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId5" onclick="toggleTaskVisibility('taskNameId5', 'fibonacciNumberId')"></div>
+            </div>
+            <div class="task_body" id="fibonacciNumberId">
+              <p>How to get nth Fibonacci number?</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="number" name="idexForFibonacciNumber" id="idexForFibonacciNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('idexForFibonacciNumberId')"></button>
+                  <button class="action_button" onclick="printNthFibonacciNumber('idexForFibonacciNumberId', 'printFibonacciNumberId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output class="task_subcolumn" type="text" name="fibonacciNumber" id="printFibonacciNumberId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>numbers,</a>
+                  <a>fibonacci</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy reverse" id="didgitsReverserTaskId">
-          <div class="task_name">
-            <h4>Didgits Reverser</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId8" onclick="toggleTaskVisibility('taskNameId8', 'revercedNumberId')"></div>
-          </div>
-          <div class="task_body" id="revercedNumberId">
-            <p>Given a 32-bit signed integer, reverse digits of an integer.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="number" name="numberToReverce" id="numberToReverceId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="action_button" onclick="printDidgitsReverser('numberToReverceId', 'printRevercedNumberId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="revercedNumber" class="task_subcolumn" id="printRevercedNumberId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>numbers,</a>
-                <a>reverse</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element numbers easy division" id="findCommonDivisorTaskId" onmousemove="startPerspective(event, 'findCommonDivisorTaskId', 'findCommonDivisorTaskInnerId')" onmouseout="stopPerspective('findCommonDivisorTaskId', 'findCommonDivisorTaskInnerId')">
+          <div class="task_element_inner" id="findCommonDivisorTaskInnerId">
+            <div class="task_name">
+              <h4>Find Common Divisor</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId6" onclick="toggleTaskVisibility('taskNameId6', 'commonDivisorId')"></div>
+            </div>
+            <div class="task_body" id="commonDivisorId">
+              <p>How would you find the greatest common divisor of two numbers?</p>
+              <form class="task_row">
+                <div class="task_column">
+                <input type="number" name="firstNumberForCommonDivisors" id="firstNumberForCommonDivisorsId" placeholder="number 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number 1'">
+                <button class="clickable_icon" onclick="autoFillNumber('firstNumberForCommonDivisorsId')"></button>
+                <input type="number" name="secondNumberForCommonDivisors" id="secondNumberForCommonDivisorsId" placeholder="number 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number 2'">
+                <button class="clickable_icon" onclick="autoFillNumber('secondNumberForCommonDivisorsId')"></button>
+                <button class="action_button" onclick="printGreatestCommonDivisorCounter('firstNumberForCommonDivisorsId', 'secondNumberForCommonDivisorsId', 'greatestCommonDivisorId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="greatestCommonDivisor" class="task_subcolumn" id="greatestCommonDivisorId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>numbers,</a>
+                  <a>division</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy prime" id="primeNumbersCounterTaskId">
-          <div class="task_name">
-            <h4>Prime Numbers Counter</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId9" onclick="toggleTaskVisibility('taskNameId9', 'amountOfPrimeNumbersId')"></div>
-          </div>
-          <div class="task_body" id="amountOfPrimeNumbersId">
-            <p>Count the number of prime numbers less than a non-negative number, n.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="number" name="countPrimeNumbers" id="countPrimeNumbersId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="action_button" onclick="printPrimeNumbersCounter('countPrimeNumbersId', 'printAmountOfPrimeNumbersId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="amountOfPrimeNumbers" class="task_subcolumn" id="printAmountOfPrimeNumbersId"></output>
+        <li class="task_element numbers easy multiplication" id="fizzBuzzTaskId" onmousemove="startPerspective(event, 'fizzBuzzTaskId', 'fizzBuzzTaskInnerId')" onmouseout="stopPerspective('fizzBuzzTaskId', 'fizzBuzzTaskInnerId')">
+          <div class="task_element_inner" id="fizzBuzzTaskInnerId">
+            <div class="task_name">
+              <h4>Fizz Buzz Task</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId7" onclick="toggleTaskVisibility('taskNameId7', 'fizzBuzzId')"></div>
             </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>numbers,</a>
-                <a>prime</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
-              </div>
-            </div>
-        </div>
-        </li>
-        <li class="task_element numbers easy ugly" id="uglyNumbersTaskId">
-          <div class="task_name">
-            <h4>Ugly Numbers</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId10" onclick="toggleTaskVisibility('taskNameId10', 'isUglyNumberId')"></div>
-          </div>
-          <div class="task_body" id="isUglyNumberId">
-            <p>Write a program to check whether a given number is an ugly number.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="number" name="uglyNumber" class="autofill_icon" id="uglyNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="clickable_icon" onclick="autoFillNumber('uglyNumberId')"></button>
-                <button class="action_button" onclick="printisNumberUglyResult('uglyNumberId', 'uglyNumberResultId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output class="task_subcolumn" type="text" name="uglyNumberResult" id="uglyNumberResultId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>numbers,</a>
-                <a>ugly</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+            <div class="task_body" id="fizzBuzzId">
+              <p>Create a for loop that iterates up to N (max 100) while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="number" name="fizzBuzzNumber" id="fizzBuzzNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('fizzBuzzNumberId')"></button>
+                  <button class="action_button" onclick="fizzBuzzPrint('fizzBuzzNumberId', 'fizzBuzzOutputId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="fizzBuzzOutput" class="task_subcolumn" id="fizzBuzzOutputId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>numbers,</a>
+                  <a>multiplication</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy happy" id="happyNumbersTaskId">
-          <div class="task_name">
-            <h4>Happy Numbers</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId11" onclick="toggleTaskVisibility('taskNameId11', 'isHappyNumberId')"></div>
-          </div>
-          <div class="task_body" id="isHappyNumberId">
-            <p>Write an algorithm to determine if a number is "happy".</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="number" name="happyNumber" class="autofill_icon" id="happyNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="clickable_icon" onclick="autoFillNumber('happyNumberId')"></button>
-                <button class="action_button" onclick="printHappyNumberResult('happyNumberId', 'happyNumberResultId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="happyNumberResult" class="task_subcolumn" id="happyNumberResultId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>numbers,</a>
-                <a>happy</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element numbers easy reverse" id="didgitsReverserTaskId" onmousemove="startPerspective(event, 'didgitsReverserTaskId', 'didgitsReverserTaskInnerId')" onmouseout="stopPerspective('didgitsReverserTaskId', 'didgitsReverserTaskInnerId')">
+          <div class="task_element_inner" id="didgitsReverserTaskInnerId">
+            <div class="task_name">
+              <h4>Didgits Reverser</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId8" onclick="toggleTaskVisibility('taskNameId8', 'revercedNumberId')"></div>
+            </div>
+            <div class="task_body" id="revercedNumberId">
+              <p>Given a 32-bit signed integer, reverse digits of an integer.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="number" name="numberToReverce" id="numberToReverceId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('numberToReverceId')"></button>
+                  <button class="action_button" onclick="printDidgitsReverser('numberToReverceId', 'printRevercedNumberId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="revercedNumber" class="task_subcolumn" id="printRevercedNumberId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>numbers,</a>
+                  <a>reverse</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers easy power" id="powerOfThreeTaskId">
-          <div class="task_name">
-            <h4>Power of Three</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId12" onclick="toggleTaskVisibility('taskNameId12', 'powerOfThreeId')"></div>
-          </div>
-          <div class="task_body" id="powerOfThreeId">
-            <p>Given an integer, write a function to determine if it is a power of three.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="number" name="powerOfThreeNumber" id="powerOfThreeNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="action_button" onclick="printPowerOfThreeresult('powerOfThreeNumberId', 'powerOfThreeNumberResultId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output class="task_subcolumn" type="text" name="powerOfThreeNumberResult" id="powerOfThreeNumberResultId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>number,</a>
-                <a>powers</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
-              </div>
+        <li class="task_element numbers easy prime" id="primeNumbersCounterTaskId" onmousemove="startPerspective(event, 'primeNumbersCounterTaskId', 'primeNumbersCounterTaskInnerId')" onmouseout="stopPerspective('primeNumbersCounterTaskId', 'primeNumbersCounterTaskInnerId')">
+          <div class="task_element_inner" id="primeNumbersCounterTaskInnerId">
+            <div class="task_name">
+              <h4>Prime Numbers Counter</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId9" onclick="toggleTaskVisibility('taskNameId9', 'amountOfPrimeNumbersId')"></div>
             </div>
-         </div>
-        </li>
-        <li class="task_element numbers easy root" id="squareRootTaskId">
-          <div class="task_name">
-            <h4>Square Root</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId13" onclick="toggleTaskVisibility('taskNameId13', 'squareRootId')"></div>
-          </div>
-          <div class="task_body" id="squareRootId">
-            <p>Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
-                Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="number" name="squareRootNumber" id="squareRootNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="action_button" onclick="printSquareRootResult('squareRootNumberId', 'squareRootResultId')">Run</button>
+            <div class="task_body" id="amountOfPrimeNumbersId">
+              <p>Count the number of prime numbers less than a non-negative number, n.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="number" name="countPrimeNumbers" id="countPrimeNumbersId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('countPrimeNumbersId')"></button>
+                  <button class="action_button" onclick="printPrimeNumbersCounter('countPrimeNumbersId', 'printAmountOfPrimeNumbersId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="amountOfPrimeNumbers" class="task_subcolumn" id="printAmountOfPrimeNumbersId"></output>
               </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="squareRootResult" class="task_subcolumn" id="squareRootResultId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>numbers,</a>
-                <a>root</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>numbers,</a>
+                  <a>prime</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element numbers medium multiplication" id="bigNumbersMultiplicationTaskId">
-          <div class="task_name">
-            <h4>Big Numbers Multiplication</h4>
-            <div class="task_body_button task_body_button_up" id="bigNumbersMultiplicationNameId" onclick="toggleTaskVisibility('bigNumbersMultiplicationNameId', 'bigNumbersMultiplicationId')"></div>
+        <li class="task_element numbers easy ugly" id="uglyNumbersTaskId" onmousemove="startPerspective(event, 'uglyNumbersTaskId', 'uglyNumbersTaskInnerId')" onmouseout="stopPerspective('uglyNumbersTaskId', 'uglyNumbersTaskInnerId')">
+          <div class="task_element_inner" id="uglyNumbersTaskInnerId">
+            <div class="task_name">
+              <h4>Ugly Numbers</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId10" onclick="toggleTaskVisibility('taskNameId10', 'isUglyNumberId')"></div>
+            </div>
+            <div class="task_body" id="isUglyNumberId">
+              <p>Write a program to check whether a given number is an ugly number.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="number" name="uglyNumber" id="uglyNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('uglyNumberId')"></button>
+                  <button class="action_button" onclick="printisNumberUglyResult('uglyNumberId', 'uglyNumberResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output class="task_subcolumn" type="text" name="uglyNumberResult" id="uglyNumberResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>numbers,</a>
+                  <a>ugly</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="task_body" id="bigNumbersMultiplicationId">
-            <p>Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
-               The length of both num1 and num2 is less then 110. Both num1 and num2 contain only digits 0-9.
-               Both num1 and num2 do not contain any leading zero, except the number 0 itself.
-               You must not use any built-in BigInteger library or convert the inputs to integer directly.
-            </p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="bigNumberForMultiplication1" id="bigNumberForMultiplication1Id" placeholder="number 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number 1'">
-                <input type="text" name="bigNumberForMultiplication2" id="bigNumberForMultiplication2Id" placeholder="number 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number 2'">
-                <button class="action_button" onclick="bigNumbersMultipierResult('bigNumberForMultiplication1Id', 'bigNumberForMultiplication2Id', 'bigNumberForMultiplicationResultId')">Run</button>
+        </li>
+        <li class="task_element numbers easy happy" id="happyNumbersTaskId" onmousemove="startPerspective(event, 'happyNumbersTaskId', 'happyNumbersTaskInnerId')" onmouseout="stopPerspective('happyNumbersTaskId', 'happyNumbersTaskInnerId')">
+          <div class="task_element_inner" id="happyNumbersTaskInnerId">
+            <div class="task_name">
+              <h4>Happy Numbers</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId11" onclick="toggleTaskVisibility('taskNameId11', 'isHappyNumberId')"></div>
+            </div>
+            <div class="task_body" id="isHappyNumberId">
+              <p>Write an algorithm to determine if a number is "happy".</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="number" name="happyNumber" id="happyNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('happyNumberId')"></button>
+                  <button class="action_button" onclick="printHappyNumberResult('happyNumberId', 'happyNumberResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="happyNumberResult" class="task_subcolumn" id="happyNumberResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>numbers,</a>
+                  <a>happy</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="bigNumberForMultiplicationResult" class="task_subcolumn" id="bigNumberForMultiplicationResultId"></output>
+            </div>
+          </div>
+        </li>
+        <li class="task_element numbers easy power" id="powerOfThreeTaskId" onmousemove="startPerspective(event, 'powerOfThreeTaskId', 'powerOfThreeTaskInnerId')" onmouseout="stopPerspective('powerOfThreeTaskId', 'powerOfThreeTaskInnerId')">
+          <div class="task_element_inner" id="powerOfThreeTaskInnerId">
+            <div class="task_name">
+              <h4>Power of Three</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId12" onclick="toggleTaskVisibility('taskNameId12', 'powerOfThreeId')"></div>
+            </div>
+            <div class="task_body" id="powerOfThreeId">
+              <p>Given an integer, write a function to determine if it is a power of three.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="number" name="powerOfThreeNumber" id="powerOfThreeNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('powerOfThreeNumberId')"></button>
+                  <button class="action_button" onclick="printPowerOfThreeresult('powerOfThreeNumberId', 'powerOfThreeNumberResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output class="task_subcolumn" type="text" name="powerOfThreeNumberResult" id="powerOfThreeNumberResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>number,</a>
+                  <a>powers</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>numbers,</a>
-                <a>multiplication</a>
+            </div>
+          </div>
+        </li>
+        <li class="task_element numbers easy root" id="squareRootTaskId" onmousemove="startPerspective(event, 'squareRootTaskId', 'squareRootTaskInnerId')" onmouseout="stopPerspective('squareRootTaskId', 'squareRootTaskInnerId')">
+          <div class="task_element_inner" id="squareRootTaskInnerId">
+            <div class="task_name">
+              <h4>Square Root</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId13" onclick="toggleTaskVisibility('taskNameId13', 'squareRootId')"></div>
+            </div>
+            <div class="task_body" id="squareRootId">
+              <p>Compute and return the square root of x, where x is guaranteed to be a non-negative integer.
+                  Since the return type is an integer, the decimal digits are truncated and only the integer part of the result is returned.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="number" name="squareRootNumber" id="squareRootNumberId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('squareRootNumberId')"></button>
+                  <button class="action_button" onclick="printSquareRootResult('squareRootNumberId', 'squareRootResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="squareRootResult" class="task_subcolumn" id="squareRootResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>numbers,</a>
+                  <a>root</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
-                <img src="img\star_icon.png" alt="stars">
+            </div>
+          </div>
+        </li>
+        <li class="task_element numbers medium multiplication" id="bigNumbersMultiplicationTaskId" onmousemove="startPerspective(event, 'bigNumbersMultiplicationTaskId', 'bigNumbersMultiplicationTaskInnerId')" onmouseout="stopPerspective('bigNumbersMultiplicationTaskId', 'bigNumbersMultiplicationTaskInnerId')">
+          <div class="task_element_inner" id="bigNumbersMultiplicationTaskInnerId">
+            <div class="task_name">
+              <h4>Big Numbers Multiplication</h4>
+              <div class="task_body_button task_body_button_up" id="bigNumbersMultiplicationNameId" onclick="toggleTaskVisibility('bigNumbersMultiplicationNameId', 'bigNumbersMultiplicationId')"></div>
+            </div>
+            <div class="task_body" id="bigNumbersMultiplicationId">
+              <p>Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
+                  The length of both num1 and num2 is less then 110. Both num1 and num2 contain only digits 0-9.
+                  Both num1 and num2 do not contain any leading zero, except the number 0 itself.
+                  You must not use any built-in BigInteger library or convert the inputs to integer directly.
+              </p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="bigNumberForMultiplication1" id="bigNumberForMultiplication1Id" placeholder="number 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number 1'">
+                  <button class="clickable_icon" onclick="autoFillNumber('bigNumberForMultiplication1Id')"></button>
+                  <input type="text" name="bigNumberForMultiplication2" id="bigNumberForMultiplication2Id" placeholder="number 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number 2'">
+                  <button class="clickable_icon" onclick="autoFillNumber('bigNumberForMultiplication2Id')"></button>
+                  <button class="action_button" onclick="bigNumbersMultipierResult('bigNumberForMultiplication1Id', 'bigNumberForMultiplication2Id', 'bigNumberForMultiplicationResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="bigNumberForMultiplicationResult" class="task_subcolumn" id="bigNumberForMultiplicationResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>numbers,</a>
+                  <a>multiplication</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -482,118 +551,134 @@
       <!--Tasks with Strings-->
     <div id="tabStrings" class="tab_content"> 
       <ol class="task_list_style">
-        <li class="task_element strings easy unique" id="uniqueStringTaskId">
-          <div class="task_name">
-            <h4>Unique Charaaters in a String</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId14" onclick="toggleTaskVisibility('taskNameId14', 'uniqueStringId')"></div>
-          </div>
-            <div class="task_body" id="uniqueStringId">
-            <p>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="userStringForUnique" class="autofill_icon" id="userStringForUniqueId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
-                <button class="clickable_icon" onclick="autoFillString('userStringForUniqueId')"></button>
-                <button class="action_button" onclick="printUniqueCharactersResult('userStringForUniqueId','resultStringForUniqueId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="resultStringForUnique" class="task_subcolumn" id="resultStringForUniqueId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>strings,</a>
-                <a>unique</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element strings easy unique" id="uniqueStringTaskId" onmousemove="startPerspective(event, 'uniqueStringTaskId', 'uniqueStringTaskInnerId')" onmouseout="stopPerspective('uniqueStringTaskId', 'uniqueStringTaskInnerId')">
+          <div class="task_element_inner" id="uniqueStringTaskInnerId">
+            <div class="task_name">
+              <h4>Unique Charaaters in a String</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId14" onclick="toggleTaskVisibility('taskNameId14', 'uniqueStringId')"></div>
+            </div>
+              <div class="task_body" id="uniqueStringId">
+              <p>Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="userStringForUnique" id="userStringForUniqueId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                  <button class="clickable_icon" onclick="autoFillString('userStringForUniqueId')"></button>
+                  <button class="action_button" onclick="printUniqueCharactersResult('userStringForUniqueId','resultStringForUniqueId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="resultStringForUnique" class="task_subcolumn" id="resultStringForUniqueId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>strings,</a>
+                  <a>unique</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element strings easy reverse" id="stringReverserTaskId">
-          <div class="task_name">
-            <h4>String Reverser</h4>
-            <div class="task_body_button task_body_button_up" id="reverseStringTaskNameId" onclick="toggleTaskVisibility('reverseStringTaskNameId', 'reverseStringId')"></div>
-          </div>
-          <div class="task_body" id="reverseStringId">
-            <p>How would you reverse a string in JavaScript?</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="userString" class="autofill_icon" id="userStringId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
-                <button class="clickable_icon" onclick="autoFillString('userStringId')"></button>
-                <button class="action_button" onclick="printReversedStringResult('userStringId', 'reverseUserStringId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="reverseUserString" class="task_subcolumn" id="reverseUserStringId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>strings,</a>
-                <a>reverse</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element strings easy reverse" id="stringReverserTaskId" onmousemove="startPerspective(event, 'stringReverserTaskId', 'stringReverserTaskInnerId')" onmouseout="stopPerspective('stringReverserTaskId', 'stringReverserTaskInnerId')">
+          <div class="task_element_inner" id="stringReverserTaskInnerId">
+            <div class="task_name">
+              <h4>String Reverser</h4>
+              <div class="task_body_button task_body_button_up" id="reverseStringTaskNameId" onclick="toggleTaskVisibility('reverseStringTaskNameId', 'reverseStringId')"></div>
+            </div>
+            <div class="task_body" id="reverseStringId">
+              <p>How would you reverse a string in JavaScript?</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="userString" id="userStringId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                  <button class="clickable_icon" onclick="autoFillString('userStringId')"></button>
+                  <button class="action_button" onclick="printReversedStringResult('userStringId', 'reverseUserStringId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="reverseUserString" class="task_subcolumn" id="reverseUserStringId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>strings,</a>
+                  <a>reverse</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element strings easy" id="validAnagramTaskId">
-          <div class="task_name">
-            <h4>Valid Anagram</h4>
-            <div class="task_body_button task_body_button_up" id="validAnagramTaskNameId" onclick="toggleTaskVisibility('validAnagramTaskNameId', 'validAnagramId')"></div>
-          </div>
-          <div class="task_body"  id="validAnagramId">
-            <p>Given two strings s and t, write a function to determine if t is an anagram of s.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="strinForAnagram1" class="autofill_icon" id="strinForAnagram1Id" placeholder="string 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string 1'">
-                <button class="clickable_icon" onclick="autoFillString('strinForAnagram1Id')"></button>
-                <input type="text" name="strinForAnagram2" class="autofill_icon" id="strinForAnagram2Id" placeholder="string 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string 2'">
-                <button class="clickable_icon" onclick="autoFillString('strinForAnagram2Id')"></button>
-                <button class="action_button" onclick="printFrequencyArray('strinForAnagram1Id', 'strinForAnagram2Id', 'strinForAnagramResultId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="strinForAnagramResult" id="strinForAnagramResultId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>string</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element strings easy" id="validAnagramTaskId" onmousemove="startPerspective(event, 'validAnagramTaskId', 'validAnagramTaskInnerId')" onmouseout="stopPerspective('validAnagramTaskId', 'validAnagramTaskInnerId')">
+          <div class="task_element_inner" id="validAnagramTaskInnerId">
+            <div class="task_name">
+              <h4>Valid Anagram</h4>
+              <div class="task_body_button task_body_button_up" id="validAnagramTaskNameId" onclick="toggleTaskVisibility('validAnagramTaskNameId', 'validAnagramId')"></div>
+            </div>
+            <div class="task_body"  id="validAnagramId">
+              <p>Given two strings s and t, write a function to determine if t is an anagram of s.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="strinForAnagram1" id="strinForAnagram1Id" placeholder="string 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string 1'">
+                  <button class="clickable_icon" onclick="autoFillString('strinForAnagram1Id')"></button>
+                  <input type="text" name="strinForAnagram2" id="strinForAnagram2Id" placeholder="string 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string 2'">
+                  <button class="clickable_icon" onclick="autoFillString('strinForAnagram2Id')"></button>
+                  <button class="action_button" onclick="printFrequencyArray('strinForAnagram1Id', 'strinForAnagram2Id', 'strinForAnagramResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="strinForAnagramResult" id="strinForAnagramResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>string</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element strings easy" id="toLowerCaseTaskId">
-          <div class="task_name">
-            <h4>To Lower Case</h4>
-            <div class="task_body_button task_body_button_up" id="toLowerCaseTaskNameId" onclick="toggleTaskVisibility('toLowerCaseTaskNameId', 'toLowerCaseId')"></div>
-          </div>
-          <div class="task_body" id="toLowerCaseId">
-            <p>Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="strinForLowerCase" class="autofill_icon" id="strinForLowerCaseId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
-                <button class="clickable_icon" onclick="autoFillString('strinForLowerCaseId')"></button>
-                <button class="action_button" onclick="toLowerCasePrint('strinForLowerCaseId', 'strinForLowerCaseResultId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="strinForLowerCaseResult" id="strinForLowerCaseResultId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>string</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element strings easy" id="toLowerCaseTaskId" onmousemove="startPerspective(event, 'toLowerCaseTaskId', 'toLowerCaseTaskInnerId')" onmouseout="stopPerspective('toLowerCaseTaskId', 'toLowerCaseTaskInnerId')">
+          <div class="task_element_inner" id="toLowerCaseTaskInnerId">
+            <div class="task_name">
+              <h4>To Lower Case</h4>
+              <div class="task_body_button task_body_button_up" id="toLowerCaseTaskNameId" onclick="toggleTaskVisibility('toLowerCaseTaskNameId', 'toLowerCaseId')"></div>
+            </div>
+            <div class="task_body" id="toLowerCaseId">
+              <p>Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="strinForLowerCase" id="strinForLowerCaseId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                  <button class="clickable_icon" onclick="autoFillString('strinForLowerCaseId')"></button>
+                  <button class="action_button" onclick="toLowerCasePrint('strinForLowerCaseId', 'strinForLowerCaseResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="strinForLowerCaseResult" id="strinForLowerCaseResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>string</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -603,173 +688,196 @@
     <!--Tasks with Arrays-->
     <div id="tabArrays" class="tab_content">
       <ol class="task_list_style">
-        <li class="task_element arrays easy duplicate" id="arrayDuplicatorTaskId">
-          <div class="task_name">
-            <h4>Array Duplicator</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId16" onclick="toggleTaskVisibility('taskNameId16', 'duplicateArrayId')"></div>
-          </div>
-          <div class="task_body" id="duplicateArrayId">
-            <p>Make this work: duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]</p>  
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="userArray" class="autofill_icon" id="userArrayId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
-                <button class="clickable_icon" onclick="autoFillArray('userArrayId')"></button>
-                <button class="action_button" onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="duplicateUserArray" class="task_subcolumn" id="duplicateUserArrayId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>array,</a>
-                <a>duplicate</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element arrays easy duplicate" id="arrayDuplicatorTaskId" onmousemove="startPerspective(event, 'arrayDuplicatorTaskId', 'arrayDuplicatorTaskInnerId')" onmouseout="stopPerspective('arrayDuplicatorTaskId', 'arrayDuplicatorTaskInnerId')">
+          <div class="task_element_inner" id="arrayDuplicatorTaskInnerId">
+            <div class="task_name">
+              <h4>Array Duplicator</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId16" onclick="toggleTaskVisibility('taskNameId16', 'duplicateArrayId')"></div>
+            </div>
+            <div class="task_body" id="duplicateArrayId">
+              <p>Make this work: duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]</p>  
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="userArray" id="userArrayId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                  <button class="clickable_icon" onclick="autoFillArray('userArrayId')"></button>
+                  <button class="action_button" onclick="printduplicateArray('userArrayId','duplicateUserArrayId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="duplicateUserArray" class="task_subcolumn" id="duplicateUserArrayId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array,</a>
+                  <a>duplicate</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays easy unique" id="uniqueArrayTaskId">
-          <div class="task_name">
-            <h4>Non Duplicated Array</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId17" onclick="toggleTaskVisibility('taskNameId17', 'uniqueArrayId')"></div>
-          </div>
-          <div class="task_body" id="uniqueArrayId">
-            <p>How would you remove duplicate members from an array?</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="userDuplicatedArray" autofill_icon" id="userDuplicatedArrayId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
-                <button class="clickable_icon" onclick="autoFillArray('userDuplicatedArrayId')"></button>
-                <button class="action_button" onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="nonDuplicatedArray" class="task_subcolumn" id="nonDuplicatedArrayId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>array,</a>
-                <a>unique</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element arrays easy unique" id="uniqueArrayTaskId" onmousemove="startPerspective(event, 'uniqueArrayTaskId', 'uniqueArrayTaskInnerId')" onmouseout="stopPerspective('uniqueArrayTaskId', 'uniqueArrayTaskInnerId')">
+          <div class="task_element_inner" id="uniqueArrayTaskInnerId">
+            <div class="task_name">
+              <h4>Non Duplicated Array</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId17" onclick="toggleTaskVisibility('taskNameId17', 'uniqueArrayId')"></div>
+            </div>
+            <div class="task_body" id="uniqueArrayId">
+              <p>How would you remove duplicate members from an array?</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="userDuplicatedArray" id="userDuplicatedArrayId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                  <button class="clickable_icon" onclick="autoFillArray('userDuplicatedArrayId')"></button>
+                  <button class="action_button" onclick="printArayWithUniqueMembers('userDuplicatedArrayId', 'nonDuplicatedArrayId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="nonDuplicatedArray" class="task_subcolumn" id="nonDuplicatedArrayId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array,</a>
+                  <a>unique</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays easy merge" id="twoArraysMergeTaskId">
-          <div class="task_name">
-            <h4>Two Arrays Merge</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId18" onclick="toggleTaskVisibility('taskNameId18', 'arrayMergeId')"></div>
-          </div>
-          <div class="task_body"  id="arrayMergeId">
-            <p>How would you merge two sorted array?</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="userArrayForMerge1" autofill_icon" id="userArrayForMerge1Id" placeholder="array 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
-                <button class="clickable_icon" onclick="autoFillArray('userArrayForMerge1Id')"></button>
-                <input type="text" name="userArrayForMerge2" class="autofill_icon" id="userArrayForMerge2Id" placeholder="array 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 2'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
-                <button class="clickable_icon" onclick="autoFillArray('userArrayForMerge2Id')"></button>
-                <button class="action_button" onclick="printMergedArray('userArrayForMerge1Id', 'userArrayForMerge2Id', 'mergedArrayId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="mergedArray" id="mergedArrayId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>array,</a>
-                <a>merge</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element arrays easy merge" id="twoArraysMergeTaskId" onmousemove="startPerspective(event, 'twoArraysMergeTaskId', 'twoArraysMergeTaskInnerId')" onmouseout="stopPerspective('twoArraysMergeTaskId', 'twoArraysMergeTaskInnerId')">
+          <div class="task_element_inner" id="twoArraysMergeTaskInnerId">
+            <div class="task_name">
+              <h4>Two Arrays Merge</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId18" onclick="toggleTaskVisibility('taskNameId18', 'arrayMergeId')"></div>
+            </div>
+            <div class="task_body"  id="arrayMergeId">
+              <p>How would you merge two sorted array?</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="userArrayForMerge1" id="userArrayForMerge1Id" placeholder="array 1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                  <button class="clickable_icon" onclick="autoFillArray('userArrayForMerge1Id')"></button>
+                  <input type="text" name="userArrayForMerge2" id="userArrayForMerge2Id" placeholder="array 2" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 2'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                  <button class="clickable_icon" onclick="autoFillArray('userArrayForMerge2Id')"></button>
+                  <button class="action_button" onclick="printMergedArray('userArrayForMerge1Id', 'userArrayForMerge2Id', 'mergedArrayId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="mergedArray" id="mergedArrayId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array,</a>
+                  <a>merge</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays easy rotate" id="arrayShiftTaskId">
-          <div class="task_name">
-            <h4>Array Shift</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId19" onclick="toggleTaskVisibility('taskNameId19', 'arrayShiftId')"></div>
-          </div>
-          <div class="task_body" id="arrayShiftId">
-            <p>Given an array, rotate the array to the right by k steps, where k is non-negative.</p>  
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="arrayForShift" autofill_icon" id="arrayForShiftId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                <button class="clickable_icon" onclick="autoFillArray('arrayForShiftId')"></button>
-                <input type="number" name="shift" id="shiftId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="action_button" onclick="printShiftedArray('arrayForShiftId', 'shiftId','shiftedArrayId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="shiftedArray" class="task_subcolumn" id="shiftedArrayId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>array,</a>
-                <a>rotate</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element arrays easy rotate" id="arrayShiftTaskId" onmousemove="startPerspective(event, 'arrayShiftTaskId', 'arrayShiftTaskInnerId')" onmouseout="stopPerspective('arrayShiftTaskId', 'arrayShiftTaskInnerId')">
+          <div class="task_element_inner" id="arrayShiftTaskInnerId">
+            <div class="task_name">
+              <h4>Array Shift</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId19" onclick="toggleTaskVisibility('taskNameId19', 'arrayShiftId')"></div>
+            </div>
+            <div class="task_body" id="arrayShiftId">
+              <p>Given an array, rotate the array to the right by k steps, where k is non-negative.</p>  
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="arrayForShift" id="arrayForShiftId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                  <button class="clickable_icon" onclick="autoFillArray('arrayForShiftId')"></button>
+                  <input type="number" name="shift" id="shiftId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('shiftId')"></button>
+                  <button class="action_button" onclick="printShiftedArray('arrayForShiftId', 'shiftId','shiftedArrayId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="shiftedArray" class="task_subcolumn" id="shiftedArrayId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array,</a>
+                  <a>rotate</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays easy zeros move" id="moveZerosInArrayTaskId">
-          <div class="task_name">
-            <h4>Move Zeros in an Array</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId20" onclick="toggleTaskVisibility('taskNameId20', 'moveZerosId')"></div>
-          </div>
-          <div class="task_body" id="moveZerosId">
-            <p>Given an array nums, write a function to move all zeros to the end of it while maintaining the relative order of the non-zero elements.</p>  
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="arrayMoveZeros" autofill_icon" id="arrayMoveZerosId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                <button class="clickable_icon" onclick="autoFillArray('arrayMoveZerosId')"></button>
-                <button class="action_button" onclick="printMoveZeros('arrayMoveZerosId', 'arrayMovedZerosId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="arrayMovedZeros" class="task_subcolumn" id="arrayMovedZerosId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>array,</a>
-                <a>zeros,</a>
-                <a>move</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element arrays easy zeros move" id="moveZerosInArrayTaskId" onmousemove="startPerspective(event, 'moveZerosInArrayTaskId', 'moveZerosInArrayTaskInnerId')" onmouseout="stopPerspective('moveZerosInArrayTaskId', 'moveZerosInArrayTaskInnerId')">
+          <div class="task_element_inner" id="moveZerosInArrayTaskInnerId">
+            <div class="task_name">
+              <h4>Move Zeros in an Array</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId20" onclick="toggleTaskVisibility('taskNameId20', 'moveZerosId')"></div>
+            </div>
+            <div class="task_body" id="moveZerosId">
+              <p>Given an array nums, write a function to move all zeros to the end of it while maintaining the relative order of the non-zero elements.</p>  
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="arrayMoveZeros" id="arrayMoveZerosId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                  <button class="clickable_icon" onclick="autoFillArray('arrayMoveZerosId')"></button>
+                  <button class="action_button" onclick="printMoveZeros('arrayMoveZerosId', 'arrayMovedZerosId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="arrayMovedZeros" class="task_subcolumn" id="arrayMovedZerosId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array,</a>
+                  <a>zeros,</a>
+                  <a>move</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays medium pascal" id="pascalsTriangleTaskId">
-          <div class="task_name">
-            <h4>Pascal's Triangle</h4>
-            <div class="task_body_button task_body_button_up" id="taskNameId21" onclick="toggleTaskVisibility('taskNameId21', 'pascalTringleId')"></div>
-          </div>
-          <div class="task_body" id="pascalTringleId">
-            <p>Given a non-negative integer numRows, generate the first numRows of 
-              <a target="_blank" href="" class="disaktiv_link" id="pacsalLinkId" onclick="openPascalTriangle('pascalTriangleImage.html', readNumberValue('numberOfRowsId'))">Pascal's triangle.</a>
-            </p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="numberOfRows" id="numberOfRowsId"  placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
-                <button class="action_button" onclick="printPascalTriangle('numberOfRowsId', 'pascalTringleResultId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="pascalTringle" class="task_subcolumn" id="pascalTringleResultId"></output>
-              </div>
+        <li class="task_element arrays medium pascal" id="pascalsTriangleTaskId" onmousemove="startPerspective(event, 'pascalsTriangleTaskId', 'pascalsTriangleTaskInnerId')" onmouseout="stopPerspective('pascalsTriangleTaskId', 'pascalsTriangleTaskInnerId')">
+          <div class="task_element_inner" id="pascalsTriangleTaskInnerId">
+            <div class="task_name">
+              <h4>Pascal's Triangle</h4>
+              <div class="task_body_button task_body_button_up" id="taskNameId21" onclick="toggleTaskVisibility('taskNameId21', 'pascalTriangleId')"></div>
+            </div>
+            <div class="task_body" id="pascalTriangleId">
+              <p>Given a non-negative integer numRows, generate the first numRows of 
+                <a target="_blank" href="" class="disaktiv_link" id="pacsalLinkId" onclick="openPascalTriangle('pascalTriangleImage.html', readNumberValue('numberOfRowsId'))">Pascal's triangle.</a>
+              </p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="numberOfRows" id="numberOfRowsId"  placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('numberOfRowsId', 1, 10)"></button>
+                  <button class="action_button" onclick="printPascalTriangle('numberOfRowsId', 'pascalTriangleResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="pascalTriangle" class="task_subcolumn" id="pascalTriangleResultId"></output>
+                </div>
               </form>
               <div class="task_row">
                 <div class="task_column task_tags">
@@ -777,155 +885,179 @@
                   <a>pascal</a>
                 </div>
                 <div class="task_column task_complexity">
-                  <img src="img\star_icon.png" alt="stars">
-                  <img src="img\star_icon.png" alt="stars">
+                  <div>
+                  <span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+                  </div>
                 </div>
               </div>
+            </div>
           </div>
         </li>
-        <li class="task_element arrays easy unique" id="singleNumberTaskId">
-          <div class="task_name">
-            <h4>Single Number</h4>
-            <div class="task_body_button task_body_button_up" id="singleNumberTaskNameId" onclick="toggleTaskVisibility('singleNumberTaskNameId', 'singleNumberId')"></div>
-          </div>
-          <div class="task_body" id="singleNumberId">
-            <p>Given a non-empty array of integers, every element appears twice except for one. Find that single one.</p>  
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="arrayForSingleNumber" class="autofill_icon" id="arrayForSingleNumberId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                <button class="clickable_icon" onclick="autoFillArray('arrayForSingleNumberId')"></button>
-                <button class="action_button" onclick="printsingleNumber('arrayForSingleNumberId', 'singleNumberInArrayId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="singleNumberInArray" class="task_subcolumn" id="singleNumberInArrayId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>array,</a>
-                <a>unique</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element arrays easy unique" id="singleNumberTaskId" onmousemove="startPerspective(event, 'singleNumberTaskId', 'singleNumberTaskInnerId')" onmouseout="stopPerspective('singleNumberTaskId', 'singleNumberTaskInnerId')">
+          <div class="task_element_inner" id="singleNumberTaskInnerId">
+            <div class="task_name">
+              <h4>Single Number</h4>
+              <div class="task_body_button task_body_button_up" id="singleNumberTaskNameId" onclick="toggleTaskVisibility('singleNumberTaskNameId', 'singleNumberId')"></div>
+            </div>
+            <div class="task_body" id="singleNumberId">
+              <p>Given a non-empty array of integers, every element appears twice except for one. Find that single one.</p>  
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="arrayForSingleNumber" id="arrayForSingleNumberId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                  <button class="clickable_icon" onclick="autoFillArray('arrayForSingleNumberId')"></button>
+                  <button class="action_button" onclick="printsingleNumber('arrayForSingleNumberId', 'singleNumberInArrayId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="singleNumberInArray" class="task_subcolumn" id="singleNumberInArrayId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array,</a>
+                  <a>unique</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays easy majority" id="majorityElementTaskId">
-          <div class="task_name">
-            <h4>Majority Element</h4>
-            <div class="task_body_button task_body_button_up" id="majorityElementTaskNameId" onclick="toggleTaskVisibility('majorityElementTaskNameId', 'majorityElementId')"></div>
-          </div>
-          <div class="task_body" id="majorityElementId">
-            <p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
-              You may assume that the array is non-empty and the majority element always exist in the array.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="arrayForMajorElement" class="autofill_icon" id="arrayForMajorElementId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
-                <button class="clickable_icon" onclick="autoFillArray('arrayForMajorElementId')"></button>
-                <button class="action_button" onclick="printMajorityElement('arrayForMajorElementId', 'majorElementInArrayId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="majorElementInArray" class="task_subcolumn" id="majorElementInArrayId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>array,</a>
-                <a>majority</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element arrays easy majority" id="majorityElementTaskId" onmousemove="startPerspective(event, 'majorityElementTaskId', 'majorityElementTaskInnerId')" onmouseout="stopPerspective('majorityElementTaskId', 'majorityElementTaskInnerId')">
+          <div class="task_element_inner" id="majorityElementTaskInnerId">
+            <div class="task_name">
+              <h4>Majority Element</h4>
+              <div class="task_body_button task_body_button_up" id="majorityElementTaskNameId" onclick="toggleTaskVisibility('majorityElementTaskNameId', 'majorityElementId')"></div>
+            </div>
+            <div class="task_body" id="majorityElementId">
+              <p>Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+                You may assume that the array is non-empty and the majority element always exist in the array.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="arrayForMajorElement" id="arrayForMajorElementId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')" >
+                  <button class="clickable_icon" onclick="autoFillArray('arrayForMajorElementId')"></button>
+                  <button class="action_button" onclick="printMajorityElement('arrayForMajorElementId', 'majorElementInArrayId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="majorElementInArray" class="task_subcolumn" id="majorElementInArrayId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array,</a>
+                  <a>majority</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays easy missing" id="missingNumberTaskId">
-          <div class="task_name">
-            <h4>Missing Number</h4>
-            <div class="task_body_button task_body_button_up" id="missingNumberTaskNameId" onclick="toggleTaskVisibility('missingNumberTaskNameId', 'missingNumberId')"></div>
-          </div>
-          <div class="task_body"  id="missingNumberId">
-            <p>Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="userArrayForMissingNumber" class="autofill_icon" id="userArrayForMissingNumberId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
-                <button class="clickable_icon" onclick="autoFillArray('userArrayForMissingNumberId')"></button>
-                <button class="action_button" onclick="printMissingNumber('userArrayForMissingNumberId', 'singleNumberResultId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="singleNumberResult" id="singleNumberResultId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>array,</a>
-                <a>missing</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element arrays easy missing" id="missingNumberTaskId" onmousemove="startPerspective(event, 'missingNumberTaskId', 'missingNumberTaskInnerId')" onmouseout="stopPerspective('missingNumberTaskId', 'missingNumberTaskInnerId')">
+          <div class="task_element_inner" id="missingNumberTaskInnerId">
+            <div class="task_name">
+              <h4>Missing Number</h4>
+              <div class="task_body_button task_body_button_up" id="missingNumberTaskNameId" onclick="toggleTaskVisibility('missingNumberTaskNameId', 'missingNumberId')"></div>
+            </div>
+            <div class="task_body"  id="missingNumberId">
+              <p>Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="userArrayForMissingNumber" id="userArrayForMissingNumberId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                  <button class="clickable_icon" onclick="autoFillArray('userArrayForMissingNumberId')"></button>
+                  <button class="action_button" onclick="printMissingNumber('userArrayForMissingNumberId', 'singleNumberResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="singleNumberResult" id="singleNumberResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array,</a>
+                  <a>missing</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays easy matrix transpose" id="transposeMatrixTaskId">
-          <div class="task_name">
-            <h4>Transpose Matrix</h4>
-            <div class="task_body_button task_body_button_up" id="transposeMatrixTaskNameId" onclick="toggleTaskVisibility('transposeMatrixTaskNameId', 'transposeMatrixId')"></div>
-          </div>
-          <div class="task_body"  id="transposeMatrixId">
-            <p>Given a matrix A, return the transpose of A.
-              The transpose of a matrix is the matrix flipped over it's main diagonal, switching the row and column indices of the matrix.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="userArrayFortransposeMatrix" class="autofill_icon" id="userArrayFortransposeMatrixId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'">
-                <button class="action_button" onclick="printTransposedMatrix('userArrayFortransposeMatrixId', 'transposeMatrixtId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="transposeMatrixResult" id="transposeMatrixtId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>array,</a>
-                <a>matrix,</a>
-                <a>transpose</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element arrays easy matrix transpose" id="transposeMatrixTaskId" onmousemove="startPerspective(event, 'transposeMatrixTaskId', 'transposeMatrixTaskInnerId')" onmouseout="stopPerspective('transposeMatrixTaskId', 'transposeMatrixTaskInnerId')">
+          <div class="task_element_inner" id="transposeMatrixTaskInnerId">
+            <div class="task_name">
+              <h4>Transpose Matrix</h4>
+              <div class="task_body_button task_body_button_up" id="transposeMatrixTaskNameId" onclick="toggleTaskVisibility('transposeMatrixTaskNameId', 'transposeMatrixId')"></div>
+            </div>
+            <div class="task_body"  id="transposeMatrixId">
+              <p>Given a matrix A, return the transpose of A.
+                The transpose of a matrix is the matrix flipped over it's main diagonal, switching the row and column indices of the matrix.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="userArrayFortransposeMatrix" id="userArrayFortransposeMatrixId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'">
+                  <button class="clickable_icon" onclick="autoFillArray('userArrayFortransposeMatrixId')"></button>
+                  <button class="action_button" onclick="printTransposedMatrix('userArrayFortransposeMatrixId', 'transposeMatrixtId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="transposeMatrixResult" id="transposeMatrixtId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array,</a>
+                  <a>matrix,</a>
+                  <a>transpose</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </li>
-        <li class="task_element arrays easy sort" id="sortArrayByParityTaskId">
-          <div class="task_name">
-            <h4>Sort Array By Parity</h4>
-            <div class="task_body_button task_body_button_up" id="sortArrayByParityNameId" onclick="toggleTaskVisibility('sortArrayByParityNameId', 'sortArrayByParityId')"></div>
-          </div>
-          <div class="task_body"  id="sortArrayByParityId">
-            <p>Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
-               You may return any answer array that satisfies this condition.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="userArrayForSortByParity" class="autofill_icon" id="userArrayForSortByParityId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'">
-                <button class="action_button" onclick="printSortedArrayByParity('userArrayForSortByParityId', 'sortedArrayByParityResultId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="sortedArrayByParityResult" id="sortedArrayByParityResultId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>array,</a>
-                <a>sort</a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element arrays easy sort" id="sortArrayByParityTaskId" onmousemove="startPerspective(event, 'sortArrayByParityTaskId', 'sortArrayByParityTaskInnerId')" onmouseout="stopPerspective('sortArrayByParityTaskId', 'sortArrayByParityTaskInnerId')">
+          <div class="task_element_inner" id="sortArrayByParityTaskInnerId">
+            <div class="task_name">
+              <h4>Sort Array By Parity</h4>
+              <div class="task_body_button task_body_button_up" id="sortArrayByParityNameId" onclick="toggleTaskVisibility('sortArrayByParityNameId', 'sortArrayByParityId')"></div>
+            </div>
+            <div class="task_body"  id="sortArrayByParityId">
+              <p>Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.
+                  You may return any answer array that satisfies this condition.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="userArrayForSortByParity" id="userArrayForSortByParityId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array 1'">
+                  <button class="clickable_icon" onclick="autoFillArray('userArrayForSortByParityId')"></button>
+                  <button class="action_button" onclick="printSortedArrayByParity('userArrayForSortByParityId', 'sortedArrayByParityResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="sortedArrayByParityResult" id="sortedArrayByParityResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array,</a>
+                  <a>sort</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -935,35 +1067,40 @@
     <!--Tasks with Lists-->
     <div id="tabLists" class="tab_content"> 
       <ol class="task_list_style">
-        <li class="task_element lists easy" id="linkedListCycleTaskId">
-          <div class="task_name">
-            <h4>Linked List Cycle</h4>
-            <div class="task_body_button task_body_button_up" id="linkedListCycleTaskNameId" onclick="toggleTaskVisibility('linkedListCycleTaskNameId', 'linkedListCycleId')"></div>
-          </div>
-            <div class="task_body" id="linkedListCycleId">
-            <p>Given a linked list, determine if it has a cycle in it. 
-              To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail connects to. 
-              If pos is -1, then there is no cycle in the linked list.</p>
-            <form class="task_row">
-              <div class="task_column">
-                <input type="text" name="userArrayForList" class="autofill_icon" id="userArrayForListId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
-                <button class="clickable_icon" onclick="autoFillString('userArrayForListId')"></button>
-                <input type="number" name="indexForListCycle" id="indexForListCycleId" placeholder="position" onfocus="this.placeholder = ''" onblur="this.placeholder = 'position'">
-                <button class="action_button" onclick="printHasCycle('userArrayForListId','indexForListCycleId','resultLinkedListCycleId')">Run</button>
-              </div>
-              <div class="task_column">
-                <p class="task_subcolumn">Result:</p>
-                <output type="text" name="resultLinkedListCycle" class="task_subcolumn" id="resultLinkedListCycleId"></output>
-              </div>
-            </form>
-            <div class="task_row">
-              <div class="task_column task_tags">
-                <a>lists,</a>
-                <a>cycle</a>
-                <a></a>
-              </div>
-              <div class="task_column task_complexity">
-                <img src="img\star_icon.png" alt="stars">
+        <li class="task_element lists easy" id="linkedListCycleTaskId" onmousemove="startPerspective(event, 'linkedListCycleTaskId', 'linkedListCycleTaskInnerId')" onmouseout="stopPerspective('linkedListCycleTaskId', 'linkedListCycleTaskInnerId')">
+          <div class="task_element_inner" id="linkedListCycleTaskInnerId">
+            <div class="task_name">
+              <h4>Linked List Cycle</h4>
+              <div class="task_body_button task_body_button_up" id="linkedListCycleTaskNameId" onclick="toggleTaskVisibility('linkedListCycleTaskNameId', 'linkedListCycleId')"></div>
+            </div>
+              <div class="task_body" id="linkedListCycleId">
+              <p>Given a linked list, determine if it has a cycle in it. 
+                To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed) in the linked list where tail connects to. 
+                If pos is -1, then there is no cycle in the linked list.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="userArrayForList" id="userArrayForListId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'" onkeyup="this.value = this.value.replace(/[^\d&^\s]/,'')">
+                  <button class="clickable_icon" onclick="autoFillArray('userArrayForListId', 5, 12)"></button>
+                  <input type="number" name="indexForListCycle" id="indexForListCycleId" placeholder="position" onfocus="this.placeholder = ''" onblur="this.placeholder = 'position'">
+                  <button class="clickable_icon" onclick="autoFillNumber('indexForListCycleId', 0, 5)"></button>
+                  <button class="action_button" onclick="printHasCycle('userArrayForListId','indexForListCycleId','resultLinkedListCycleId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="resultLinkedListCycle" class="task_subcolumn" id="resultLinkedListCycleId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>lists,</a>
+                  <a>cycle</a>
+                  <a></a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
