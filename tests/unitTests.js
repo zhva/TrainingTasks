@@ -694,3 +694,23 @@ describe('N-element shift of an array', function() {
         assert.equal(bigNumbersMultipier("123456789", "987654321"), "121932631112635269");
       });
     });
+
+
+    describe('Integer to Roman', function() {
+      it('should return an empty string for invalid input', function() {
+        assert.isEmpty(intToRoman());
+        assert.isEmpty(intToRoman(null));
+        assert.isEmpty(intToRoman(""));
+        assert.isEmpty(intToRoman(-45));
+        assert.isEmpty(intToRoman(0));
+        assert.isEmpty(intToRoman(4000));
+      });
+      it('should return Roman number', function() {
+        assert.equal(intToRoman(1), "I");
+        assert.equal(intToRoman(123), "CXXIII");
+        assert.equal(intToRoman(999), "CMXCIX");
+        assert.equal(intToRoman(1000), "M");
+        assert.equal(intToRoman(1994), "MCMXCIV");
+        assert.equal(intToRoman(3999), "MMMCMXCIX");
+      });
+    });

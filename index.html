@@ -64,6 +64,7 @@
           <li class="side_menu_list_item" data-type="matrix">matrix</li>
           <li class="side_menu_list_item" data-type="transpose">transpose</li>
           <li class="side_menu_list_item" data-type="sorte">sort</li>
+          <li class="side_menu_list_item" data-type="sorte">convert</li>
         </div>
     </nav>
   </header>
@@ -536,6 +537,41 @@
                 <div class="task_column task_tags">
                   <a>numbers,</a>
                   <a>multiplication</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9733;</span><span>&#9734;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element numbers medium convert" id="integerToRomanTaskId" onmousemove="startPerspective(event, 'integerToRomanTaskId', 'integerToRomanTaskInnerId')" onmouseout="stopPerspective('integerToRomanTaskId', 'integerToRomanTaskInnerId')">
+          <div class="task_element_inner" id="integerToRomanTaskInnerId">
+            <div class="task_name">
+              <h4>Integer to Roman</h4>
+              <div class="task_body_button task_body_button_up" id="integerToRomanNameId" onclick="toggleTaskVisibility('integerToRomanNameId', 'integerToRomanId')"></div>
+            </div>
+            <div class="task_body" id="integerToRomanId">
+              <p>Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999.
+                 Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+              </p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="number" name="integerToRomanInput" id="integerToRomanInputId" placeholder="number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'number'">
+                  <button class="clickable_icon" onclick="autoFillNumber('integerToRomanInputId', 1, 3999)"></button>
+                  <button class="action_button" onclick="printIntToRomanResult('integerToRomanInputId', 'integerToRomanOutputId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="integerToRomanOutput" class="task_subcolumn" id="integerToRomanOutputId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>numbers,</a>
+                  <a>convert</a>
                 </div>
                 <div class="task_column task_complexity">
                   <div>
