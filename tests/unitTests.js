@@ -43,7 +43,7 @@ describe('Prime numbers', function() {
   });
   });
 
-describe('Zeros counter', function() {
+describe('Zero counter', function() {
   it('should return -1 for numbers < 1', function() {
     assert.equal(countZeros(0), -1);
     assert.equal(countZeros(-1),-1);
@@ -98,7 +98,7 @@ describe('Duplicate array', function(){
 });
 
 describe('String reverse', function(){
-  it('should return an empty String for invalide value', function(){
+  it('should return an empty String for invalid value', function(){
     assert.isEmpty(reverseString());
     assert.isEmpty(reverseString(""));
     assert.isEmpty(reverseString(null));
@@ -171,15 +171,15 @@ describe('Prime factors of Number', function(){
 
 });
 
-describe('Nth Fibonacci Number', function(){
-  it('should return 0 for invalid index', function(){
+describe('N-th Fibonacci Number', function(){
+  it('should return 0 for invalid value', function(){
     assert.equal(nthFibonacciNumberCounter("dagad"), 0);
     assert.equal(nthFibonacciNumberCounter(null), 0);
     assert.equal(nthFibonacciNumberCounter(NaN), 0);
     assert.equal(nthFibonacciNumberCounter(0), 0);
     assert.equal(nthFibonacciNumberCounter(-5), 0);
   });
-  it('should return nth Fibonacci number', function(){
+  it('should return n-th Fibonacci number', function(){
     assert.equal(nthFibonacciNumberCounter(1), 1);
     assert.equal(nthFibonacciNumberCounter(5), 5);
     assert.equal(nthFibonacciNumberCounter(13), 233);
@@ -189,7 +189,7 @@ describe('Nth Fibonacci Number', function(){
 });
 
 describe('Greatest common divisor of two numbers', function(){
-  it('should return 0 for invalid index', function(){
+  it('should return 0 for invalid values', function(){
     assert.equal(greatestCommonDivisorCounter("dagad", 23), 0);
     assert.equal(greatestCommonDivisorCounter(null), 0);
     assert.equal(greatestCommonDivisorCounter(NaN), 0);
@@ -323,7 +323,7 @@ describe('Reverse digits of an integer.', function(){
       assert.equal(didgitsReverser_VN(26.5), -1);
       assert.equal(didgitsReverser_VN(0), -1);
     });
-    it('should return reverced number(V' + (i+1) + ')', function(){
+    it('should return reversed number(V' + (i+1) + ')', function(){
       assert.equal(didgitsReverser_VN(1234), 4321);
       assert.equal(didgitsReverser_VN(35146540), 4564153);
       assert.equal(didgitsReverser_VN(-1234), -4321);
@@ -452,15 +452,15 @@ describe('Happy numbers', function() {
   });
   
 describe('Power of 3 numbers', function(){
-  it('schoud return false for numbers < 1', function(){
+  it('should return false for numbers < 1', function(){
       assert.isFalse(isPowerOfThree(0));
       assert.isFalse(isPowerOfThree(-9));
   });
-  it('schoud return false for numbers that are not power of 3', function(){
+  it('should return false for numbers that are not power of 3', function(){
     assert.isFalse(isPowerOfThree(15));
     assert.isFalse(isPowerOfThree(45));
   });
-  it('schoud return true for numbers that are power of 3', function(){
+  it('should return true for numbers that are power of 3', function(){
     assert.isTrue(isPowerOfThree(3));
     assert.isTrue(isPowerOfThree(9));
     assert.isTrue(isPowerOfThree(27));
@@ -536,7 +536,7 @@ describe('N-element shift of an array', function() {
   });
   });
 
-  describe('Single Element in an Array', function() {
+  describe('Single element in an array', function() {
     it('should return null for invalid input', function() {
       assert.isNull(singleNumber());
       assert.isNull(singleNumber(null));
@@ -551,7 +551,7 @@ describe('N-element shift of an array', function() {
     });
   });
 
-  describe('Major Element in an Array', function() {
+  describe('Major element in an array', function() {
     it('should return null for invalid input', function() {
       assert.isNull(majorityElement());
       assert.isNull(majorityElement(null));
@@ -567,7 +567,7 @@ describe('N-element shift of an array', function() {
     });
   });
 
-  describe('Valid Anagram', function() {
+  describe('Valid anagram', function() {
     it('should return an empty string for invalid input', function() {
       assert.isEmpty(isAnagram());
       assert.isEmpty(isAnagram(null, null));
@@ -589,7 +589,7 @@ describe('N-element shift of an array', function() {
     });
   });
 
-  describe('Missing Number in an array', function() {
+  describe('Missing number in an array', function() {
     it('should return an empty array for invalid input', function() {
       assert.isEmpty(missingNumber());
       assert.isEmpty(missingNumber(null));
@@ -614,7 +614,7 @@ describe('N-element shift of an array', function() {
       assert.isFalse(hasCycle(generateLinkedList(null)));
       assert.isFalse(hasCycle(generateLinkedList("dfsgffdgfdg")));
     });
-    it('should return true in the provided list has cycle', function() {
+    it('should return true in the provided list has a cycle', function() {
       assert.isTrue(hasCycle(generateLinkedList([1], 0)));
       assert.isTrue(hasCycle(generateLinkedList([1, 2, 3, 4], 1)));
       assert.isTrue(hasCycle(generateLinkedList([3, 2, 0, -4], 3)));
@@ -645,7 +645,7 @@ describe('N-element shift of an array', function() {
     });
   });
 
-    describe('Sort Array By Parity', function() {
+    describe('Sort array by evenness', function() {
       it('should return an empty array for invalid input', function() {
         assert.isEmpty(sortArrayByParity([]));
         assert.isEmpty(sortArrayByParity("dfasdf"));
@@ -653,7 +653,7 @@ describe('N-element shift of an array', function() {
         assert.isEmpty(sortArrayByParity(null));
         assert.isEmpty(sortArrayByParity(NaN));
       });
-      it('should return a sorted by parity array', function() {
+      it('should return a sorted by evenness array', function() {
         assert.sameDeepOrderedMembers(sortArrayByParity([3, 1, 2, 4]), [2, 4, 1, 3]);
         assert.sameDeepOrderedMembers(sortArrayByParity([3, 1, 2, 5, 4]), [2, 4, 5, 1, 3]);
         assert.sameDeepOrderedMembers(sortArrayByParity([0, 1]), [0, 1]);
@@ -665,7 +665,7 @@ describe('N-element shift of an array', function() {
       });
     });
 
-    describe('To Lower Case', function() {
+    describe('To lower case', function() {
       it('should return an empty string for invalid input', function() {
         assert.isEmpty(toLowerCase());
         assert.isEmpty(toLowerCase(null));
@@ -679,7 +679,7 @@ describe('N-element shift of an array', function() {
       });
     });
 
-    describe('Big Numbers Multiplication', function() {
+    describe('Big numbers multiplication', function() {
       it('should return an empty string for invalid input', function() {
         assert.isEmpty(bigNumbersMultipier());
         assert.isEmpty(bigNumbersMultipier(null));
@@ -695,8 +695,7 @@ describe('N-element shift of an array', function() {
       });
     });
 
-
-    describe('Integer to Roman', function() {
+    describe('Arabic to Roman', function() {
       it('should return an empty string for invalid input', function() {
         assert.isEmpty(intToRoman());
         assert.isEmpty(intToRoman(null));
@@ -714,6 +713,7 @@ describe('N-element shift of an array', function() {
         assert.equal(intToRoman(3999), "MMMCMXCIX");
       });
     });
+
     describe('Flipping an Image', function() {
       it('should return an empty array for invalid input', function() {
         assert.isEmpty(flipAndInvertImage());
