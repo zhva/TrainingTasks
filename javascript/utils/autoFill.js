@@ -1,26 +1,75 @@
-function autoFillNumber(elemId, minV = 1, maxV = 10000) {
-  const obj = document.getElementById(elemId);
-  obj.value = Math.floor(minV + Math.random() * (maxV - minV + 1));
+/* requires:
+    helper.js
+*/
+//---------------------------------------------------------------------------
+//     autoFill.js
+//---------------------------------------------------------------------------
+function getRandomNumber(minV, maxV) {
+  const randVal = Math.floor(minV + Math.random() * (maxV - minV + 1));
+
+  return randVal;
 }
 
-function autoFillString(elemId) {
+function getRandomChar() {
+  const charA = 'a'.charCodeAt(0);
+  const charZ = 'z'.charCodeAt(0);
+  const randomCharCode = getRandomNumber(charA, charZ);
+
+  return String.fromCharCode(randomCharCode);
+}
+
+function getRandomString(maxL) {
   let randomStr = '';
-  let randomAscii;
-  const stringLength = Math.floor(Math.random() * 20) + 1;
+  const stringLength = getRandomNumber(1, maxL);
   for (let i = 0; i < stringLength; i++) {
-    randomAscii = Math.floor((Math.random() * 25) + 97);
-    randomStr += String.fromCharCode(randomAscii);
+    randomStr += getRandomChar();
   }
-  const obj = document.getElementById(elemId);
-  obj.value = randomStr;
+  return randomStr;
 }
 
-function autoFillArray(elemId, minL = 4, maxL = 10) {
+function getRandomArray(minL, maxL, minV, maxV) {
   const randomArray = [];
-  const arrayLength = Math.floor(minL + Math.random() * (maxL - minL));
+  const arrayLength = getRandomNumber(minL, maxL);
   for (let i = 0; i < arrayLength; i++) {
-    randomArray[i] = Math.floor(Math.random() * 100);
+    randomArray[i] = getRandomNumber(minV, maxV);
   }
-  const obj = document.getElementById(elemId);
-  obj.value = randomArray.join(' ');
+  return randomArray;
+}
+
+function getRandom2DArray(minL, maxL, minV, maxV) {
+  const random2DArray = [];
+  const arrayLength = getRandomNumber(minL, maxL);
+  for (let i = 0; i < arrayLength; i++) {
+    random2DArray.push([]);
+  }
+
+  for (let i = 0; i < arrayLength; i++) {
+    for (let j = 0; j < arrayLength; j++) {
+      random2DArray[i][j] = getRandomNumber(minV, maxV);
+    }
+  }
+  return random2DArray;
+}
+//---------------------------------------------------------------------------
+// Events
+//---------------------------------------------------------------------------
+function onButtonFillNumberClick(elemId, minV = 1, maxV = 10000) {
+  const randNum = getRandomNumber(minV, maxV);
+  printIntValue(elemId, randNum);
+}
+
+function onButtonFillStringClick(elemId, maxL = 20) {
+  const randStr = getRandomString(maxL);
+  printStringValue(elemId, randStr);
+}
+
+function onButtonFillArrayClick(elemId, minL = 4, maxL = 10, minV = 0, maxV = 100) {
+  const randArr = getRandomArray(minL, maxL, minV, maxV);
+  printArray(elemId, randArr);
+}
+
+function onButtonFill2DArrayClick(elemId, minL = 4, maxL = 10, minV = 0, maxV = 100) {
+  const randArr2D = getRandom2DArray(minL, maxL, minV, maxV);
+
+  print2DArray(elemId, randArr2D);
 }

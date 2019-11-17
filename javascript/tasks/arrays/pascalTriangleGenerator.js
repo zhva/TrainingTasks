@@ -39,6 +39,6 @@ function printPascalTriangle(id1, id2) {
   else {
     document.getElementById('pacsalLinkId').style.cursor = 'pointer';
     document.getElementById('pacsalLinkId').style.pointerEvents = 'all';
-    printArray(id2, generatePascalTriangle(numberOfRows));
+    print2DArray(id2, generatePascalTriangle(numberOfRows));
   }
 }

@@ -42,7 +42,7 @@ function readArray(ctrlId) {
   return arr;
 }
 //---------------------------------------------------------------------------
-function readArrayOfArrays(ctrlId) {
+function read2DArray(ctrlId) {
   const ctrl = document.getElementById(ctrlId);
   if (ctrl == null) {
     return [];
@@ -85,7 +85,24 @@ function printArray(ctrlId, arr) {
     return;
   }
 
-  ctrl.value = arr.join(' ');
+  // ctrl.value = arr.join(' ');
+  ctrl.value = arr;
+}
+//---------------------------------------------------------------------------
+function print2DArray(ctrlId, arr2D) {
+  const ctrl = document.getElementById(ctrlId);
+  if (ctrl == null) {
+    return;
+  }
+
+  let joinedArr = '';
+  for (let i = 0; i < arr2D.length; i++) {
+    const temp = arr2D[i].join(' ');
+    joinedArr = joinedArr.concat(temp, ',');
+  }
+  joinedArr = joinedArr.substr(0, joinedArr.length - 1);
+
+  ctrl.value = joinedArr;
 }
 //---------------------------------------------------------------------------
 function compareAsc(a, b) {

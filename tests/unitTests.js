@@ -714,3 +714,21 @@ describe('N-element shift of an array', function() {
         assert.equal(intToRoman(3999), "MMMCMXCIX");
       });
     });
+    describe('Flipping an Image', function() {
+      it('should return an empty array for invalid input', function() {
+        assert.isEmpty(flipAndInvertImage());
+        assert.isEmpty(flipAndInvertImage(null));
+        assert.isEmpty(flipAndInvertImage(""));
+        assert.isEmpty(flipAndInvertImage([1]));
+        assert.isEmpty(flipAndInvertImage([[1, 2, 3],[1, 3]]));
+        assert.isEmpty(flipAndInvertImage([[1, 2],[2, 1]]));
+        assert.isEmpty(flipAndInvertImage(4000));
+      });
+      it('should return flipped horizontally and inverted array', function() {
+        assert.sameDeepOrderedMembers(flipAndInvertImage([[1]]), [[0]]);
+        assert.sameDeepOrderedMembers(flipAndInvertImage([[1,0],[0,1]]), [[1,0],[0,1]]);
+        assert.sameDeepOrderedMembers(flipAndInvertImage([[0,0],[0,0]]), [[1,1],[1,1]]);
+        assert.sameDeepOrderedMembers(flipAndInvertImage([[1,1,0],[1,0,1],[0,0,0]]), [[1,0,0],[0,1,0],[1,1,1]]);
+        assert.sameDeepOrderedMembers(flipAndInvertImage([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]), [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]);
+      });
+    });

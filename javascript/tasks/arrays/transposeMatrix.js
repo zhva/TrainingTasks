@@ -26,11 +26,11 @@ function transposeMatrix(A) {
 // Events
 //---------------------------------------------------------------------------
 function printTransposedMatrix(id1, id2) {
-  const maxtrix = readArrayOfArrays(id1);
+  const maxtrix = read2DArray(id1);
   if (maxtrix === []) {
     alert('The matrix is invalid! Please, enter the correct value!');
   }
   else {
-    printArray(id2, transposeMatrix(maxtrix));
+    print2DArray(id2, transposeMatrix(maxtrix));
   }
 }
