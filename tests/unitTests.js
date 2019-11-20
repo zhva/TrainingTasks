@@ -732,3 +732,23 @@ describe('N-element shift of an array', function() {
         assert.sameDeepOrderedMembers(flipAndInvertImage([[1,1,0,0],[1,0,0,1],[0,1,1,1],[1,0,1,0]]), [[1,1,0,0],[0,1,1,0],[0,0,0,1],[1,0,1,0]]);
       });
     });
+
+    describe('Valid palindrome', function() {
+      it('should return an empty string for invalid input', function() {
+        assert.isEmpty(isPalindrome());
+        assert.isEmpty(isPalindrome(""));
+        assert.isEmpty(isPalindrome(null));
+        assert.isEmpty(isPalindrome(undefined));
+      });
+      it('should return false for string that isn\'t palindrome', function() {
+        assert.isTrue(isPalindrome("aaa"));
+        assert.isTrue(isPalindrome("Racecar"));
+        assert.isTrue(isPalindrome("No lemon, no melon"));
+        assert.isTrue(isPalindrome("A man, a plan, a canal: Panama"));
+      });
+      it('should return true for string that is palindrome', function() {
+        assert.isFalse(isPalindrome("baaa"));
+        assert.isFalse(isPalindrome("race a car"));
+        assert.isFalse(isPalindrome("Cdasfa1"));
+      });
+    });

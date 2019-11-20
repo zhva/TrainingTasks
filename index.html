@@ -65,6 +65,7 @@
           <li class="side_menu_list_item" data-type="transpose">transpose</li>
           <li class="side_menu_list_item" data-type="sorte">sort</li>
           <li class="side_menu_list_item" data-type="sorte">convert</li>
+          <li class="side_menu_list_item" data-type="sorte">palindrome</li>
         </div>
     </nav>
   </header>
@@ -697,18 +698,51 @@
               <p>Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.</p>
               <form class="task_row">
                 <div class="task_column">
-                  <input type="text" name="strinForLowerCase" id="strinForLowerCaseId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
-                  <button class="clickable_icon" onclick="onButtonFillStringClick('strinForLowerCaseId')"></button>
-                  <button class="action_button" onclick="toLowerCasePrint('strinForLowerCaseId', 'strinForLowerCaseResultId')">Run</button>
+                  <input type="text" name="stringForLowerCase" id="stringForLowerCaseId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                  <button class="clickable_icon" onclick="onButtonFillStringClick('stringForLowerCaseId')"></button>
+                  <button class="action_button" onclick="toLowerCasePrint('stringForLowerCaseId', 'stringForLowerCaseResultId')">Run</button>
                 </div>
                 <div class="task_column">
                   <p class="task_subcolumn">Result:</p>
-                  <output type="text" name="strinForLowerCaseResult" id="strinForLowerCaseResultId"></output>
+                  <output type="text" name="stringForLowerCaseResult" id="stringForLowerCaseResultId"></output>
                 </div>
               </form>
               <div class="task_row">
                 <div class="task_column task_tags">
                   <a>string</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="task_element strings easy palindrome" id="isPalindromeTaskId" onmousemove="startPerspective(event, 'isPalindromeTaskId', 'isPalindromeTaskInnerId')" onmouseout="stopPerspective('toLowerCaseTaskId', 'toLowerCaseTaskInnerId')">
+          <div class="task_element_inner" id="isPalindromeTaskInnerId">
+            <div class="task_name">
+              <h4>Valid Palindrome</h4>
+              <div class="task_body_button task_body_button_up" id="isPalindromeTaskNameId" onclick="toggleTaskVisibility('isPalindromeTaskNameId', 'isPalindromeId')"></div>
+            </div>
+            <div class="task_body" id="isPalindromeId">
+              <p>Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="stringPalindrome" id="stringPalindromeId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                  <button class="clickable_icon" onclick="onButtonFillStringClick('stringPalindromeId')"></button>
+                  <button class="action_button" onclick="printIsPalindrome('stringPalindromeId', 'stringPalindromeResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="stringPalindromeResult" id="stringPalindromeResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>string,</a>
+                  <a>palindrome</a>
                 </div>
                 <div class="task_column task_complexity">
                   <div>
