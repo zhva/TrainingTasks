@@ -753,6 +753,39 @@
             </div>
           </div>
         </li>
+        <li class="task_element strings easy palindrome" id="isPalindromeIITaskId" onmousemove="startPerspective(event, 'isPalindromeIITaskId', 'isPalindromeIITaskInnerId')" onmouseout="stopPerspective('toLowerCaseTaskId', 'toLowerCaseTaskInnerId')">
+          <div class="task_element_inner" id="isPalindromeIITaskInnerId">
+            <div class="task_name">
+              <h4>Valid Palindrome II</h4>
+              <div class="task_body_button task_body_button_up" id="isPalindromeIITaskNameId" onclick="toggleTaskVisibility('isPalindromeIITaskNameId', 'isPalindromeIIId')"></div>
+            </div>
+            <div class="task_body" id="isPalindromeIIId">
+              <p>Given a non-empty string s, you may delete at most one character. Judge whether you can make it a palindrome. The string will only contain lowercase characters a-z.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="stringPalindromeII" id="stringPalindromeIIId" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                  <button class="clickable_icon" onclick="onButtonFillStringClick('stringPalindromeIIId')"></button>
+                  <button class="action_button" onclick="printValidPalindrome('stringPalindromeIIId', 'stringPalindromeIIResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="stringPalindromeIIResult" id="stringPalindromeIIResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>string,</a>
+                  <a>palindrome</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
       </ol>
     </div>
     <!--Tasks with Arrays-->

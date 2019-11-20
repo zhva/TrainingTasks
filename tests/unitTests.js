@@ -752,3 +752,23 @@ describe('N-element shift of an array', function() {
         assert.isFalse(isPalindrome("Cdasfa1"));
       });
     });
+
+    describe('Valid palindrome II', function() {
+      it('should return an empty string for invalid input', function() {
+        assert.isEmpty(isPalindrome());
+        assert.isEmpty(isPalindrome(""));
+        assert.isEmpty(isPalindrome(null));
+        assert.isEmpty(isPalindrome(undefined));
+      });
+      it('should return false for string that isn\'t palindrome', function() {
+        assert.isTrue(validPalindrome("aba"));
+        assert.isTrue(validPalindrome("raceacar"));
+        assert.isTrue(validPalindrome("nolemongnomelon"));
+        assert.isTrue(validPalindrome("amanaplangacanalpanama"));
+      });
+      it('should return true for string that is palindrome', function() {
+        assert.isFalse(validPalindrome("babaa"));
+        assert.isFalse(validPalindrome("race a carbb"));
+        assert.isFalse(validPalindrome("Cdasfa1bdfg"));
+      });
+    });
