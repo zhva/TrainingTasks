@@ -772,3 +772,22 @@ describe('N-element shift of an array', function() {
         assert.isFalse(validPalindrome("Cdasfa1bdfg"));
       });
     });
+    
+    describe('Buddy Strings', function() {
+      it('should return an empty string for invalid input', function() {
+        assert.isEmpty(isBuddyStrings());
+        assert.isEmpty(isBuddyStrings("", "a"));
+        assert.isEmpty(isBuddyStrings(null, "aa"));
+        assert.isEmpty(isBuddyStrings(undefined));
+      });
+      it('should return false for string that isn\'t buddy strings', function() {
+        assert.isTrue(isBuddyStrings("ab", "ba"));
+        assert.isTrue(isBuddyStrings("aa", "aa"));
+        assert.isTrue(isBuddyStrings("aaaaaaabc", "aaaaaaacb"));
+      });
+      it('should return true for string that is buddy strings', function() {
+        assert.isFalse(isBuddyStrings("ab", "ab"));
+        assert.isFalse(isBuddyStrings("raceacarbb", "racgbcarbb"));
+        assert.isFalse(isBuddyStrings("dsfaefgegvwaw", "ddffgcfesfc"));
+      });
+    });

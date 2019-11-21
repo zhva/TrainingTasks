@@ -786,6 +786,40 @@
             </div>
           </div>
         </li>
+        <li class="task_element strings easy" id="buddyStringsTaskId" onmousemove="startPerspective(event, 'buddyStringsTaskId', 'buddyStringsTaskInnerId')" onmouseout="stopPerspective('toLowerCaseTaskId', 'toLowerCaseTaskInnerId')">
+          <div class="task_element_inner" id="buddyStringsTaskInnerId">
+            <div class="task_name">
+              <h4>Buddy Strings</h4>
+              <div class="task_body_button task_body_button_up" id="buddyStringsTaskNameId" onclick="toggleTaskVisibility('buddyStringsTaskNameId', 'buddyStringsIIId')"></div>
+            </div>
+            <div class="task_body" id="buddyStringsId">
+              <p>Given two strings A and B of lowercase letters, return true if and only if we can swap two letters in A so that the result equals B.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="buddyString1" id="buddyString1Id" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                  <button class="clickable_icon" onclick="onButtonFillStringClick('buddyString1Id')"></button>
+                  <input type="text" name="buddyString1" id="buddyString2Id" placeholder="string" onfocus="this.placeholder = ''" onblur="this.placeholder = 'string'">
+                  <button class="clickable_icon" onclick="onButtonFillStringClick('buddyString2Id')"></button>
+                  <button class="action_button" onclick="printBuddyStrings('buddyString1Id', 'buddyString2Id', 'buddyStringResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="buddyStringResult" id="buddyStringResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>string</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
       </ol>
     </div>
     <!--Tasks with Arrays-->

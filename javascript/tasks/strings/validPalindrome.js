@@ -24,8 +24,8 @@ function validPalindrome(str) {
 //---------------------------------------------------------------------------
 // Events
 //---------------------------------------------------------------------------
-function printValidPalindrome(iputObjId, outputObjId) {
-  const str = readStringValue(iputObjId);
+function printValidPalindrome(inputObjId, outputObjId) {
+  const str = readStringValue(inputObjId);
 
   if (str === '') {
     alert('The string is invalid! Please, enter the correct string!');
