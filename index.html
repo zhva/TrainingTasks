@@ -1230,6 +1230,38 @@
             </div>
           </div>
         </li>
+        <li class="task_element arrays easy" id="thirdMaxNumberTaskId" onmousemove="startPerspective(event, 'thirdMaxNumberTaskId', 'thirdMaxNumberTaskInnerId')" onmouseout="stopPerspective('sortArrayByParityTaskId', 'sortArrayByParityTaskInnerId')">
+          <div class="task_element_inner" id="thirdMaxNumberTaskInnerId">
+            <div class="task_name">
+              <h4>Third Maximum Number</h4>
+              <div class="task_body_button task_body_button_up" id="thirdMaxNumberNameId" onclick="toggleTaskVisibility('thirdMaxNumberNameId', 'thirdMaxNumberId')"></div>
+            </div>
+            <div class="task_body"  id="thirdMaxNumberId">
+              <p>Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="arrayThirdMaxNumber" id="arrayThirdMaxNumberId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'">
+                  <button class="clickable_icon" onclick="onButtonFillArrayClick('arrayThirdMaxNumberId')"></button>
+                  <button class="action_button" onclick="printThirdMaxNumber('arrayThirdMaxNumberId', 'arrayThirdMaxNumberResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="arrayThirdMaxNumberResult" id="arrayThirdMaxNumberResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
       </ol>
     </div>
     <!--Tasks with Lists-->

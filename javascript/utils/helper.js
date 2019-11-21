@@ -85,8 +85,7 @@ function printArray(ctrlId, arr) {
     return;
   }
 
-  // ctrl.value = arr.join(' ');
-  ctrl.value = arr;
+  ctrl.value = arr.join(' ');
 }
 //---------------------------------------------------------------------------
 function print2DArray(ctrlId, arr2D) {

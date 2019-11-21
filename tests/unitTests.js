@@ -791,3 +791,20 @@ describe('N-element shift of an array', function() {
         assert.isFalse(isBuddyStrings("dsfaefgegvwaw", "ddffgcfesfc"));
       });
     });
+
+    describe('Third Maximum Number', function() {
+      it('should return an empty array for invalid input', function() {
+        assert.isEmpty(findThirdMaxNumber([]));
+        assert.isEmpty(findThirdMaxNumber("dfasdf"));
+        assert.isEmpty(findThirdMaxNumber());
+        assert.isEmpty(findThirdMaxNumber(null));
+        assert.isEmpty(findThirdMaxNumber(NaN));
+      });
+      it('should a third max value', function() {
+        assert.equal(findThirdMaxNumber([3, 1, 2, 4]), 2);
+        assert.equal(findThirdMaxNumber([2, 2, 3, 1]), 1);
+        assert.equal(findThirdMaxNumber([1, 2]), 2);
+        assert.equal(findThirdMaxNumber([39, 12, 2, 48, 95, 3, 45, 22]), 45);
+        assert.equal(findThirdMaxNumber([1, 1, 1, 1]), 1);
+      });
+    });
