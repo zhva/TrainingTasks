@@ -1262,6 +1262,40 @@
             </div>
           </div>
         </li>
+        <li class="task_element arrays easy" id="disapearedNumbersTaskId" onmousemove="startPerspective(event, 'disapearedNumbersTaskId', 'disapearedNumbersTaskInnerId')" onmouseout="stopPerspective('sortArrayByParityTaskId', 'sortArrayByParityTaskInnerId')">
+          <div class="task_element_inner" id="disapearedNumbersTaskInnerId">
+            <div class="task_name">
+              <h4>Disappeared Numbers in an Array</h4>
+              <div class="task_body_button task_body_button_up" id="disapearedNumbersNameId" onclick="toggleTaskVisibility('disapearedNumbersNameId', 'disapearedNumbersId')"></div>
+            </div>
+            <div class="task_body"  id="disapearedNumbersId">
+              <p>Given an array of integers where 1 ≤ a[i] ≤ n (n = size of array), some elements appear twice and others appear once.
+                Find all the elements of [1, n] inclusive that do not appear in this array.
+                Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="arrayDisapearedNumbers" id="arrayDisapearedNumbersId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'">
+                  <button class="clickable_icon" onclick="onButtonFillArrayClick('arrayDisapearedNumbersId')"></button>
+                  <button class="action_button" onclick="printDisappearedNumbers('arrayDisapearedNumbersId', 'arrayDisapearedNumbersResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="arrayDisapearedNumbersResult" id="arrayDisapearedNumbersResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
       </ol>
     </div>
     <!--Tasks with Lists-->

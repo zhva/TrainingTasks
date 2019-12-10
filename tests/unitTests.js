@@ -808,3 +808,20 @@ describe('N-element shift of an array', function() {
         assert.equal(findThirdMaxNumber([1, 1, 1, 1]), 1);
       });
     });
+
+    describe('Disappeared Numbers in an Array', function() {
+      it('should return an empty array for invalid input', function() {
+        assert.isEmpty(findDisappearedNumbers([]));
+        assert.isEmpty(findDisappearedNumbers("dfasdf"));
+        assert.isEmpty(findDisappearedNumbers());
+        assert.isEmpty(findDisappearedNumbers(null));
+        assert.isEmpty(findDisappearedNumbers(NaN));
+      });
+      it('should return disapeared numbers', function() {
+        assert.sameDeepOrderedMembers(findDisappearedNumbers([3, 1, 2, 4]), []);
+        assert.sameDeepOrderedMembers(findDisappearedNumbers([3, 5, 2, 4]), [1]);
+        assert.sameDeepOrderedMembers(findDisappearedNumbers([2, 2, 3, 1]), [4]);
+        assert.sameDeepOrderedMembers(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1]), [5, 6]);
+        assert.sameDeepOrderedMembers(findDisappearedNumbers([1, 1, 1, 1]), [2, 3, 4]);
+      });
+    });
