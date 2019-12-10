@@ -1296,6 +1296,40 @@
             </div>
           </div>
         </li>
+        <li class="task_element arrays easy" id="containsDuplicateTaskId" onmousemove="startPerspective(event, 'containsDuplicateTaskId', 'containsDuplicateTaskInnerId')" onmouseout="stopPerspective('sortArrayByParityTaskId', 'sortArrayByParityTaskInnerId')">
+          <div class="task_element_inner" id="containsDuplicateTaskInnerId">
+            <div class="task_name">
+              <h4>Contains Duplicate</h4>
+              <div class="task_body_button task_body_button_up" id="containsDuplicateNameId" onclick="toggleTaskVisibility('containsDuplicateNameId', 'containsDuplicateId')"></div>
+            </div>
+            <div class="task_body"  id="containsDuplicateId">
+              <p>Given an array of integers, find if the array contains any duplicates.
+                Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.</p>
+              <form class="task_row">
+                <div class="task_column">
+                  <input type="text" name="arrayContainsDuplicate" id="arrayContainsDuplicateId" placeholder="array" onfocus="this.placeholder = ''" onblur="this.placeholder = 'array'">
+                  <button class="clickable_icon" onclick="onButtonFillArrayClick('arrayContainsDuplicateId')"></button>
+                  <button class="action_button" onclick="printContainsDuplicate('arrayContainsDuplicateId', 'arrayContainsDuplicateResultId')">Run</button>
+                </div>
+                <div class="task_column">
+                  <p class="task_subcolumn">Result:</p>
+                  <output type="text" name="arrayContainsDuplicateResult" id="arrayContainsDuplicateResultId"></output>
+                </div>
+              </form>
+              <div class="task_row">
+                <div class="task_column task_tags">
+                  <a>array</a>,
+                  <a>duplicate</a>
+                </div>
+                <div class="task_column task_complexity">
+                  <div>
+                    <span>&#9733;</span><span>&#9734;</span><span>&#9734;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
       </ol>
     </div>
     <!--Tasks with Lists-->

@@ -825,3 +825,29 @@ describe('N-element shift of an array', function() {
         assert.sameDeepOrderedMembers(findDisappearedNumbers([1, 1, 1, 1]), [2, 3, 4]);
       });
     });
+
+    describe('Contains Duplicate', function() {
+      var funcs = [containsDuplicate_V1, containsDuplicate_V2];
+    
+      var i = 0;
+      funcs.forEach(function(containsDuplicate_VN){
+        it('should return an empty array for invalid input (V' + (i+1) + ')', function() {
+          assert.isEmpty(containsDuplicate_VN([]));
+          assert.isEmpty(containsDuplicate_VN("dfasdf"));
+          assert.isEmpty(containsDuplicate_VN());
+          assert.isEmpty(containsDuplicate_VN(null));
+          assert.isEmpty(containsDuplicate_VN(NaN));
+        });
+        it('should return true for arrays with duplicated values (V' + (i+1) + ')', function() {
+          assert.isTrue(containsDuplicate_VN([1, 2, 3, 1]));
+          assert.isTrue(containsDuplicate_VN([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]));
+          assert.isTrue(containsDuplicate_VN([1, 1, 1, 1]));
+        });
+        it('should return false for arrays without duplicated values (V' + (i+1) + ')', function() {
+          assert.isFalse(containsDuplicate_VN([1, 2, 3, 4]));
+          assert.isFalse(containsDuplicate_VN([1, 2, 3, 4, 11, 99, 111]));
+          assert.isFalse(containsDuplicate_VN([1]));
+        });
+        i++;
+      });
+    });
